@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><title>Pokerface - The Experiment</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>HTML5 MediaElement</title>	
+	
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+    google.load("language", "1");
+    </script>		
+	
+	<script src="mediaelement-master/build/mediaelement-and-player.js"></script>
+	<link rel="stylesheet" href="mediaelement-master/build/mediaelementplayer.css" />
+    
+<style> 
+	 .container {
+	 	position: relative;
+	 	width: 100%;
+	  }
+	  
+	 #vidHolder { 
+	  	float:left; 
+	  	padding:15px; 
+	  	width:100%; 
+	  	height: auto;
+	  	position: absolute;
+	  	margin-left:50%;
+	  	margin-right:50%;
+	  }
+
+	.noChange {
+ 	 	display: inline;
+ 		padding: 3px 5px;
+ 		/* background: rgba(20,20,20,.5);*/
+	 }
+
+</style>
+
+</head>
+
+
+<body class="container">
+<video id="player1" class="mejs-player" data-mejsoptions='{"alwaysShowControls": true}' controls="controls">
+
+	<source src="150EuroTEDxFirenze.mp4" type="video/mp4">
+	<track src="150EuroTEDxFirenze.srt" label="English captions" kind="subtitles" srclang="en" default>
+	<p>Your browser leaves much to be desired.</p>			
+</video>	 
+
+<script>
+$(document).ready(function(){
+	
+});
+$('#player1').ready(function(){;
+$('#player1').data('mediaelementplayer').play();
+});
+
+</script>
+
+</body>
+</html>
