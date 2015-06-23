@@ -1,0 +1,15 @@
+﻿Build started 10/21/2014 3:06:19 PM.
+     1>Project "C:\Users\Ferda\Documents\Kinect2\trunk\src\kinectTest2.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Libraries\PCL\Eigen\include /I"C:\Libraries\jsoncpp-master\include" /I"C:\Program Files\Microsoft SDKs\Kinect\v2.0-PublicPreview1409\\inc" /IC:\Libraries\OpenCV_2.4.9\include\ /IC:\Libraries\OpenCV_2.4.9\include\opencv /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"..\build\Win32\Release\\" /Fd"..\build\Win32\Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt kinectTest2\kinectTest2.cpp
+         kinectTest2.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\bin\kinectTest2.exe" /NOLOGO /LIBPATH:..\lib libKinectInterface2.lib libSkeleton.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"..\bin\kinectTest2.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\bin\kinectTest2.lib" /MACHINE:X86 /SAFESEH ..\build\Win32\Release\kinectTest2.obj
+         Generating code
+         Finished generating code
+         kinectTest2.vcxproj -> C:\Users\Ferda\Documents\Kinect2\trunk\src\..\bin\kinectTest2.exe
+     1>Done Building Project "C:\Users\Ferda\Documents\Kinect2\trunk\src\kinectTest2.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.37

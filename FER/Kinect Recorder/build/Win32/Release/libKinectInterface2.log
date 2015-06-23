@@ -1,0 +1,9 @@
+﻿Build started 10/21/2014 3:28:47 PM.
+     1>Project "C:\Users\Ferda\Documents\Kinect2\trunk\src\libKinectInterface2.vcxproj" on node 2 (Build target(s)).
+     1>Lib:
+         libKinectInterface2.vcxproj -> C:\Users\Ferda\Documents\Kinect2\trunk\src\..\lib\libKinectInterface2.lib
+     1>Done Building Project "C:\Users\Ferda\Documents\Kinect2\trunk\src\libKinectInterface2.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.08

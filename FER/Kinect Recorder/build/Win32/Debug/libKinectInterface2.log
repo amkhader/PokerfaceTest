@@ -1,0 +1,9 @@
+﻿Build started 6/3/2015 4:49:10 AM.
+     1>Project "C:\Users\Admin\Desktop\Kinect2\src\libKinectInterface2.vcxproj" on node 2 (Build target(s)).
+     1>Lib:
+         libKinectInterface2.vcxproj -> C:\Users\Admin\Desktop\Kinect2\src\..\lib\libKinectInterface2D.lib
+     1>Done Building Project "C:\Users\Admin\Desktop\Kinect2\src\libKinectInterface2.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.04
