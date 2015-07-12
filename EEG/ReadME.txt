@@ -9,4 +9,4 @@
 5. PowerSpectral.m - Using EEGLAB calculating area under the graph and mean of peak values of eeg signal 
                      separated into four freq bands ALPHA, BETA, THETA, DELTA.
 					 
-					 
+		 ******* IS BEING UPDATED WITH THE LATEST CODE***
