@@ -5017,6 +5017,7 @@ if (typeof jQuery != 'undefined') {
 				timesArray = [],
 				today = new Date(),
 				startTime,
+				stopTime,
 				x = 0,
 				boo = 0,
 				p = 0;
@@ -5119,7 +5120,7 @@ if (typeof jQuery != 'undefined') {
 											  "alteredClass": alteredClasses[x],		
 											  "wordshownat": track.entries.times[i].start,
 											  "starttime": startTime,
-											  "stoptime": stopTime,
+											  "stoptime": startTime+duration,
 											  "top": $(thePosIndexArray[x]).offset().top,
 											  "left": $(thePosIndexArray[x]).offset().left,
 											  "eyeTop": newy,		
