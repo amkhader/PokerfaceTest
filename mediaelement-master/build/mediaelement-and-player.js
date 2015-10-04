@@ -5137,12 +5137,12 @@ if (typeof jQuery != 'undefined') {
 							//console.log(doneFor[counter].done);
 							//console.log("Counter: "+counter);
 						}
-						//console.log("Its visible");								
+						console.log("Its visible");								
 						//stopTime = today.getTime();		
 						//console.log(stopTime);		
-						//for (boo=0; boo<=lineLength; boo++){		
-						//	theFullArray[counterf].stoptime = stopTime;		
-						//	console.log(theFullArray[counterf].stoptime);		
+						for (boo=0; boo<=lineLength; boo++){		
+							theFullArray[counterf].stoptime = startTime+duration;		
+							console.log(theFullArray[counterf].stoptime);		
 							//countert++;		
 						}		
 								
