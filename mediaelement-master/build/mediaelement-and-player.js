@@ -24,10 +24,15 @@ doneFor[0] = {
 										"done": 1000
 			 };
 var iid = 0;
-var counter = 0;
+var counterf = 0;		
+var countert = 0; 
+var stopTime;
+var lineLength = 0;
 var wcounter = 0;
+var vidStart = 0;
+var tday = new Date();
 var csvData = new Array();
-csvData.push('"SubNum","Word","WordId","Starttime","Stoptime","Top","Left"');
+csvData.push('"SubNum","WordAltered","WordId","WordUnaltered","AlteredClass","WordShownAt","Starttime","Stoptime","Top","Left","EyeTop","EyeLeft","WordWidth","WordHeight"');
 
 // version number
 mejs.version = '2.17.0'; 
@@ -5007,12 +5012,25 @@ if (typeof jQuery != 'undefined') {
 				thePosIndexArray = [],
 				thePosWordArray = [],
 				thePosArray = [],
+				eyeTrackerWords = [],		
+				alteredClasses = [],
 				timesArray = [],
 				today = new Date(),
 				startTime,
-				stopTime,
 				x = 0,
+				boo = 0,
 				p = 0;
+				Xs = screen.width,				
+				Ys = screen.height,		
+				Xw = $(window).width(),		
+				Yw = $(window).height(),		
+				diffTop = window.screenTop,		
+				diffBottom = Ys - (Yw + diffTop),		
+				diffLeft = window.screenLeft,		
+				diffRight = Xs - (Xw + diffLeft),		
+				diffHeight = screen.height - $(window).height(),		
+				sidebarDiff = window.outerHeight - window.innerHeight;		
+			
 				
 		
 			if (typeof this.tracks == 'undefined')
@@ -5022,6 +5040,7 @@ if (typeof jQuery != 'undefined') {
 				t = this,
 				i,
 				track = t.selectedTrack; 
+				stopTime = today.getTime();
 				//console.log(track.entries.length);
 				
 			
@@ -5037,12 +5056,25 @@ if (typeof jQuery != 'undefined') {
 						
 						if ((track.entries.text[i]).search("sub") < 0){
 							theOldText = (track.entries.text[i]).split(/,?\s+/);
+							lineLength = theOldText.length;		
+							console.log("LineLength "+ lineLength);
 							wcounter += theOldText.length;
 							//console.log("wcounter: " + wcounter);
 										 for (index = 0; index < theOldText.length; index++) {
 												  var tempText = theOldText[index];
-												  theNewText[index] = '<div id="sub' + i + 'in' + index + '" class="noChange">' + tempText + '</div>';
+												  if (tempText.indexOf("<b") >= 0){
+												  	tempText = $(tempText).contents().unwrap().text();		
+													  //console.log(tempText);		
+													  theNewText[index] = '<div id="sub' + i + 'in' + index + '" class="experimental">' + tempText + '</div>';  		
+												   	  alteredClasses[p] = "experimental";		
+												   }		
+												   else {		
+													  theNewText[index] = '<div id="sub' + i + 'in' + index + '" class="noChange">' + tempText + '</div>';  		
+												   	  alteredClasses[p] = "noChange";		
+												   }		
+		
 												  thePosWordArray[p] = theNewText[index];
+												  eyeTrackerWords[p] = tempText;
 												  //console.log("This is it");
 												  
 												  //Store the unique indices in an array
@@ -5059,35 +5091,60 @@ if (typeof jQuery != 'undefined') {
 									track.entries.text[i] = theNewText.join(" ");	
 									//console.log(track.entries.text[i]);
 						}
-								
+						var topInt;										
+						var widthInt;		
+						var newx;		
+						var newy;			
 						// Set the line before the timecode as a class so the cue can be targeted if needed
 						t.captionsText.html(track.entries.text[i]).attr('class', 'mejs-captions-text ' + (track.entries.times[i].identifier || ''));
 						t.captions.show().height(0);
 						for (x = 0; x < thePosIndexArray.length; x++){
-							counter++;
+							counterf++;
+							countert = counterf-lineLength;		
+							console.log(thePosIndexArray[x]);
 							if (!startTime) {
 									  startTime = today.getTime();
 									  //console.log("Starttime: " + startTime);
 							}
-							theFullArray[counter] = {
+							// Transforming into eyetribe coordinates	
+							topInt = parseInt($(thePosIndexArray[x]).offset().top) + sidebarDiff;		
+							widthInt = parseInt($(thePosIndexArray[x]).offset().left);		
+							newx = widthInt + diffLeft;		
+							newy = topInt + diffTop;		
+							theFullArray[counterf] = {
 											  "subnum":i,
-											  "word": thePosWordArray[x],
+											  "wordAltered": thePosWordArray[x],
 											  "wordid": thePosIndexArray[x],
+											  "wordUnaltered": eyeTrackerWords[x],		
+											  "alteredClass": alteredClasses[x],		
+											  "wordshownat": track.entries.times[i].start,
 											  "starttime": startTime,
-											  "stoptime": startTime+duration,
+											  "stoptime": stopTime,
 											  "top": $(thePosIndexArray[x]).offset().top,
-											  "left": $(thePosIndexArray[x]).offset().left
+											  "left": $(thePosIndexArray[x]).offset().left,
+											  "eyeTop": newy,		
+											  "eyeLeft": newx,		
+											  "wordWidth": $(thePosIndexArray[x]).width() + 10,		
+											  "wordHeight": $(thePosIndexArray[x]).height() + 6
 							};
 							
 							//console.log("again "+ theFullArray[counter].wordid);
-							doneFor[counter] = {
+							doneFor[counterf] = {
 					  					"id": i,
 										"done": 0
 				 			};
 							//console.log(doneFor[counter].done);
 							//console.log("Counter: "+counter);
 						}
-						
+						console.log("Its visible");								
+						stopTime = today.getTime();		
+						console.log(stopTime);		
+						for (boo=0; boo<=lineLength; boo++){		
+							theFullArray[counterf].stoptime = stopTime;		
+							console.log(theFullArray[counterf].stoptime);		
+							//countert++;		
+						}		
+								
 						return; // exit out if one is visible;
 					}
 				}
@@ -5096,8 +5153,8 @@ if (typeof jQuery != 'undefined') {
 				t.captions.hide();
 			}
 			
-			if (counter == wcounter && doneFor[counter].done != 1) {
-				 console.log("times1 "+doneFor[counter].done);
+			if (counterf == wcounter && doneFor[counterf].done != 1) {
+				 //console.log("times1 "+doneFor[counter].done);
 				  var link = document.createElement("a"); 
 				  var done = 0;
 				  theFullArray.forEach(function(item, index, array) {
@@ -5105,7 +5162,7 @@ if (typeof jQuery != 'undefined') {
 					  if (!csvData[index]){
 						  //console.log(index);
 						  //console.log("times2");
-						  csvData.push('"' + item.subnum + '","' + item.word + '","' + item.wordid + '","' + item.starttime + '","' + item.stoptime + '","' + item.top + '","' + item.left + '"');
+						  csvData.push('"' + item.subnum + '","' + item.wordAltered + '","' + item.wordid + '","' + item.wordUnaltered + '","' + item.alteredClass + '","' + item.wordshownat + '","' + item.starttime + '","' + item.stoptime + '","' + item.top + '","' + item.left + '","' + item.eyeTop + '","' + item.eyeLeft + '","' + item.wordWidth + '","' + item.wordHeight + '"');
 				  		  //console.log(csvData[index]);
 						  //console.log(index + ","+item.wordid+","+ item.starttime + '","' + item.stoptime);
 					  }
