@@ -519,8 +519,7 @@ Mimics the <video/audio> element by calling Flash's External Interface or Silver
 mejs.PluginMediaElement = function (pluginid, pluginType, mediaUrl) {
 	this.id = pluginid;
 	this.pluginType = pluginType;
-	//this.src = mediaUrl;
-	this.src = "file:///C:\Users\Alaa Khader\Downloads\pokerface-master\pokerface-master\Media\Would_You_Rather_John_Oliver.mp4"
+	this.src = mediaUrl;
 	this.events = {};
 	this.attributes = {};
 };
@@ -938,8 +937,7 @@ mejs.HtmlMediaElementShim = {
 			htmlMediaElement = (typeof(el) == 'string') ? document.getElementById(el) : el,
 			tagName = htmlMediaElement.tagName.toLowerCase(),
 			isMediaTag = (tagName === 'audio' || tagName === 'video'),
-			src = "file:///C:\Users\Alaa Khader\Downloads\pokerface-master\pokerface-master\Media\Would_You_Rather_John_Oliver.mp4",
-			//src = (isMediaTag) ? htmlMediaElement.getAttribute('src') : htmlMediaElement.getAttribute('href'),
+		        src = (isMediaTag) ? htmlMediaElement.getAttribute('src') : htmlMediaElement.getAttribute('href'),
 			poster = htmlMediaElement.getAttribute('poster'),
 			autoplay =  htmlMediaElement.getAttribute('autoplay'),
 			preload =  htmlMediaElement.getAttribute('preload'),
