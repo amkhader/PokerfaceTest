@@ -520,7 +520,7 @@ mejs.PluginMediaElement = function (pluginid, pluginType, mediaUrl) {
 	this.id = pluginid;
 	this.pluginType = pluginType;
 	//this.src = mediaUrl;
-	this.src = "file:///C:\Users\Alaa Khader\Downloads\pokerface-master\pokerface-master\Media\150EuroTEDxFirenze.mp4"
+	this.src = "file:///C:\Users\Alaa Khader\Downloads\pokerface-master\pokerface-master\Media\Would_You_Rather_John_Oliver.mp4"
 	this.events = {};
 	this.attributes = {};
 };
