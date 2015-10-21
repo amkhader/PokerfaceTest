@@ -80,6 +80,7 @@ def parseSub(subfile):
 
 
 ## returns time colisions - find when eye timestamps match subtitle timestamps
+## return type: list of dictionaries
 def timeCol(eyefile, subfile):
 
         subline = [] #list of all words and their data
@@ -147,26 +148,54 @@ def timeCol(eyefile, subfile):
 ##                        f.write("%s, %d,%.1f,%s\n"% (gaze[i][0],gaze[i][1],gaze[i][2],gaze[i][3]))
 ##        f.close()
 ##        return gaze
-               
+
+
+
+#Takes time and space collisions and smooths them with a threshold
+#returns a list of tuples (word, duration)
+#duration is milliseconds
+def smooth(colls, threshold):
+        result = []
+        counter = 0 #counts number of a certain word seen so far
+        firstSeen = colls[0]
+        firstWord = firstSeen.get('word')
+        next = ""
+        for i in range (len(colls)):
+                next = colls[i].get('word')
+                
+                if (next == firstWord):
+                        counter+=1
+                else:
+                        if (counter >= threshold):
+                                lastSeen = colls[i-1]
+                                duration = lastSeen.get('timestamp') - firstSeen.get('timestamp')
+                                result.append((firstWord, duration))
+                                counter = 1
+                                firstSeen = colls[i]
+                                firstWord = firstSeen.get('word')
+                        else: #don't meet threshold (shouldn't be included)
+                                counter = 1
+                                firstSeen = colls[i]
+                                firstWord = firstSeen.get('word')
+        #adding last word to list
+        word = colls[(len(colls))-1].get('word')
+        duration = colls[(len(colls))-1].get('timestamp') - colls[(len(colls))-counter].get('timestamp')
+        result.append((word, duration))
+        return result
+
 
 #Sample transform function, build your own here
 def transformCoordinates(x,delta=0,factor=1):
 	newx = (x*factor)+delta
 	return newx
 
-def detectWords(eyedata,subdata):
 
-	words=[]
-
-	# Your collision detection algorithm goes here
-
-	return words 
 
 
 
 def test():
 	main("Demo2Eyenew.csv","Ferda-Video2.csv")
-	timeCol("Demo2Eyenew.csv","Ferda-Video2.csv")
+	smooth(timeCol("Demo2Eyenew.csv","Ferda-Video2.csv"), 2)
 
 def main(eyefile,subfile):
    print("Going to EYE")
@@ -184,7 +213,7 @@ def main(eyefile,subfile):
 if __name__ == '__main__':
 
         #print "test"
-        print timeCol("Alaa_Test1.csv", "Alaa_Test1")
+        print smooth(timeCol("Alaa_Test1.csv", "Alaa_Test1"),2)
 
 ##	if (len(sys.argv)!=3): # Check that we have two arguments
 ##		test()
