@@ -32,6 +32,11 @@ var wcounter = 0;
 var vidStart = 0;
 var tday = new Date();
 var csvData = new Array();
+
+//file created when push confused button
+var confusedCsvData = new Array();
+var confusedButton = document.getElementById("confusion");
+
 csvData.push('"SubNum","WordAltered","WordId","WordUnaltered","AlteredClass","WordShownAt","Starttime","Stoptime","Top","Left","EyeTop","EyeLeft","WordWidth","WordHeight"');
 
 // version number
