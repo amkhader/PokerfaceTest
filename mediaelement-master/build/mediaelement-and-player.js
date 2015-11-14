@@ -766,10 +766,7 @@ mejs.PluginMediaElement.prototype = {
 		}
 	},
 	// end: fake events
-	
-	confusedButton.addEventListener("click", function (){
-	confusedCsvData.push(new Date().getTime());
-}),
+
 	
 	// fake DOM attribute methods
 	hasAttribute: function(name){
