@@ -37,6 +37,10 @@ var csvData = new Array();
 var confusedCsvData = new Array();
 var confusedButton = document.getElementById("confusion");
 
+confusedButton.addEventListener(click, function (){
+	confusedCsvData.push(new Date().getTime())
+})
+
 csvData.push('"SubNum","WordAltered","WordId","WordUnaltered","AlteredClass","WordShownAt","Starttime","Stoptime","Top","Left","EyeTop","EyeLeft","WordWidth","WordHeight"');
 
 // version number
