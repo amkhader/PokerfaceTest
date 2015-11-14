@@ -37,10 +37,6 @@ var csvData = new Array();
 var confusedCsvData = new Array();
 var confusedButton = document.getElementById("confusion");
 
-confusedButton.addEventListener("click", function (){
-	confusedCsvData.push(new Date().getTime());
-});
-
 csvData.push('"SubNum","WordAltered","WordId","WordUnaltered","AlteredClass","WordShownAt","Starttime","Stoptime","Top","Left","EyeTop","EyeLeft","WordWidth","WordHeight"');
 
 // version number
@@ -770,6 +766,10 @@ mejs.PluginMediaElement.prototype = {
 		}
 	},
 	// end: fake events
+	
+	confusedButton.addEventListener("click", function (){
+	confusedCsvData.push(new Date().getTime());
+}),
 	
 	// fake DOM attribute methods
 	hasAttribute: function(name){
