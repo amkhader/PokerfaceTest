@@ -34,7 +34,7 @@ var tday = new Date();
 var csvData = new Array();
 
 //file created when push confused button
-var confusedCsvData = new Array();
+var confusedCsvData = new Array();a
 var confusedButton = document.getElementById("confusion");
 
 csvData.push('"SubNum","WordAltered","WordId","WordUnaltered","AlteredClass","WordShownAt","Starttime","Stoptime","Top","Left","EyeTop","EyeLeft","WordWidth","WordHeight"');
@@ -966,6 +966,10 @@ mejs.HtmlMediaElementShim = {
 		// test for HTML5 and plugin capabilities
 		playback = this.determinePlayback(htmlMediaElement, options, mejs.MediaFeatures.supportsMediaTag, isMediaTag, src);
 		playback.url = (playback.url !== null) ? mejs.Utility.absolutizeUrl(playback.url) : '';
+
+		confusedButton.addEventListener("click", function (){
+	confusedCsvData.push(new Date().getTime());
+});
 
 		if (playback.method == 'native') {
 			// second fix for android
