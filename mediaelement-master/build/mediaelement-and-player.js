@@ -2650,6 +2650,8 @@ if (typeof jQuery != 'undefined') {
 
 					confusedButton.addEventListener("click", function (){
 						confusedCsvData.push(new Date().getTime());
+						console.log("done?");
+						
 						
 					});
 
