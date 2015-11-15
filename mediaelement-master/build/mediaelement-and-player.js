@@ -967,10 +967,7 @@ mejs.HtmlMediaElementShim = {
 		playback = this.determinePlayback(htmlMediaElement, options, mejs.MediaFeatures.supportsMediaTag, isMediaTag, src);
 		playback.url = (playback.url !== null) ? mejs.Utility.absolutizeUrl(playback.url) : '';
 
-		confusedButton.addEventListener("click", function (){
-	confusedCsvData.push(new Date().getTime());
-});
-
+	
 		if (playback.method == 'native') {
 			// second fix for android
 			if (mejs.MediaFeatures.isBustedAndroid) {
@@ -2650,6 +2647,11 @@ if (typeof jQuery != 'undefined') {
 					t.hasFocus = true;
 				},false);
 
+
+					confusedButton.addEventListener("click", function (){
+						confusedCsvData.push(new Date().getTime());
+						
+					});
 
 				// ended for all
 				t.media.addEventListener('ended', function (e) {
