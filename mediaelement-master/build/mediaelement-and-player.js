@@ -35,6 +35,13 @@ var csvData = new Array();
 
 //file created when push confused button
 var confusedCsvData = new Array();
+
+<!-- Video Controls -->
+  <div id="video-controls">
+    <button type="button" id="confusion">Confusion</button>
+  </div>
+</div>
+
 var confusedButton = document.getElementById("confusion");
 
 csvData.push('"SubNum","WordAltered","WordId","WordUnaltered","AlteredClass","WordShownAt","Starttime","Stoptime","Top","Left","EyeTop","EyeLeft","WordWidth","WordHeight"');
