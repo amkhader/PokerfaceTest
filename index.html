@@ -42,7 +42,7 @@
 
 
 <body class="container">
-<input type="file" accept="video/*"/>
+
 <video id="player1" class="mejs-player" data-mejsoptions='{"alwaysShowControls": true}' controls="controls">
 
 	<!-- Change the video by changing the value of src -->
@@ -51,6 +51,12 @@
 	<track src="Media/150EuroTEDxFirenze-shorter.srt" label="English captions" kind="subtitles" srclang="en" default>
 	<p>Your browser leaves much to be desired.</p>			
 </video>	 
+
+<!-- Video Controls -->
+  <div id="video-controls">
+    <button type="button" id="confusion"> Confusion</button>
+  </div>
+</div>
 
 <script>
 $(document).ready(function(){

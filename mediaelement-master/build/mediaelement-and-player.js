@@ -32,6 +32,11 @@ var wcounter = 0;
 var vidStart = 0;
 var tday = new Date();
 var csvData = new Array();
+
+//file created when push confused button
+var confusedCsvData = new Array();
+
+
 csvData.push('"SubNum","WordAltered","WordId","WordUnaltered","AlteredClass","WordShownAt","Starttime","Stoptime","Top","Left","EyeTop","EyeLeft","WordWidth","WordHeight"');
 
 // version number
@@ -761,6 +766,7 @@ mejs.PluginMediaElement.prototype = {
 		}
 	},
 	// end: fake events
+
 	
 	// fake DOM attribute methods
 	hasAttribute: function(name){
@@ -961,6 +967,7 @@ mejs.HtmlMediaElementShim = {
 		playback = this.determinePlayback(htmlMediaElement, options, mejs.MediaFeatures.supportsMediaTag, isMediaTag, src);
 		playback.url = (playback.url !== null) ? mejs.Utility.absolutizeUrl(playback.url) : '';
 
+	
 		if (playback.method == 'native') {
 			// second fix for android
 			if (mejs.MediaFeatures.isBustedAndroid) {
@@ -2641,6 +2648,11 @@ if (typeof jQuery != 'undefined') {
 				},false);
 
 
+				
+						
+						
+				
+
 				// ended for all
 				t.media.addEventListener('ended', function (e) {
 					if(t.options.autoRewind) {
@@ -3350,7 +3362,12 @@ if (typeof jQuery != 'undefined') {
 			
 			//var subPos = $('#player1').data('mediaelementplayer').findTrackIndices();
 //			console.log(subPos);
-			
+			var confusedButton = document.getElementById("confusion");
+
+			confusedButton.addEventListener("click", function (){
+			confusedCsvData.push(new Date().getTime());
+			console.log("helooo\n");
+			});
 		});
 	}
 
@@ -3366,6 +3383,58 @@ if (typeof jQuery != 'undefined') {
 		pauseText: mejs.i18n.t('Pause')
 	});
 
+
+
+	// CONFUSION BUTTON
+	$.extend(MediaElementPlayer.prototype, {
+		buildconfusion: function(player, controls, layers, media) {
+			var 
+				t = this,
+				op = t.options,
+				confused = 
+				$('<div class="mejs-button mejs-confusion-button mejs-confusion" >' +
+					'<button type="button" aria-controls="' + t.id + '" title="' + op.confusedText + '" aria-label="' + op.confusedText + '"></button>' +
+				'</div>')
+				.appendTo(controls)
+				.click(function(e) {
+					e.preventDefault();
+				
+					confusedCsvData.push(new Date().getTime());
+					console.log("hi");
+					
+					return false;
+				}),
+				confused_btn = confused.find('button');
+
+
+			function toggleConfusion(which) {
+				if ('confused' === which) {
+					confused.removeClass('mejs-confusion');
+				
+				} else {
+					confused.addClass('mejs-confusion');
+					play_btn.attr({
+						'title': op.confusedText,
+						'aria-label': op.confusedText
+					});
+				}
+			};
+			toggleConfusion('pse');
+
+
+			media.addEventListener('confused',function() {
+				toggleCoonfusion('confused');
+			}, false);
+			
+		}
+	});
+	
+})(mejs.$);
+
+
+
+
+(function($) {
 	// PLAY/pause BUTTON
 	$.extend(MediaElementPlayer.prototype, {
 		buildplaypause: function(player, controls, layers, media) {
@@ -5166,6 +5235,15 @@ if (typeof jQuery != 'undefined') {
 				  console.log("download this link: " + encodedUri);
 				  link.setAttribute("href", encodedUri); 
 				  link.setAttribute("download", "my_data.csv");  
+				  
+				  
+				  //same for confusion data
+				  var csvConContent = "data:text/csv;charset=utf-8,"
+				  csvConContent += confusedCsvData.join("\n"); 
+				  var encodedUri = encodeURI(csvConContent);  
+				  console.log("download this confuion link: " + encodedUri);
+				  link.setAttribute("href", encodedUri); 
+				  link.setAttribute("download", "my_data.csv");
 				  //link.click();
 				  doneFor = {
 					  	"id": i,
