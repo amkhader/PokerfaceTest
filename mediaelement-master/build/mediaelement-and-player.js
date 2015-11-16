@@ -3492,7 +3492,7 @@ if (typeof jQuery != 'undefined') {
 			media.addEventListener('paused',function() {
 				togglePlayPause('pse');
 			}, false);
-		}
+	
 	});
 	
 })(mejs.$);
