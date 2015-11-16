@@ -3383,6 +3383,59 @@ if (typeof jQuery != 'undefined') {
 		pauseText: mejs.i18n.t('Pause')
 	});
 
+
+
+	// CONFUSION BUTTON
+	$.extend(MediaElementPlayer.prototype, {
+		buildconfusion: function(player, controls, layers, media) {
+			var 
+				t = this,
+				op = t.options,
+				confused = 
+				$('<div class="mejs-button mejs-confusion-button mejs-confusion" >' +
+					'<button type="button" aria-controls="' + t.id + '" title="' + op.confusedText + '" aria-label="' + op.confusedText + '"></button>' +
+				'</div>')
+				.appendTo(controls)
+				.click(function(e) {
+					e.preventDefault();
+				
+					confusedCsvData.push(new Date().getTime());
+					console.log("hi");
+					
+					return false;
+				}),
+				confused_btn = confused.find('button');
+
+
+			function toggleConfusion(which) {
+				if ('confused' === which) {
+					confused.removeClass('mejs-confusion');
+					
+					});
+				} else {
+					confused.addClass('mejs-confusion');
+					play_btn.attr({
+						'title': op.confusedText,
+						'aria-label': op.confusedText
+					});
+				}
+			};
+			toggleConfusion('pse');
+
+
+			media.addEventListener('confused',function() {
+				toggleCoonfusion('confused');
+			}, false);
+			
+		}
+	});
+	
+})(mejs.$);
+
+
+
+
+
 	// PLAY/pause BUTTON
 	$.extend(MediaElementPlayer.prototype, {
 		buildplaypause: function(player, controls, layers, media) {
