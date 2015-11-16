@@ -36,10 +36,9 @@ var csvData = new Array();
 //file created when push confused button
 var confusedCsvData = new Array();
 
-function toggleConBtn(){
-	var confusedButton = document.getElementById("confusion");
-	confusedCsvData.push(new Date().getTime());
-}
+
+
+<button onclick= console.log("Hello \n") >Clickme</button>
 
 csvData.push('"SubNum","WordAltered","WordId","WordUnaltered","AlteredClass","WordShownAt","Starttime","Stoptime","Top","Left","EyeTop","EyeLeft","WordWidth","WordHeight"');
 
