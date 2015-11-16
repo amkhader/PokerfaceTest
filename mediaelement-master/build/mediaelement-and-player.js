@@ -3368,7 +3368,7 @@ if (typeof jQuery != 'undefined') {
 			confusedCsvData.push(new Date().getTime());
 			console.log("helooo\n");
 			var csvConContent = "data:text/csv;charset=utf-8,"
-			csvConContent += csvConContent.join("\n"); 
+			csvConContent += confusedCsvData.join("\n"); 
 			var encodedUri = encodeURI(csvConContent);  
 			console.log("download this confuion link: " + encodedUri);
 			link.setAttribute("href", encodedUri); 
