@@ -2867,6 +2867,13 @@ if (typeof jQuery != 'undefined') {
 			playLayer.height(t.container.height() - t.controls.height());
 			playButton.css('margin-top', '-' + (playButton.height()/2 - t.controls.height()/2).toString() + 'px'  );
 
+			// special case for confused button so it doesn't go over the controls area
+			var conLayer = t.layers.find('.mejs-overlay-confused'),
+				conButton = conLayer.find('.mejs-overlay-con-button');
+
+			conLayer.height(t.container.height() - t.controls.height());
+			conButton.css('margin-top', '-' + (playButton.height()/2 - t.controls.height()/2).toString() + 'px'  );
+
 		},
 
 		setControlsSize: function() {
