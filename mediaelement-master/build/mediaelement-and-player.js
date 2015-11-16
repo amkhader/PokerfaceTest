@@ -2651,7 +2651,7 @@ if (typeof jQuery != 'undefined') {
 				
 						
 						
-					});
+				
 
 				// ended for all
 				t.media.addEventListener('ended', function (e) {
