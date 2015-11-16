@@ -3006,6 +3006,15 @@ if (typeof jQuery != 'undefined') {
 						}
 					}
 				});
+				
+			redConfused =
+				$('<div class="mejs-overlay mejs-layer mejs-overlay-confused">'+
+					'<div class="mejs-overlay-con-button"></div>'+
+				'</div>')
+				.appendTo(layers)
+				.bind('click', function() {  
+					confusedCsvData.push(new Date().getTime());	
+				});
 
 			/*
 			if (mejs.MediaFeatures.isiOS || mejs.MediaFeatures.isAndroid) {
