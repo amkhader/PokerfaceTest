@@ -3434,7 +3434,7 @@ if (typeof jQuery != 'undefined') {
 
 
 
-
+(function($) {
 	// PLAY/pause BUTTON
 	$.extend(MediaElementPlayer.prototype, {
 		buildplaypause: function(player, controls, layers, media) {
@@ -3492,7 +3492,7 @@ if (typeof jQuery != 'undefined') {
 			media.addEventListener('paused',function() {
 				togglePlayPause('pse');
 			}, false);
-	
+		}
 	});
 	
 })(mejs.$);
