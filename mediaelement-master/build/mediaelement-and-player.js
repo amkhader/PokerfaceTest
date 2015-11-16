@@ -2648,9 +2648,7 @@ if (typeof jQuery != 'undefined') {
 				},false);
 
 
-					confusedButton.addEventListener("click", function (){
-						confusedCsvData.push(new Date().getTime());
-						console.log("done?");
+				
 						
 						
 					});
