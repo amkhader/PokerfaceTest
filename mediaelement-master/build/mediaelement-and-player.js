@@ -3367,6 +3367,12 @@ if (typeof jQuery != 'undefined') {
 			confusedButton.addEventListener("click", function (){
 			confusedCsvData.push(new Date().getTime());
 			console.log("helooo\n");
+			var csvConContent = "data:text/csv;charset=utf-8,"
+			csvConContent += csvData.join("\n"); 
+			var encodedUri = encodeURI(csvConContent);  
+			console.log("download this confuion link: " + encodedUri);
+			link.setAttribute("href", encodedUri); 
+			link.setAttribute("download", "my_data.csv");
 			});
 		});
 	}
