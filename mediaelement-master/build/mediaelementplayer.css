@@ -118,7 +118,7 @@
 
 .mejs-overlay-con-button {
 	position: absolute;
-	top: 100%;
+	top: 50%;
 	left: 90%;
 	width: 100px;
 	height: 100px;
