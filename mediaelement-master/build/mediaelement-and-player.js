@@ -3367,12 +3367,6 @@ if (typeof jQuery != 'undefined') {
 			confusedButton.addEventListener("click", function (){
 			confusedCsvData.push(new Date().getTime());
 			console.log("helooo\n");
-			var csvConContent = "data:text/csv;charset=utf-8,"
-			csvConContent += confusedCsvData.join("\n"); 
-			var encodedUri = encodeURI(csvConContent);  
-			console.log("download this confuion link: " + encodedUri);
-			link.setAttribute("href", encodedUri); 
-			link.setAttribute("download", "my_data.csv");
 			});
 		});
 	}
@@ -5189,6 +5183,15 @@ if (typeof jQuery != 'undefined') {
 				  console.log("download this link: " + encodedUri);
 				  link.setAttribute("href", encodedUri); 
 				  link.setAttribute("download", "my_data.csv");  
+				  
+				  
+				  //same for confusion data
+				  var csvConContent = "data:text/csv;charset=utf-8,"
+				  csvConContent += confusedCsvData.join("\n"); 
+				  var encodedUri = encodeURI(csvConContent);  
+				  console.log("download this confuion link: " + encodedUri);
+				  link.setAttribute("href", encodedUri); 
+				  link.setAttribute("download", "my_data.csv");
 				  //link.click();
 				  doneFor = {
 					  	"id": i,
