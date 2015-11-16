@@ -36,12 +36,6 @@ var csvData = new Array();
 //file created when push confused button
 var confusedCsvData = new Array();
 
-var confusedButton = document.getElementById("confusion");
-
-	confusedButton.addEventListener("click", function (){
-	confusedCsvData.push(new Date().getTime());
-	console.log("helooo\n");
-});
 
 csvData.push('"SubNum","WordAltered","WordId","WordUnaltered","AlteredClass","WordShownAt","Starttime","Stoptime","Top","Left","EyeTop","EyeLeft","WordWidth","WordHeight"');
 
@@ -3370,7 +3364,12 @@ if (typeof jQuery != 'undefined') {
 			
 			//var subPos = $('#player1').data('mediaelementplayer').findTrackIndices();
 //			console.log(subPos);
-			
+			var confusedButton = document.getElementById("confusion");
+
+			confusedButton.addEventListener("click", function (){
+			confusedCsvData.push(new Date().getTime());
+			console.log("helooo\n");
+			});
 		});
 	}
 
