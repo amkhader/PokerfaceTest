@@ -3410,8 +3410,7 @@ if (typeof jQuery != 'undefined') {
 			function toggleConfusion(which) {
 				if ('confused' === which) {
 					confused.removeClass('mejs-confusion');
-					
-					});
+				
 				} else {
 					confused.addClass('mejs-confusion');
 					play_btn.attr({
