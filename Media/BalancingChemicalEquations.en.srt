@@ -1,0 +1,496 @@
+1
+00:00:00,375 --> 00:00:02,516
+- Balancing chemical
+equations is one of those
+
+2
+00:00:02,516 --> 00:00:07,086
+concepts in chemistry that
+often confuses people.
+
+3
+00:00:07,086 --> 00:00:11,623
+But I think we'll see that
+if we work through this
+
+4
+00:00:11,624 --> 00:00:13,673
+carefully and methodically,
+and we also appreciate
+
+5
+00:00:13,673 --> 00:00:15,797
+the art of balancing chemical equations,
+
+6
+00:00:15,797 --> 00:00:18,120
+that it's actually not too bad.
+
+7
+00:00:18,120 --> 00:00:20,722
+So first of all, what
+is a chemical equation?
+
+8
+00:00:20,722 --> 00:00:22,670
+Well this is a chemical
+equation right over here.
+
+9
+00:00:22,670 --> 00:00:24,776
+It's describing a reaction.
+
+10
+00:00:24,775 --> 00:00:28,788
+So if I take an atom of
+aluminum and I add it
+
+11
+00:00:28,788 --> 00:00:32,070
+to a dioxygen molecule, so a molecule that
+
+12
+00:00:32,070 --> 00:00:36,457
+has two oxygens with it, under
+the appropriate conditions
+
+13
+00:00:36,457 --> 00:00:40,054
+they will react to form aluminum oxide.
+
+14
+00:00:40,054 --> 00:00:43,153
+And the aluminum oxide molecule has
+
+15
+00:00:43,152 --> 00:00:47,064
+two aluminum atoms and three oxygen atoms.
+
+16
+00:00:47,064 --> 00:00:48,600
+And so you might say, "Okay, well what's
+
+17
+00:00:48,600 --> 00:00:49,960
+"the balancing business all about?
+
+18
+00:00:49,960 --> 00:00:51,496
+"I have a chemical reaction.
+
+19
+00:00:51,496 --> 00:00:53,059
+"What do I have to balance?"
+
+20
+00:00:53,058 --> 00:00:55,341
+Well if you look carefully,
+you might notice that
+
+21
+00:00:55,341 --> 00:01:00,024
+you don't have the same number
+of each atom on both sides.
+
+22
+00:01:00,024 --> 00:01:02,341
+For example, right over
+here on the left-hand side,
+
+23
+00:01:02,341 --> 00:01:04,126
+how many aluminums do we have?
+
+24
+00:01:04,126 --> 00:01:06,901
+Well on the left-hand
+side, we have one aluminum.
+
+25
+00:01:06,900 --> 00:01:09,150
+How many do we have on
+the right-hand side?
+
+26
+00:01:09,150 --> 00:01:12,302
+Well on the right-hand
+side, we have two aluminums.
+
+27
+00:01:12,302 --> 00:01:14,984
+And so aluminum just can't
+appear out of thin air
+
+28
+00:01:14,984 --> 00:01:17,311
+by virtue of some magical reaction.
+
+29
+00:01:17,311 --> 00:01:20,075
+You have to have the same amount
+of aluminums on both sides,
+
+30
+00:01:20,075 --> 00:01:22,498
+and the same thing is
+true for the oxygens.
+
+31
+00:01:22,498 --> 00:01:26,399
+Over here on the left-hand
+side, we have two oxygens.
+
+32
+00:01:26,400 --> 00:01:31,138
+They form one dioxygen molecule
+that has two oxygen atoms.
+
+33
+00:01:31,138 --> 00:01:33,779
+And then over here in the
+aluminum oxide molecule,
+
+34
+00:01:33,778 --> 00:01:35,537
+we have three.
+
+35
+00:01:35,537 --> 00:01:38,485
+We have three oxygen atoms.
+
+36
+00:01:38,486 --> 00:01:41,207
+So once again, we can't
+just have miraculously
+
+37
+00:01:41,207 --> 00:01:44,837
+an oxygen atom appear out of nowhere.
+
+38
+00:01:44,837 --> 00:01:47,566
+So we have to balance the number
+of aluminums on both sides,
+
+39
+00:01:47,566 --> 00:01:49,732
+this number and this
+number should be the same,
+
+40
+00:01:49,733 --> 00:01:51,638
+and we have to balance
+the number of oxygens,
+
+41
+00:01:51,638 --> 00:01:55,127
+this number and that
+number should be the same.
+
+42
+00:01:55,126 --> 00:01:56,551
+So how do we do that?
+
+43
+00:01:56,799 --> 00:01:58,855
+Well one thing might be
+to say, "Okay, if I've got
+
+44
+00:01:58,855 --> 00:02:02,237
+"two aluminums here and
+I have one aluminum here,
+
+45
+00:02:02,237 --> 00:02:03,963
+"well why don't I just double the number
+
+46
+00:02:03,963 --> 00:02:06,293
+"of aluminums right over here?"
+
+47
+00:02:06,293 --> 00:02:08,157
+I could just write a two in front of it,
+
+48
+00:02:08,157 --> 00:02:09,747
+so now this has two aluminums,
+
+49
+00:02:09,747 --> 00:02:11,592
+so I no longer have one aluminum here.
+
+50
+00:02:11,592 --> 00:02:14,102
+I now have two aluminums,
+and so it looks like
+
+51
+00:02:14,102 --> 00:02:17,623
+the aluminums are balanced,
+and they are indeed balanced.
+
+52
+00:02:17,623 --> 00:02:20,362
+But still we have an
+issue with the oxygens.
+
+53
+00:02:20,362 --> 00:02:22,079
+Over here I have two oxygens.
+
+54
+00:02:22,079 --> 00:02:24,432
+Over here I have three oxygens.
+
+55
+00:02:24,646 --> 00:02:25,893
+So one thing that you might say is,
+
+56
+00:02:25,893 --> 00:02:27,894
+"Okay, well how do I go from two to three?
+
+57
+00:02:27,894 --> 00:02:30,111
+"I could multiply by 1.5."
+
+58
+00:02:30,111 --> 00:02:34,646
+So I could multiply by 1.5,
+
+59
+00:02:34,646 --> 00:02:37,335
+and if I multiply 1.5 times two,
+
+60
+00:02:37,336 --> 00:02:38,906
+that's going to be three.
+
+61
+00:02:38,906 --> 00:02:42,560
+So now I have three
+oxygen atoms on this side
+
+62
+00:02:42,560 --> 00:02:45,218
+and three oxygen atoms on this side.
+
+63
+00:02:45,218 --> 00:02:47,413
+But the convention is that we don't like
+
+64
+00:02:47,413 --> 00:02:50,105
+writing "1.5 molecules."
+
+65
+00:02:50,105 --> 00:02:52,403
+We don't like having this
+notion of a half molecule,
+
+66
+00:02:52,403 --> 00:02:54,329
+which is kind of this bizarre notion.
+
+67
+00:02:54,329 --> 00:02:56,868
+We want whole number molecules.
+
+68
+00:02:56,868 --> 00:02:58,900
+So what can we do?
+
+69
+00:02:59,622 --> 00:03:01,747
+Well, you can imagine that
+this makes it very similar
+
+70
+00:03:01,747 --> 00:03:04,304
+to what you did in algebra,
+an algebraic equation.
+
+71
+00:03:04,305 --> 00:03:08,343
+We just can multiply both
+sides by the same number
+
+72
+00:03:08,343 --> 00:03:12,478
+that gets rid of having this
+fraction or this decimal here.
+
+73
+00:03:12,479 --> 00:03:14,165
+So if we multiplied both sides
+
+74
+00:03:14,164 --> 00:03:15,991
+by two, we're going to do that.
+
+75
+00:03:15,991 --> 00:03:19,235
+This is going to be a four,
+this is going to be a three,
+
+76
+00:03:19,235 --> 00:03:21,216
+this is going to be a two right over here.
+
+77
+00:03:21,217 --> 00:03:22,249
+So let me do that.
+
+78
+00:03:22,248 --> 00:03:25,138
+Let me multiply both sides by two.
+
+79
+00:03:25,139 --> 00:03:26,737
+So instead of two aluminum atoms,
+
+80
+00:03:26,737 --> 00:03:28,330
+let me have four aluminum...
+
+81
+00:03:28,330 --> 00:03:30,855
+Actually, let me just write
+the chemical equation first
+
+82
+00:03:30,854 --> 00:03:32,346
+in the form that it was before.
+
+83
+00:03:32,346 --> 00:03:36,509
+So I had aluminum plus dioxygen,
+
+84
+00:03:36,709 --> 00:03:40,508
+a molecule of two oxygens,
+yielding in the reaction --
+
+85
+00:03:40,508 --> 00:03:44,314
+these are the reactants,
+this is the product --
+
+86
+00:03:44,314 --> 00:03:49,294
+aluminum, aluminum, aluminum oxide.
+
+87
+00:03:49,728 --> 00:03:51,992
+So what I'm saying here
+is to get rid of this 1.5,
+
+88
+00:03:51,992 --> 00:03:55,030
+to turn it into a whole number,
+let's multiply all of these,
+
+89
+00:03:55,030 --> 00:03:57,810
+all of the number of molecules by two.
+
+90
+00:03:57,810 --> 00:04:01,772
+And here, there's implicitly a one...
+
+91
+00:04:01,772 --> 00:04:03,293
+Let me do this in a different color.
+
+92
+00:04:03,692 --> 00:04:06,379
+There is implicitly a one right over here.
+
+93
+00:04:06,379 --> 00:04:08,394
+So let's multiply all of these by two.
+
+94
+00:04:08,394 --> 00:04:10,680
+So two times two is...
+
+95
+00:04:10,680 --> 00:04:12,622
+Let me do that same color.
+
+96
+00:04:13,021 --> 00:04:16,362
+Two times two is four...
+
+97
+00:04:16,639 --> 00:04:18,500
+That's not the same color.
+
+98
+00:04:18,838 --> 00:04:21,346
+Two times two is four.
+
+99
+00:04:21,346 --> 00:04:25,117
+1.5 times two is three.
+
+100
+00:04:25,117 --> 00:04:27,316
+And then one times two,
+
+101
+00:04:27,315 --> 00:04:29,234
+one times two is two.
+
+102
+00:04:29,235 --> 00:04:31,141
+And now you can verify how many aluminums
+
+103
+00:04:31,141 --> 00:04:32,991
+do we have on each side?
+
+104
+00:04:32,990 --> 00:04:37,050
+Well I have four aluminum
+atoms on the left-hand side,
+
+105
+00:04:37,050 --> 00:04:39,014
+and how many do I have
+on the right-hand side?
+
+106
+00:04:39,014 --> 00:04:40,975
+I have four aluminum atoms.
+
+107
+00:04:40,975 --> 00:04:43,935
+How many oxygens do I have
+on the left-hand side?
+
+108
+00:04:43,935 --> 00:04:48,382
+I have three molecules of dioxygen.
+
+109
+00:04:48,382 --> 00:04:50,622
+Each molecule has two oxygen atoms,
+
+110
+00:04:50,622 --> 00:04:53,656
+so I have six oxygens on the left,
+
+111
+00:04:53,656 --> 00:04:57,218
+and I have two times three oxygens
+
+112
+00:04:57,218 --> 00:04:58,908
+on the right, or I have six oxygens.
+
+113
+00:04:58,908 --> 00:05:02,108
+So my chemical equation is now balanced.
