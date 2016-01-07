@@ -5150,11 +5150,11 @@ if (typeof jQuery != 'undefined') {
 												  if (tempText.indexOf("<b") >= 0){
 												  	tempText = $(tempText).contents().unwrap().text();		
 													  //console.log(tempText);		
-													  theNewText[index] = '<div id="sub' + i + 'in' + index + '" class="experimental">' + tempText + '</div>';  		
+													  theNewText[index] = '<div id="sub' + index + 'in' + i + '" class="experimental">' + tempText + '</div>';  		
 												   	  alteredClasses[p] = "experimental";		
 												   }		
 												   else {		
-													  theNewText[index] = '<div id="sub' + i + 'in' + index + '" class="noChange">' + tempText + '</div>';  		
+													  theNewText[index] = '<div id="sub' + index + 'in' + i + '" class="noChange">' + tempText + '</div>';  		
 												   	  alteredClasses[p] = "noChange";		
 												   }		
 		
