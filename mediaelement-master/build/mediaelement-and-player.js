@@ -37,7 +37,7 @@ var csvData = new Array();
 var confusedCsvData = new Array();
 
 
-csvData.push('"SubNum","WordAltered","WordId","WordUnaltered","AlteredClass","WordShownAt","Starttime","Stoptime","Top","Left","EyeTop","EyeLeft","WordWidth","WordHeight"');
+csvData.push('"SubNum","WordAltered","WordId","WordUnaltered","AlteredClass","WordShownAt","Starttime","Stoptime","Top","Left","EyeTop","EyeLeft","WordWidth","WordHeight", "Jargon"');
 
 // version number
 mejs.version = '2.17.0'; 
@@ -5210,7 +5210,8 @@ if (typeof jQuery != 'undefined') {
 											  "eyeTop": newy,		
 											  "eyeLeft": newx,		
 											  "wordWidth": $(thePosIndexArray[x]).width() + 10,		
-											  "wordHeight": $(thePosIndexArray[x]).height() + 6
+											  "wordHeight": $(thePosIndexArray[x]).height() + 6,
+											  "jargon": false
 							};
 							
 							//console.log("again "+ theFullArray[counter].wordid);
@@ -5239,7 +5240,7 @@ if (typeof jQuery != 'undefined') {
 					  if (!csvData[index]){
 						  //console.log(index);
 						  //console.log("times2");
-						  csvData.push('"' + item.subnum + '","' + item.wordAltered + '","' + item.wordid + '","' + item.wordUnaltered + '","' + item.alteredClass + '","' + item.wordshownat + '","' + item.starttime + '","' + item.stoptime + '","' + item.top + '","' + item.left + '","' + item.eyeTop + '","' + item.eyeLeft + '","' + item.wordWidth + '","' + item.wordHeight + '"');
+						  csvData.push('"' + item.subnum + '","' + item.wordAltered + '","' + item.wordid + '","' + item.wordUnaltered + '","' + item.alteredClass + '","' + item.wordshownat + '","' + item.starttime + '","' + item.stoptime + '","' + item.top + '","' + item.left + '","' + item.eyeTop + '","' + item.eyeLeft + '","' + item.wordWidth + '","' + item.wordHeight + item.jargon + '"');
 				  		  //console.log(csvData[index]);
 						  //console.log(index + ","+item.wordid+","+ item.starttime + '","' + item.stoptime);
 					  }
