@@ -3196,10 +3196,10 @@ if (typeof jQuery != 'undefined') {
 							theOldText = (track.entries.text[i]).split(" ");
 										 for (index = 0; index < theOldText.length; index++) {
 												  var tempText = theOldText[index];
-												  theNewText[index] = '<div id="sub' + i + 'in' + index + '" class="noChange">' + tempText + '</div>';
+												  theNewText[index] = '<div id="sub' + index + 'in' + i + '" class="noChange">' + tempText + '</div>';
 												  
 												  //Store the unique indices in an array
-												  var posIndex = ('sub'+ i + 'in' + index);
+												  var posIndex = ('sub'+ index + 'in' + i);
 												  console.log('before pos: ' + posIndex);
 												  thePosIndexArray[p] = posIndex;
 												  console.log('after pos: ' + thePosIndexArray[p]);
@@ -5163,8 +5163,8 @@ if (typeof jQuery != 'undefined') {
 												  //console.log("This is it");
 												  
 												  //Store the unique indices in an array
-												  var obj =  $('#sub'+ i + 'in' + index);	
-												  var posIndex = ('#sub'+ i + 'in' + index);
+												  var obj =  $('#sub'+ index + 'in' + i);	
+												  var posIndex = ('#sub'+ index + 'in' + i);
 												  //console.log('before pos: ' + posIndex);
 												  thePosIndexArray[p] = posIndex;
 												  //console.log("pindex"+ posIndex);
