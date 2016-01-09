@@ -88,7 +88,7 @@ var socket = net.createConnection(connectionOptions, function() {
     // }
     // console.log('Configuration saved successfully.')
   // });
-  	fs.appendFile('./Alaa_Test1.csv', fixed, function (err) {
+  	fs.appendFile('./Alaa_jargon_1.csv', fixed, function (err) {
     if (err) {
       console.log('There has been an error saving your configuration data.');
       console.log(err.message);
