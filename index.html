@@ -29,13 +29,11 @@
 	  	margin-left:50%;
 	  	margin-right:50%;
 	  }
-
 	.noChange {
  	 	display: inline;
  		padding: 3px 5px;
  		/* background: rgba(20,20,20,.5);*/
 	 }
-
 </style>
 
 </head>
@@ -46,9 +44,9 @@
 <video id="player1" class="mejs-player" data-mejsoptions='{"alwaysShowControls": true}' controls="controls">
 
 	<!-- Change the video by changing the value of src -->
-	<source src= "Media/150EuroTEDxFirenze.mp4" >
+	<source src= "Media/BalancingChemicalEquations.mp4" >
 	<!-- Change the subtitle file by changing the value of src -->
-	<track src="Media/150EuroTEDxFirenze.srt" label="English captions" kind="subtitles" srclang="en" default>
+	<track src="Media/BalancingChemicalEquations.en.srt" label="English captions" kind="subtitles" srclang="en" default>
 	<p>Your browser leaves much to be desired.</p>			
 </video>	 
 
@@ -65,7 +63,6 @@ $(document).ready(function(){
 $('#player1').ready(function(){;
 $('#player1').data('mediaelementplayer').play();
 });
-
 </script>
 
 </body>

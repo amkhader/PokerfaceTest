@@ -37,7 +37,7 @@ var csvData = new Array();
 var confusedCsvData = new Array();
 
 
-csvData.push('"SubNum","WordAltered","WordId","WordUnaltered","AlteredClass","WordShownAt","Starttime","Stoptime","Top","Left","EyeTop","EyeLeft","WordWidth","WordHeight"');
+csvData.push('"SubNum","WordAltered","WordId","WordUnaltered","AlteredClass","WordShownAt","Starttime","Stoptime","Top","Left","EyeTop","EyeLeft","WordWidth","WordHeight", "Jargon"');
 
 // version number
 mejs.version = '2.17.0'; 
@@ -3196,10 +3196,10 @@ if (typeof jQuery != 'undefined') {
 							theOldText = (track.entries.text[i]).split(" ");
 										 for (index = 0; index < theOldText.length; index++) {
 												  var tempText = theOldText[index];
-												  theNewText[index] = '<div id="sub' + i + 'in' + index + '" class="noChange">' + tempText + '</div>';
+												  theNewText[index] = '<div id="sub' + index + 'in' + i + '" class="noChange">' + tempText + '</div>';
 												  
 												  //Store the unique indices in an array
-												  var posIndex = ('sub'+ i + 'in' + index);
+												  var posIndex = ('sub'+ index + 'in' + i);
 												  console.log('before pos: ' + posIndex);
 												  thePosIndexArray[p] = posIndex;
 												  console.log('after pos: ' + thePosIndexArray[p]);
@@ -5150,11 +5150,11 @@ if (typeof jQuery != 'undefined') {
 												  if (tempText.indexOf("<b") >= 0){
 												  	tempText = $(tempText).contents().unwrap().text();		
 													  //console.log(tempText);		
-													  theNewText[index] = '<div id="sub' + i + 'in' + index + '" class="experimental">' + tempText + '</div>';  		
+													  theNewText[index] = '<div id="sub' + index + 'in' + i + '" class="experimental">' + tempText + '</div>';  		
 												   	  alteredClasses[p] = "experimental";		
 												   }		
 												   else {		
-													  theNewText[index] = '<div id="sub' + i + 'in' + index + '" class="noChange">' + tempText + '</div>';  		
+													  theNewText[index] = '<div id="sub' + index + 'in' + i + '" class="noChange">' + tempText + '</div>';  		
 												   	  alteredClasses[p] = "noChange";		
 												   }		
 		
@@ -5163,8 +5163,8 @@ if (typeof jQuery != 'undefined') {
 												  //console.log("This is it");
 												  
 												  //Store the unique indices in an array
-												  var obj =  $('#sub'+ i + 'in' + index);	
-												  var posIndex = ('#sub'+ i + 'in' + index);
+												  var obj =  $('#sub'+ index + 'in' + i);	
+												  var posIndex = ('#sub'+ index + 'in' + i);
 												  //console.log('before pos: ' + posIndex);
 												  thePosIndexArray[p] = posIndex;
 												  //console.log("pindex"+ posIndex);
@@ -5210,7 +5210,8 @@ if (typeof jQuery != 'undefined') {
 											  "eyeTop": newy,		
 											  "eyeLeft": newx,		
 											  "wordWidth": $(thePosIndexArray[x]).width() + 10,		
-											  "wordHeight": $(thePosIndexArray[x]).height() + 6
+											  "wordHeight": $(thePosIndexArray[x]).height() + 6,
+											  "jargon": false
 							};
 							
 							//console.log("again "+ theFullArray[counter].wordid);
@@ -5239,7 +5240,7 @@ if (typeof jQuery != 'undefined') {
 					  if (!csvData[index]){
 						  //console.log(index);
 						  //console.log("times2");
-						  csvData.push('"' + item.subnum + '","' + item.wordAltered + '","' + item.wordid + '","' + item.wordUnaltered + '","' + item.alteredClass + '","' + item.wordshownat + '","' + item.starttime + '","' + item.stoptime + '","' + item.top + '","' + item.left + '","' + item.eyeTop + '","' + item.eyeLeft + '","' + item.wordWidth + '","' + item.wordHeight + '"');
+						  csvData.push('"' + item.subnum + '","' + item.wordAltered + '","' + item.wordid + '","' + item.wordUnaltered + '","' + item.alteredClass + '","' + item.wordshownat + '","' + item.starttime + '","' + item.stoptime + '","' + item.top + '","' + item.left + '","' + item.eyeTop + '","' + item.eyeLeft + '","' + item.wordWidth + '","' + item.wordHeight + '","' + item.jargon + '"');
 				  		  //console.log(csvData[index]);
 						  //console.log(index + ","+item.wordid+","+ item.starttime + '","' + item.stoptime);
 					  }
