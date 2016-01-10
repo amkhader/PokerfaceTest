@@ -5195,7 +5195,22 @@ if (typeof jQuery != 'undefined') {
 							topInt = parseInt($(thePosIndexArray[x]).offset().top) + sidebarDiff;		
 							widthInt = parseInt($(thePosIndexArray[x]).offset().left);		
 							newx = widthInt + diffLeft;		
-							newy = topInt + diffTop;		
+							newy = topInt + diffTop;
+							
+							//checking jargon file
+							var fs = require("fs"),
+    							readline = require("readline");
+
+							var reader = readline.createInterface({
+							  input: fs.createReadStream("/feedback/tests/jargon_test_1_4.txt");
+							  terminal: false
+							});
+							
+							reader.on("line", function(line) {
+							  console.log("Line:", line);
+							});
+							
+							
 							theFullArray[counterf] = {
 											  "subnum":i,
 											  "wordAltered": thePosWordArray[x],
