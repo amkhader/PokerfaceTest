@@ -5202,7 +5202,7 @@ if (typeof jQuery != 'undefined') {
     							readline = require("readline");
 
 							var reader = readline.createInterface({
-							  input: fs.createReadStream("/feedback/tests/jargon_test_1_4.txt");
+							  input: fs.createReadStream("/feedback/tests/jargon_test_1_4.txt"),
 							  terminal: false
 							});
 							
