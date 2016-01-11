@@ -5216,18 +5216,6 @@ if (typeof jQuery != 'undefined') {
 							newx = widthInt + diffLeft;		
 							newy = topInt + diffTop;
 							
-							//checking jargon file
-							var fs = require("fs"),
-    							readline = require("readline");
-
-							var reader = readline.createInterface({
-							  input: fs.createReadStream("/feedback/tests/jargon_test_1_4.txt"),
-							  terminal: false
-							});
-							
-							reader.on("line", function(line) {
-							  console.log("Line:", line);
-							});
 							
 							
 							theFullArray[counterf] = {
