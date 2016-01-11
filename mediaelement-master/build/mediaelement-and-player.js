@@ -55,6 +55,8 @@ function readTextFile(file)
     rawFile.send(null);
 }
 
+console.log(readTextFile("/feedback/tests/jargon_test_1_4.txt"));
+
 
 csvData.push('"SubNum","WordAltered","WordId","WordUnaltered","AlteredClass","WordShownAt","Starttime","Stoptime","Top","Left","EyeTop","EyeLeft","WordWidth","WordHeight", "Jargon"');
 
