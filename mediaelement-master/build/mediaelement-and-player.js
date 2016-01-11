@@ -37,25 +37,13 @@ var csvData = new Array();
 var confusedCsvData = new Array();
 
 //jargon file
-function readTextFile(file)
-{
-    var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file, false);
-    rawFile.onreadystatechange = function ()
-    {
-        if(rawFile.readyState === 4)
-        {
-            if(rawFile.status === 200 || rawFile.status == 0)
-            {
-                var allText = rawFile.responseText;
-                alert(allText);
-            }
-        }
-    }
-    rawFile.send(null);
+var fs = require('fs');
+var array = fs.readFileSync('/feedback/tests/jargon_test_1_4.txt').toString().split("\n");
+for(i in array) {
+    console.log(array[i]);
 }
 
-console.log(readTextFile("file:///feedback/tests/jargon_test_1_4.txt"));
+
 
 
 csvData.push('"SubNum","WordAltered","WordId","WordUnaltered","AlteredClass","WordShownAt","Starttime","Stoptime","Top","Left","EyeTop","EyeLeft","WordWidth","WordHeight", "Jargon"');
