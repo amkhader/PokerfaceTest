@@ -36,12 +36,6 @@ var csvData = new Array();
 //file created when push confused button
 var confusedCsvData = new Array();
 
-//jargon file
-var fs = require('fs');
-var array = fs.readFileSync('/feedback/tests/jargon_test_1_4.txt').toString().split("\n");
-for(i in array) {
-    console.log(array[i]);
-}
 
 
 
