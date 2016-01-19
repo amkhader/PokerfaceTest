@@ -1439,10 +1439,9 @@ if (typeof jQuery != 'undefined') {
 
 (function($) {
 
-//	$.extend(mejs.MepDefaults, {
-//		playText: mejs.i18n.t('Play'),
-//		pauseText: mejs.i18n.t('Pause')
-//	});
+	$.extend(mejs.MepDefaults, {
+		confusionText: mejs.i18n.t('Confused')
+	});
 
 	// Confusion BUTTON
 	$.extend(MediaElementPlayer.prototype, {
