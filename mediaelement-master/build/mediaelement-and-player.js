@@ -3025,7 +3025,7 @@ if (typeof jQuery != 'undefined') {
 				.bind('click', function() {  
 					confusedCsvData.push(new Date().getTime());
 					media.pause();
-					window.open('https://www.google.com/');
+					window.open('_blank','height=400, width=400');
 				});
 
 			/*
