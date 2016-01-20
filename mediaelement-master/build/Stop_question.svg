@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+	 id="svg1337" sodipodi:version="0.32" inkscape:version="0.45.1" inkscape:export-ydpi="90.000000" sodipodi:docbase="C:\Documents and Settings\Administrator\Desktop" inkscape:export-xdpi="90.000000" sodipodi:docname="Newstophand.svg" inkscape:export-filename="/home/silsor/graphics/mine/stop_hand.png" inkscape:output_extension="org.inkscape.output.svg.inkscape" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px"
+	 viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<sodipodi:namedview  id="base" inkscape:grid-bbox="false" inkscape:grid-points="false" inkscape:window-height="573" inkscape:pageshadow="2" inkscape:pageopacity="0.0" inkscape:window-width="800" inkscape:window-x="0" inkscape:window-y="0" inkscape:current-layer="svg1337" showgrid="false" inkscape:zoom="0.70710678" pagecolor="#ffffff" inkscape:cx="18.77918" gridspacingy="1px" gridoriginx="0.0000000px" gridspacingx="1px" gridtolerance="50" gridempspacing="8" gridoriginy="0.0000000px" inkscape:cy="37.623444" borderopacity="1.0" bordercolor="#666666">
+	</sodipodi:namedview>
+<path id="path3717" inkscape:flatsided="true" inkscape:rounded="0" inkscape:randomized="0" sodipodi:type="star" sodipodi:cx="32" sodipodi:cy="32" sodipodi:sides="8" sodipodi:r1="32" sodipodi:r2="1" sodipodi:arg1="-1.5707963" sodipodi:arg2="-1.1780972" d="
+	M18.745,0h26.51L64,18.745v26.51L45.255,64h-26.51L0,45.255v-26.51L18.745,0z"/>
+<path id="path3741" inkscape:flatsided="true" inkscape:rounded="0" inkscape:randomized="0" sodipodi:type="star" sodipodi:cx="32" sodipodi:cy="32" sodipodi:sides="8" sodipodi:r1="32" sodipodi:r2="1" sodipodi:arg1="-1.5707963" sodipodi:arg2="-1.1780972" fill="#F46C6C" d="
+	M19.159,1h25.682L63,19.159v25.682L44.841,63H19.159L1,44.841V19.159L19.159,1z"/>
+<radialGradient id="path3747_1_" cx="-869.2847" cy="-993.896" r="32.0003" gradientTransform="matrix(-1.2065 1.324 -1.3191 -1.2021 -2327.9756 -39.9579)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#E20000"/>
+</radialGradient>
+<path id="path3747" inkscape:flatsided="true" inkscape:rounded="0" inkscape:randomized="0" sodipodi:type="star" sodipodi:cx="32" sodipodi:cy="32" sodipodi:sides="8" sodipodi:r1="32" sodipodi:r2="1" sodipodi:arg1="-1.5707963" sodipodi:arg2="-1.1780972" fill="url(#path3747_1_)" d="
+	M20.277,3.875h23.196l16.402,16.402v23.196L43.473,59.875H20.277L3.875,43.473V20.277L20.277,3.875z"/>
+<path id="path3296" inkscape:flatsided="true" inkscape:rounded="0" inkscape:randomized="0" sodipodi:type="star" sodipodi:cx="93.630691" sodipodi:cy="26.787802" sodipodi:sides="8" sodipodi:r1="1.0736646" sodipodi:r2="0.99193671" sodipodi:arg1="-2.677945" sodipodi:arg2="-2.285246" fill="#FF0000" fill-opacity="0" d="
+	M92.67,26.308l0.621-0.539l0.82,0.059l0.537,0.621l-0.061,0.82l-0.617,0.539l-0.82-0.059l-0.539-0.621L92.67,26.308z"/>
+<path id="text2466" sodipodi:nodetypes="cccccccscsccccccccccccccccc" fill="#FFFFFF" stroke="#000000" d="M35.708,38.596h-9.344
+	v-1.285c0-1.436,0.285-2.705,0.854-3.809c0.569-1.119,1.769-2.537,3.598-4.252l1.656-1.522c0.984-0.91,1.701-1.768,2.148-2.573
+	c0.466-0.805,0.698-1.61,0.698-2.416c0-1.225-0.414-2.178-1.242-2.861c-0.827-0.7-1.983-1.05-3.468-1.05
+	c-1.397,0-2.907,0.297-4.529,0.892c-1.622,0.578-3.312,1.444-5.072,2.599v-8.244c2.087-0.734,3.994-1.277,5.719-1.627
+	c1.726-0.351,3.39-0.525,4.995-0.525c4.208,0,7.417,0.876,9.626,2.625c2.209,1.733,3.313,4.271,3.313,7.613
+	c0,1.715-0.336,3.255-1.009,4.621c-0.674,1.348-1.82,2.8-3.443,4.358l-1.654,1.497c-1.174,1.084-1.941,1.961-2.305,2.627
+	c-0.361,0.646-0.542,1.365-0.542,2.152V38.596 M26.95,44.061l8.35-0.104l0.153,7.871c0,0-9.107,0-8.58,0"/>
+<line fill="none" stroke="#000000" x1="26.95" y1="44.061" x2="26.873" y2="51.828"/>
+</svg>
