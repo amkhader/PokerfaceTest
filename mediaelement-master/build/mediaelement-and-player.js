@@ -3023,25 +3023,31 @@ if (typeof jQuery != 'undefined') {
 				'</div>')
 				.appendTo(layers)
 				.bind('click', function() {  
-					confusedCsvData.push(new Date().getTime());
-					media.pause();
-					
-					var myWindow = window.open('', 'MsgWindow','height=400, width=400');
-					myWindow.document.write("<!DOCTYPE html><html><body>");
-					myWindow.document.write("<p>Are you confused?</p>");
-					//jargon button 
-					myWindow.document.write('<p>Are you confused by *jargon*?<p><button onclick="jargonFunction()">YES</button>');
-					myWindow.document.write('<p id="jargonButton"></p>');
-					//translation error button 
-					myWindow.document.write('<p>Are you confused by *MT_error*?<p><button onclick="MTEFunction()">YES</button>');
-					myWindow.document.write('<p id="MTEButton"></p>');
-					
-								
-					myWindow.document.write("<script>function jargonFunction() {document.getElementById('jargonButton').innerHTML = 'This word means...'; }</script>");
-					myWindow.document.write("<script>function MTEFunction() {document.getElementById('MTEButton').innerHTML = 'This may also mean...'; }</script>");
-					//document.getElementById("jargonButton").innerHTML = "Hello World";
-			
-					myWindow.document.write("</body></html>");
+					if (!media.paused){
+						confusedCsvData.push(new Date().getTime());
+						media.pause();
+						
+						var myWindow = window.open('', 'MsgWindow','height=400, width=400');
+						myWindow.document.write("<!DOCTYPE html><html><body>");
+						myWindow.document.write("<p>Are you confused?</p>");
+						//jargon button 
+						myWindow.document.write('<p>Are you confused by *jargon*?<p><button onclick="jargonFunction()">YES</button>');
+						myWindow.document.write('<p id="jargonButton"></p>');
+						//translation error button 
+						myWindow.document.write('<p>Are you confused by *MT_error*?<p><button onclick="MTEFunction()">YES</button>');
+						myWindow.document.write('<p id="MTEButton"></p>');
+						
+									
+						myWindow.document.write("<script>function jargonFunction() {document.getElementById('jargonButton').innerHTML = 'This word means...'; }</script>");
+						myWindow.document.write("<script>function MTEFunction() {document.getElementById('MTEButton').innerHTML = 'This may also mean...'; }</script>");
+						//document.getElementById("jargonButton").innerHTML = "Hello World";
+				
+						myWindow.document.write("</body></html>");
+					}
+					else{
+						media.play();
+					}
+					}
 				});
 
 			/*
