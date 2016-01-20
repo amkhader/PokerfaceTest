@@ -3029,7 +3029,7 @@ if (typeof jQuery != 'undefined') {
 					var myWindow = window.open('', 'MsgWindow','height=400, width=400');
 					myWindow.document.write("<!DOCTYPE html><html><body>");
 					myWindow.document.write("<p>Are you confused?</p>");
-					myWindow.document.write('<p>Are you confused by ___?<p><button onclick="myFunction()">Click me</button>');
+					myWindow.document.write('<p>Are you confused by ___?<p><button onclick="myFunction()">Click me</button><p id="demo"></p>');
 					myWindow.document.write('<script>function myFunction() { document.getElementById("demo").innerHTML = "Hello World";}</script>');
 					myWindow.document.write("</body></html>");
 				});
