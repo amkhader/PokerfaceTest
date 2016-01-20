@@ -3047,7 +3047,6 @@ if (typeof jQuery != 'undefined') {
 					else{
 						media.play();
 					}
-					}
 				});
 
 			/*
