@@ -3028,7 +3028,11 @@ if (typeof jQuery != 'undefined') {
 					
 					var myWindow = window.open('', 'MsgWindow','height=400, width=400');
 					myWindow.document.write("<p>Are you confused?</p>");
-					myWindow.document.write('<div id="video-controls"> <button type="button" id="confusion"> Confusion</button> </div>');
+					myWindow.document.write('<p>Are you confused by ___?<p><div id="video-controls"> <button type="button" onclick ="myFunction()" id="yes"> Confusion</button> </div>');
+					function myFunction(){
+    						document.getElementById("demo").innerHTML = "Hello World";
+					}
+					
 				});
 
 			/*
