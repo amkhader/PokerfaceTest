@@ -37,10 +37,10 @@ var csvData = new Array();
 var confusedCsvData = new Array();
 var JargonData = new Array();
 
-$.getScript("require.js", function(){
+$.getScript("mediaelement-master/build/require.js", function(){
 
    var fs  = require("fs");
-   JargonData = fs.readFileSync(path).toString().split('\n');
+   JargonData = fs.readFileSync("feedback/tests/jargon_test_1_4.txt").toString().split('\n');
 
 });
 
