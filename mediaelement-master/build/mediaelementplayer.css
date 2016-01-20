@@ -66,8 +66,8 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 50%;
-	height: 50%;
+	width: 100%;
+	height: 100%;
 }
 
 .mejs-poster {
@@ -119,12 +119,11 @@
 .mejs-overlay-con-button {
 	position: absolute;
 	top: 10%;
-	left: 90%;
+	left: 100%;
 	width: 100px;
 	height: 100px;
 	margin: -50px 0 0 -50px;
 	background: url(Stop_question.svg) no-repeat;
-	fill: #94d31b; 
 }
 
 .no-svg .mejs-overlay-con-button {
