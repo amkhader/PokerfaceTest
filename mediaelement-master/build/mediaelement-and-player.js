@@ -39,9 +39,9 @@ var JargonData = new Array();
 
 $.getScript("mediaelement-master/build/require.js", function(){
 
-   var fs  = require(["fs"], function(fs));
+   var fs  = require(["fs"], function(fs){
    JargonData = fs.readFileSync("feedback/tests/jargon_test_1_4.txt").toString().split('\n');
-
+   });
 });
 
 console.log(JargonData.toString());
