@@ -3025,7 +3025,10 @@ if (typeof jQuery != 'undefined') {
 				.bind('click', function() {  
 					confusedCsvData.push(new Date().getTime());
 					media.pause();
-					window.open('_blank','height=400, width=400');
+					
+					var myWindow = window.open('Confused?','height=400, width=400', scrollbars=no);
+					myWindow.document.write("<p>Are you confused?</p>");
+					myWindow.document.write('<div id="video-controls"> <button type="button" id="confusion"> Confusion</button> </div>');
 				});
 
 			/*
