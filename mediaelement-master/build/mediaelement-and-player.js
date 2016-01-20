@@ -3031,7 +3031,7 @@ if (typeof jQuery != 'undefined') {
 					function myFunction(){
     						document.getElementById("demo").innerHTML = "Hello World";
 					}
-					myWindow.document.write('<p>Are you confused by ___?<p><div id="video-controls"> <button type="button" onclick ="myFunction()" > Yes </button> </div>');
+					myWindow.document.write('<p>Are you confused by ___?<p><div id="video-controls"> <button type="button" onclick ="myFunction()">Yes</button> </div>');
 					
 					
 				});
