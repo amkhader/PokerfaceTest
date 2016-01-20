@@ -3029,10 +3029,18 @@ if (typeof jQuery != 'undefined') {
 					var myWindow = window.open('', 'MsgWindow','height=400, width=400');
 					myWindow.document.write("<!DOCTYPE html><html><body>");
 					myWindow.document.write("<p>Are you confused?</p>");
-					myWindow.document.write('<p>Are you confused by ___?<p><button onclick="myFunction()">YES</button>');
+					//jargon button 
+					myWindow.document.write('<p>Are you confused by *jargon*?<p><button onclick="jargonFunction()">YES</button>');
 					myWindow.document.write('<p id="jargonButton"></p>');
-					myWindow.document.write("<script>function myFunction() {document.getElementById('jargonButton').innerHTML =var myJargonWindow = window.open('', 'MsgWindow','height=400, width=400'); }</script>");
+					//translation error button 
+					myWindow.document.write('<p>Are you confused by *MT_error*?<p><button onclick="MTEFunction()">YES</button>');
+					myWindow.document.write('<p id="MTEButton"></p>');
+					
+								
+					myWindow.document.write("<script>function jargonFunction() {document.getElementById('jargonButton').innerHTML = 'This word means...'; }</script>");
+					myWindow.document.write("<script>function MTEFunction() {document.getElementById('MTEButton').innerHTML = 'This may also mean...'; }</script>");
 					//document.getElementById("jargonButton").innerHTML = "Hello World";
+			
 					myWindow.document.write("</body></html>");
 				});
 
