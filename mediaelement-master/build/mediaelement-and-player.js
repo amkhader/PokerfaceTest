@@ -3023,7 +3023,8 @@ if (typeof jQuery != 'undefined') {
 				'</div>')
 				.appendTo(layers)
 				.bind('click', function() {  
-					confusedCsvData.push(new Date().getTime());	
+					confusedCsvData.push(new Date().getTime());
+					media.pause();
 				});
 
 			/*
