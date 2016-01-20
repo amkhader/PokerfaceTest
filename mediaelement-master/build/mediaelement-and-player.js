@@ -35,14 +35,16 @@ var csvData = new Array();
 
 //file created when push confused button
 var confusedCsvData = new Array();
+var JargonData = new Array();
 
 $.getScript("require.js", function(){
 
    var fs  = require("fs");
-   var JargonData = fs.readFileSync(path).toString().split('\n');
+   JargonData = fs.readFileSync(path).toString().split('\n');
 
 });
 
+console.log(JargonData.toString());
 
 
 
