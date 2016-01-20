@@ -20,6 +20,18 @@
 	 	width: 100%;
 	  }
 	  
+	  .container>.player-buttons{
+    background: url('http://cdn1.iconfinder.com/data/icons/iconslandplayer/PNG/64x64/CircleBlue/Play1Pressed.png') center center no-repeat;
+    height: 128px;
+    left: 50%;
+    margin: -64px 0 0 -64px;
+    position: absolute;
+    top: 50%;
+    width: 128px;
+    z-index: 1; 
+}
+	  
+	  
 	 #vidHolder { 
 	  	float:left; 
 	  	padding:15px; 
@@ -34,6 +46,7 @@
  		padding: 3px 5px;
  		/* background: rgba(20,20,20,.5);*/
 	 }
+
 </style>
 
 </head>
@@ -47,7 +60,10 @@
 	<source src= "Media/PhasesofMeiosisI.mp4" >
 	<!-- Change the subtitle file by changing the value of src -->
 	<track src="Media/PhasesofMeiosisI.ar.srt" label="Arabic captions" kind="subtitles" srclang="ar" default>
-	<p>Your browser leaves much to be desired.</p>			
+	<p>Your browser leaves much to be desired.</p>	
+	
+	<div class="player-buttons"></div>
+	
 </video>	 
 
 <!-- Video Controls -->

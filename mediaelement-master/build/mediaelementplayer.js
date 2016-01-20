@@ -71,7 +71,7 @@ if (typeof jQuery != 'undefined') {
 		// automatically calculate the width of the progress bar based on the sizes of other elements
 		autosizeProgress : true,
 		// Hide controls when playing and mouse is not over the video
-		alwaysShowControls: false,
+		alwaysShowControls: true,
 		// Display the video control
 		hideVideoControlsOnLoad: false,
 		// Enable click video element to toggle play/pause
@@ -83,7 +83,7 @@ if (typeof jQuery != 'undefined') {
 		// force Android's native controls
 		AndroidUseNativeControls: false,
 		// features to show
-		features: ['playpause','current','progress','duration','tracks','volume','fullscreen'],
+		features: ['playpause','current','progress','duration','tracks','volume','fullscreen', 'confusion'],
 		// only for dynamic
 		isVideo: true,
 
@@ -1432,6 +1432,71 @@ if (typeof jQuery != 'undefined') {
 			media.addEventListener('paused',function() {
 				togglePlayPause('pse');
 			}, false);
+		}
+	});
+	
+})(mejs.$);
+
+(function($) {
+
+	$.extend(mejs.MepDefaults, {
+		confusionText: mejs.i18n.t('Confused')
+	});
+
+	// Confusion BUTTON
+	$.extend(MediaElementPlayer.prototype, {
+		buildconfusion: function(player, controls, layers, media) {
+			var 
+				t = this,
+				op = t.options,
+				confusion = 
+				$('<div class="mejs-button mejs-confusion-button ' + ((player.options.confusion) ? 'mejs-confusion-on' : 'mejs-confusion-off') + '">' +
+            '<span></span>' +
+        '</div>')
+				.appendTo(controls)
+				.click(function(e) {
+					e.preventDefault();
+				
+					if (player.options.confusion) {
+						player.options.confusion = !player.options.confusion;
+						console.log("I'm confused");
+					} 
+				}),
+				//play_btn = play.find('button');
+
+
+			//function togglePlayPause(which) {
+			//	if ('play' === which) {
+			//		play.removeClass('mejs-play').addClass('mejs-pause');
+			//		play_btn.attr({
+			//			'title': op.pauseText,
+			//			'aria-label': op.pauseText
+			//		});
+			//	} else {
+			//		play.removeClass('mejs-pause').addClass('mejs-play');
+			//		play_btn.attr({
+			//			'title': op.playText,
+			//			'aria-label': op.playText
+			//		});
+			//	}
+			//};
+			//togglePlayPause('pse');
+
+
+			//media.addEventListener('play',function() {
+			//	togglePlayPause('play');
+			///}, false);
+			//media.addEventListener('playing',function() {
+			//	togglePlayPause('play');
+			//}, false);
+
+
+			//media.addEventListener('pause',function() {
+			//	togglePlayPause('pse');
+			//}, false);
+			//media.addEventListener('paused',function() {
+			//	togglePlayPause('pse');
+			//}, false);
 		}
 	});
 	

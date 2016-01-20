@@ -37,6 +37,9 @@ var csvData = new Array();
 var confusedCsvData = new Array();
 
 
+
+
+
 csvData.push('"SubNum","WordAltered","WordId","WordUnaltered","AlteredClass","WordShownAt","Starttime","Stoptime","Top","Left","EyeTop","EyeLeft","WordWidth","WordHeight", "Jargon"');
 
 // version number
@@ -5195,7 +5198,10 @@ if (typeof jQuery != 'undefined') {
 							topInt = parseInt($(thePosIndexArray[x]).offset().top) + sidebarDiff;		
 							widthInt = parseInt($(thePosIndexArray[x]).offset().left);		
 							newx = widthInt + diffLeft;		
-							newy = topInt + diffTop;		
+							newy = topInt + diffTop;
+							
+							
+							
 							theFullArray[counterf] = {
 											  "subnum":i,
 											  "wordAltered": thePosWordArray[x],

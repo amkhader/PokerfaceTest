@@ -124,6 +124,7 @@
 	height: 100px;
 	margin: -50px 0 0 -50px;
 	background: url(CONFUSED.svg) no-repeat;
+	fill: #94d31b; 
 }
 
 .no-svg .mejs-overlay-con-button {
