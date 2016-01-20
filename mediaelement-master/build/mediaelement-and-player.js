@@ -3031,7 +3031,7 @@ if (typeof jQuery != 'undefined') {
 					myWindow.document.write("<p>Are you confused?</p>");
 					myWindow.document.write('<p>Are you confused by ___?<p><button onclick="myFunction()">Click me</button>');
 					myWindow.document.write('<p id="jargonButton"></p>');
-					myWindow.document.write('<script>function myFunction() {var myJargonWindow = window.open('', 'MsgWindow','height=400, width=400'); }</script>');
+					myWindow.document.write("<script>function myFunction() {var myJargonWindow = window.open('', 'MsgWindow','height=400, width=400"); }</script>');
 					//document.getElementById("jargonButton").innerHTML = "Hello World";
 					myWindow.document.write("</body></html>");
 				});
