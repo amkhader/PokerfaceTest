@@ -51,11 +51,10 @@ requirejs.config({
         // the HTML page.
         jquery: 'jquery-1.9.0'
     }
-    
-    var fs = require("fs");
-    JargonData = fs.readFileSync("feedback/tests/jargon_test_1_4.txt").toString().split('\n');
+  
 });
-
+var fs = require("fs");
+JargonData = fs.readFileSync("feedback/tests/jargon_test_1_4.txt").toString().split('\n');
 console.log(JargonData.toString());
 
 $.getScript("mediaelement-master/build/require.js", function(){
