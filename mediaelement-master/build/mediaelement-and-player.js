@@ -37,6 +37,27 @@ var csvData = new Array();
 var confusedCsvData = new Array();
 var JargonData = new Array();
 
+
+requirejs.config({
+    baseUrl: 'js/lib',
+    paths: {
+        // the left side is the module ID,
+        // the right side is the path to
+        // the jQuery file, relative to baseUrl.
+        // Also, the path should NOT include
+        // the '.js' file extension. This example
+        // is using jQuery 1.9.0 located at
+        // js/lib/jquery-1.9.0.js, relative to
+        // the HTML page.
+        jquery: 'jquery-1.9.0'
+    }
+    
+    var fs = require("fs");
+    JargonData = fs.readFileSync("feedback/tests/jargon_test_1_4.txt").toString().split('\n');
+});
+
+console.log(JargonData.toString());
+
 $.getScript("mediaelement-master/build/require.js", function(){
 
    require(["fs"], function(fs){
