@@ -38,6 +38,10 @@ var confusedCsvData = new Array();
 var JargonData = new Array();
 JargonData.push("جديدين 113", "الطليعي 95", "تتدافع 73", "الصبغي 64", "المحركة 50", "شقيقين 33", "شقيقين 27", "خليتي 21", "الطليعي 8", "تتخد 7", "الطليعي 2")
 
+for (i = 0; i < JargonData.length; i++) { 
+    console.log(JargonData.substr(0, str.indexOf(' ')));
+}
+
 //$.getScript("mediaelement-master/build/require.js", function(){
 //define(function (require) {
   // var fs =  require('fs');
