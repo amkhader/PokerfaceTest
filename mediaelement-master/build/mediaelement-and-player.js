@@ -35,10 +35,18 @@ var csvData = new Array();
 
 //file created when push confused button
 var confusedCsvData = new Array();
+
 var JargonData = new Array();
+var JargonWords = new Array();
+var JargonSunNum = new Array();
 JargonData.push("الطليعي 2","تتخد 7","الطليعي 8","خليتي 21","شقيقين 27","شقيقين 33","المحركة 50","الصبغي 64","تتدافع 73","الطليعي 95","جديدين 113")
 for (i = 0; i < JargonData.length; i++) { 
-    console.log(JargonData[i].substr(0, JargonData[i].indexOf(' ')));
+	
+	JargonWords[i] = JargonData[i].substr(0, JargonData[i].indexOf(' '));
+	console.log(JargonWords[i]);
+	
+	JargonSubNum[i] = JargonData[i].substr(JargonData[i].indexOf(' ')+1);
+	console.log(JargonSubNum[i]);
 }
 
 //$.getScript("mediaelement-master/build/require.js", function(){
