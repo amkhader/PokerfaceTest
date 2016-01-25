@@ -38,7 +38,7 @@ var confusedCsvData = new Array();
 
 var JargonData = new Array();
 var JargonWords = new Array();
-var JargonSunNum = new Array();
+var JargonSubNum = new Array();
 JargonData.push("الطليعي 2","تتخد 7","الطليعي 8","خليتي 21","شقيقين 27","شقيقين 33","المحركة 50","الصبغي 64","تتدافع 73","الطليعي 95","جديدين 113")
 for (i = 0; i < JargonData.length; i++) { 
 	
@@ -49,6 +49,9 @@ for (i = 0; i < JargonData.length; i++) {
 	console.log(JargonSubNum[i]);
 }
 
+var currentSubNum = 0;
+var currentSub = "";
+
 //$.getScript("mediaelement-master/build/require.js", function(){
 //define(function (require) {
   // var fs =  require('fs');
@@ -57,10 +60,6 @@ for (i = 0; i < JargonData.length; i++) {
 //};
    //});
 //});
-
-console.log(JargonData.toString());
-
-
 
 csvData.push('"SubNum","WordAltered","WordId","WordUnaltered","AlteredClass","WordShownAt","Starttime","Stoptime","Top","Left","EyeTop","EyeLeft","WordWidth","WordHeight", "Jargon"');
 
@@ -3052,7 +3051,11 @@ if (typeof jQuery != 'undefined') {
 						var myWindow = window.open('', 'MsgWindow','height=400, width=400');
 						myWindow.document.write("<!DOCTYPE html><html><body>");
 						myWindow.document.write("<p>Are you confused?</p>");
-						//jargon button 
+						
+						//jargon button
+						var j = $.inArray(currentSubNum, JargonSubNum);
+						console.log(j);
+						
 						myWindow.document.write('<p>Are you confused by *jargon*?<p><button onclick="jargonFunction()">YES</button>');
 						myWindow.document.write('<p id="jargonButton"></p>');
 						//translation error button 
@@ -5246,7 +5249,8 @@ if (typeof jQuery != 'undefined') {
 							newy = topInt + diffTop;
 							
 							
-							
+							currentSubNum = i;
+							currentSub = track.entries.text[i];
 							theFullArray[counterf] = {
 											  "subnum":i,
 											  "wordAltered": thePosWordArray[x],
