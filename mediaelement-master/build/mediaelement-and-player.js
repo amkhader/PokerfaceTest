@@ -3055,7 +3055,7 @@ if (typeof jQuery != 'undefined') {
 						//jargon button
 						var j = $.inArray(currentSubNum, JargonSubNum);
 						if (j > -1){
-							myWindow.document.write('<p>Are you confused by '.concat(JargonSub[j], '?<p><button onclick="jargonFunction()">YES</button>') );
+							myWindow.document.write('<p>Are you confused by '.concat(JargonWords[j], '?<p><button onclick="jargonFunction()">YES</button>') );
 							myWindow.document.write('<p id="jargonButton"></p>');
 						}
 						//translation error button 
