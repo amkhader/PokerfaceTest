@@ -3054,10 +3054,10 @@ if (typeof jQuery != 'undefined') {
 						
 						//jargon button
 						var j = $.inArray(currentSubNum, JargonSubNum);
-						console.log(j);
-						console.log(currentSubNum);
-						myWindow.document.write('<p>Are you confused by *jargon*?<p><button onclick="jargonFunction()">YES</button>');
-						myWindow.document.write('<p id="jargonButton"></p>');
+						if (j > -1){
+							myWindow.document.write('<p>Are you confused by '.concat(JargonSub[j], '?<p><button onclick="jargonFunction()">YES</button>') );
+							myWindow.document.write('<p id="jargonButton"></p>');
+						}
 						//translation error button 
 						myWindow.document.write('<p>Are you confused by *MT_error*?<p><button onclick="MTEFunction()">YES</button>');
 						myWindow.document.write('<p id="MTEButton"></p>');
