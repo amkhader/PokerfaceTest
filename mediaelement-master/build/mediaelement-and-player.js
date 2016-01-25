@@ -3055,7 +3055,7 @@ if (typeof jQuery != 'undefined') {
 						//jargon button
 						var j = $.inArray(currentSubNum, JargonSubNum);
 						console.log(j);
-						
+						console.log(currentSubNum);
 						myWindow.document.write('<p>Are you confused by *jargon*?<p><button onclick="jargonFunction()">YES</button>');
 						myWindow.document.write('<p id="jargonButton"></p>');
 						//translation error button 
