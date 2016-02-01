@@ -3049,11 +3049,7 @@ if (typeof jQuery != 'undefined') {
 						media.pause();
 						
 						
-						$('.html_popup').popup({
-					
-  							content : '<h1>This is some HTML</h1>',
-  							type : 'html'
-						});
+						$('.default_popup').popup();
 						
 						var myWindow = window.open('', 'MsgWindow','height=400, width=400');
 						myWindow.document.write("<!DOCTYPE html><html><body>");
