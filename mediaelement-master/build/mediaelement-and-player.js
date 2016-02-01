@@ -36,9 +36,30 @@ var csvData = new Array();
 //file created when push confused button
 var confusedCsvData = new Array();
 
+var JargonData = new Array();
+var JargonWords = new Array();
+var JargonSubNum = new Array();
+JargonData.push("الطليعي 2","تتخد 7","الطليعي 8","خليتي 21","شقيقين 27","شقيقين 33","المحركة 50","الصبغي 64","تتدافع 73","الطليعي 95","جديدين 113")
+for (i = 0; i < JargonData.length; i++) { 
+	
+	JargonWords[i] = JargonData[i].substr(0, JargonData[i].indexOf(' '));
+	console.log(JargonWords[i]);
+	
+	JargonSubNum[i] = parseInt(JargonData[i].substr(JargonData[i].indexOf(' ')+1), 10);
+	console.log(JargonSubNum[i]);
+}
 
+var currentSubNum = 0;
+var currentSub = "";
 
-
+//$.getScript("mediaelement-master/build/require.js", function(){
+//define(function (require) {
+  // var fs =  require('fs');
+  //require(["fs"], function(fs){
+  //JargonData = fs.readFileSync("feedback/tests/jargon_test_1_4.txt").toString().split('\n');
+//};
+   //});
+//});
 
 csvData.push('"SubNum","WordAltered","WordId","WordUnaltered","AlteredClass","WordShownAt","Starttime","Stoptime","Top","Left","EyeTop","EyeLeft","WordWidth","WordHeight", "Jargon"');
 
@@ -3023,7 +3044,34 @@ if (typeof jQuery != 'undefined') {
 				'</div>')
 				.appendTo(layers)
 				.bind('click', function() {  
-					confusedCsvData.push(new Date().getTime());	
+					if (!media.paused){
+						confusedCsvData.push(new Date().getTime());
+						media.pause();
+						
+						var myWindow = window.open('', 'MsgWindow','height=400, width=400');
+						myWindow.document.write("<!DOCTYPE html><html><body>");
+						myWindow.document.write("<p>Are you confused?</p>");
+						
+						//jargon button
+						var j = $.inArray(currentSubNum, JargonSubNum);
+						if (j > -1){
+							myWindow.document.write('<p>Are you confused by '.concat(JargonWords[j], '?<p><button onclick="jargonFunction()">YES</button>') );
+							myWindow.document.write('<p id="jargonButton"></p>');
+						}
+						//translation error button 
+						myWindow.document.write('<p>Are you confused by *MT_error*?<p><button onclick="MTEFunction()">YES</button>');
+						myWindow.document.write('<p id="MTEButton"></p>');
+						
+									
+						myWindow.document.write("<script>function jargonFunction() {document.getElementById('jargonButton').innerHTML = 'This word means...'; }</script>");
+						myWindow.document.write("<script>function MTEFunction() {document.getElementById('MTEButton').innerHTML = 'This may also mean...'; }</script>");
+						//document.getElementById("jargonButton").innerHTML = "Hello World";
+				
+						myWindow.document.write("</body></html>");
+					}
+					else{
+						media.play();
+					}
 				});
 
 			/*
@@ -5201,7 +5249,8 @@ if (typeof jQuery != 'undefined') {
 							newy = topInt + diffTop;
 							
 							
-							
+							currentSubNum = i;
+							currentSub = track.entries.text[i];
 							theFullArray[counterf] = {
 											  "subnum":i,
 											  "wordAltered": thePosWordArray[x],

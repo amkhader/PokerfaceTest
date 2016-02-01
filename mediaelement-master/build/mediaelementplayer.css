@@ -119,12 +119,11 @@
 .mejs-overlay-con-button {
 	position: absolute;
 	top: 10%;
-	left: 90%;
+	left: 95%;
 	width: 100px;
 	height: 100px;
 	margin: -50px 0 0 -50px;
-	background: url(Ambox_blue_question.svg) no-repeat;
-	fill: #94d31b; 
+	background: url(Stop_question.svg) no-repeat;
 }
 
 .no-svg .mejs-overlay-con-button {
