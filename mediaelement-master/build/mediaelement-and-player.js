@@ -3048,7 +3048,7 @@ if (typeof jQuery != 'undefined') {
 						confusedCsvData.push(new Date().getTime());
 						media.pause();
 						
-						
+						var popup = new $.Popup();
 						popup.open('<h1>New Content</h1>', 'html', $('a.popup'));
 						
 						var myWindow = window.open('', 'MsgWindow','height=400, width=400');
