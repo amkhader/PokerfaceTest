@@ -3050,6 +3050,7 @@ if (typeof jQuery != 'undefined') {
 						
 						
 						$('.html_popup').popup({
+							console.log('I was called');
   							content : '<h1>This is some HTML</h1>',
   							type : 'html'
 						});
