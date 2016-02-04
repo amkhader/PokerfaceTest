@@ -3048,8 +3048,7 @@ if (typeof jQuery != 'undefined') {
 						confusedCsvData.push(new Date().getTime());
 						media.pause();
 						
-						var popup = new $.Popup();
-						popup.open('<h1>New Content</h1>', 'html');
+						
 						
 						var myWindow = window.open('', 'MsgWindow','height=400, width=400');
 						myWindow.document.write("<!DOCTYPE html><html><body>");
@@ -3069,6 +3068,10 @@ if (typeof jQuery != 'undefined') {
 						myWindow.document.write("<script>function jargonFunction() {document.getElementById('jargonButton').innerHTML = 'This word means...'; }</script>");
 						myWindow.document.write("<script>function MTEFunction() {document.getElementById('MTEButton').innerHTML = 'This may also mean...'; }</script>");
 						//document.getElementById("jargonButton").innerHTML = "Hello World";
+						
+						
+						var popup = new $.Popup();
+						popup.open(myWindow, 'html');
 				
 						myWindow.document.write("</body></html>");
 					}
