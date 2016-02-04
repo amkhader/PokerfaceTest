@@ -3049,7 +3049,7 @@ if (typeof jQuery != 'undefined') {
 						media.pause();
 						
 						var popup = new $.Popup();
-						popup.open('www.google.com');
+						popup.open('<h1>New Content</h1>', 'html');
 						
 						var myWindow = window.open('', 'MsgWindow','height=400, width=400');
 						myWindow.document.write("<!DOCTYPE html><html><body>");
