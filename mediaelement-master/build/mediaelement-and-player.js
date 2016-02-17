@@ -3028,18 +3028,7 @@ if (typeof jQuery != 'undefined') {
 			
 				
 
-			bigPlay =
-				$('<div class="mejs-overlay mejs-layer mejs-overlay-play">'+
-					'<div class="mejs-overlay-button"></div>'+
-				'</div>')
-				.appendTo(layers)
-				.bind('click', function() {  // Removed 'touchstart' due issues on Samsung Android devices where a tap on bigPlay started and immediately stopped the video
-					if (t.options.clickToPlayPause) {
-						if (media.paused) {
-							media.play();
-						}
-					}
-				});
+			
 				
 			redConfused =
 				$('<div class="mejs-overlay mejs-layer mejs-overlay-confused">'+
@@ -3085,6 +3074,19 @@ if (typeof jQuery != 'undefined') {
 					}
 					else{
 						media.play();
+					}
+				});
+				
+		bigPlay =
+				$('<div class="mejs-overlay mejs-layer mejs-overlay-play">'+
+					'<div class="mejs-overlay-button"></div>'+
+				'</div>')
+				.appendTo(layers)
+				.bind('click', function() {  // Removed 'touchstart' due issues on Samsung Android devices where a tap on bigPlay started and immediately stopped the video
+					if (t.options.clickToPlayPause) {
+						if (media.paused) {
+							media.play();
+						}
 					}
 				});
 
