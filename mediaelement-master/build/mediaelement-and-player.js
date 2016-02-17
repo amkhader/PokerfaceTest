@@ -3025,18 +3025,7 @@ if (typeof jQuery != 'undefined') {
 				.hide() // start out hidden
 				.appendTo(layers),
 			// this needs to come last so it's on top
-			bigPlay =
-				$('<div class="mejs-overlay mejs-layer mejs-overlay-play">'+
-					'<div class="mejs-overlay-button"></div>'+
-				'</div>')
-				.appendTo(layers)
-				.bind('click', function() {  // Removed 'touchstart' due issues on Samsung Android devices where a tap on bigPlay started and immediately stopped the video
-					if (t.options.clickToPlayPause) {
-						if (media.paused) {
-							media.play();
-						}
-					}
-				});
+			
 				
 			redConfused =
 				$('<div class="mejs-overlay mejs-layer mejs-overlay-confused">'+
@@ -3054,6 +3043,18 @@ if (typeof jQuery != 'undefined') {
 							content : '<h1>This is some HTML</h1>',
 							type : 'html'
 						});
+			bigPlay =
+				$('<div class="mejs-overlay mejs-layer mejs-overlay-play">'+
+					'<div class="mejs-overlay-button"></div>'+
+				'</div>')
+				.appendTo(layers)
+				.bind('click', function() {  // Removed 'touchstart' due issues on Samsung Android devices where a tap on bigPlay started and immediately stopped the video
+					if (t.options.clickToPlayPause) {
+						if (media.paused) {
+							media.play();
+						}
+					}
+				});
 						
 						var myWindow = window.open('', 'MsgWindow','height=400, width=400');
 						myWindow.document.write("<!DOCTYPE html><html><body>");
