@@ -3027,22 +3027,7 @@ if (typeof jQuery != 'undefined') {
 			// this needs to come last so it's on top
 			
 				
-			redConfused =
-				$('<div class="mejs-overlay mejs-layer mejs-overlay-confused">'+
-					'<div class="mejs-overlay-con-button"></div>'+
-				'</div>')
-				.appendTo(layers)
-				.bind('click', function() {  
-					if (!media.paused){
-						confusedCsvData.push(new Date().getTime());
-						media.pause();
-						
-						//var popup = new $.Popup();
-						
-						$('.html_popup').popup({
-							content : '<h1>This is some HTML</h1>',
-							type : 'html'
-						});
+
 			bigPlay =
 				$('<div class="mejs-overlay mejs-layer mejs-overlay-play">'+
 					'<div class="mejs-overlay-button"></div>'+
