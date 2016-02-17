@@ -3040,6 +3040,23 @@ if (typeof jQuery != 'undefined') {
 						}
 					}
 				});
+				
+			redConfused =
+				$('<div class="mejs-overlay mejs-layer mejs-overlay-confused">'+
+					'<div class="mejs-overlay-con-button"></div>'+
+				'</div>')
+				.appendTo(layers)
+				.bind('click', function() {  
+					if (!media.paused){
+						confusedCsvData.push(new Date().getTime());
+						media.pause();
+						
+						//var popup = new $.Popup();
+						
+						$('.html_popup').popup({
+							content : '<h1>This is some HTML</h1>',
+							type : 'html'
+						});
 						
 						var myWindow = window.open('', 'MsgWindow','height=400, width=400');
 						myWindow.document.write("<!DOCTYPE html><html><body>");
