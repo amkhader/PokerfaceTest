@@ -3035,6 +3035,7 @@ if (typeof jQuery != 'undefined') {
 					'<div class="mejs-overlay-con-button"></div>'+
 				'</div>')
 				.appendTo(layers)
+				//use .onclick
 				.bind('click', function() {  
 					if (!media.paused){
 						confusedCsvData.push(new Date().getTime());
@@ -3042,12 +3043,11 @@ if (typeof jQuery != 'undefined') {
 						
 						//var popup = new $.Popup();
 						
-						$('.html_popup').popup({
-							content : '<h1>This is some HTML</h1>',
-							type : 'html'
-						});
-						
-						var myWindow = window.open('', 'MsgWindow','height=400, width=400');
+							$('.jquery_popup').popup({
+		  						content : $('#inline')
+							});
+								
+								var myWindow = window.open('', 'MsgWindow','height=400, width=400');
 						myWindow.document.write("<!DOCTYPE html><html><body>");
 						myWindow.document.write("<p>Are you confused?</p>");
 						
