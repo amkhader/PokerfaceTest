@@ -3043,7 +3043,7 @@ if (typeof jQuery != 'undefined') {
 						
 						//var popup = new $.Popup();
 						
-							$('.jquery_popup').popup({
+							$('a.jquery_popup').popup({
 		  						content : $('#inline')
 							});
 								
