@@ -3043,7 +3043,7 @@ if (typeof jQuery != 'undefined') {
 						
 						//var popup = new $.Popup();
 						
-							$('.html_popup').popup({
+							$('a.html_popup').popup({
 							content : '<h1>This is some HTML</h1>',
 							type : 'html'
 							});
