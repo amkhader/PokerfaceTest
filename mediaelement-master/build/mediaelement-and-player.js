@@ -3043,11 +3043,12 @@ if (typeof jQuery != 'undefined') {
 						
 						//var popup = new $.Popup();
 						
-							$('a.jquery_popup').popup({
-		  						content : $('#inline')
+							$('.html_popup').popup({
+							content : '<h1>This is some HTML</h1>',
+							type : 'html'
 							});
 								
-								var myWindow = window.open('', 'MsgWindow','height=400, width=400');
+						var myWindow = window.open('', 'MsgWindow','height=400, width=400');
 						myWindow.document.write("<!DOCTYPE html><html><body>");
 						myWindow.document.write("<p>Are you confused?</p>");
 						
