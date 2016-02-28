@@ -3043,7 +3043,7 @@ if (typeof jQuery != 'undefined') {
 						
 						var popup = new $.Popup();
 						
-						popup.open('<h1>New Content</h1>', 'html')
+						popup.open('<h1>New Content</h1>', 'html');
 								
 						var myWindow = window.open('', 'MsgWindow','height=400, width=400');
 						myWindow.document.write("<!DOCTYPE html><html><body>");
