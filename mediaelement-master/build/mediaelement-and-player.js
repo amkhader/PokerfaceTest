@@ -3041,12 +3041,9 @@ if (typeof jQuery != 'undefined') {
 						confusedCsvData.push(new Date().getTime());
 						media.pause();
 						
-						//var popup = new $.Popup();
+						var popup = new $.Popup();
 						
-							$('a.html_popup').popup({
-							content : '<h1>This is some HTML</h1>',
-							type : 'html'
-							});
+						popup.open('<h1>New Content</h1>', 'html')
 								
 						var myWindow = window.open('', 'MsgWindow','height=400, width=400');
 						myWindow.document.write("<!DOCTYPE html><html><body>");
