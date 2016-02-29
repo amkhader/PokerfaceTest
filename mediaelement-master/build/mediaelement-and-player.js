@@ -3050,6 +3050,9 @@ if (typeof jQuery != 'undefined') {
 						  type : 'html'
 						});
 						
+						
+						popup.open('<h1>New Content</h1>', 'html', $('a.html_popup'));
+						
 						console.log("please open")
 								
 						//var myWindow = window.open('', 'MsgWindow','height=400, width=400');
