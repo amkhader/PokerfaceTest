@@ -3045,7 +3045,10 @@ if (typeof jQuery != 'undefined') {
 						
 						//popup.open('<h1>New Content</h1>', 'html');
 						
-						$('a.popup').popup({ content : '<h1>This is some HTML</h1>' , type : 'html' });
+						$('.html_popup').popup({
+						  content : '<h1>This is some HTML</h1>',
+						  type : 'html'
+						});
 								
 						var myWindow = window.open('', 'MsgWindow','height=400, width=400');
 						myWindow.document.write("<!DOCTYPE html><html><body>");
