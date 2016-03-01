@@ -2027,7 +2027,7 @@ if (typeof jQuery != 'undefined') {
 		// rewind to beginning when media ends
                 autoRewind: true,
 		// resize to media dimensions
-		enableAutosize: false,
+		enableAutosize: true,
 		// forces the hour marker (##:00:00)
 		alwaysShowHours: false,
 
