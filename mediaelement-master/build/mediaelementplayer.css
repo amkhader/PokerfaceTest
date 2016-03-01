@@ -90,8 +90,8 @@
 
 .mejs-overlay {
 	position: absolute;
-	top: 0;
-	left: 50;
+	top: 50%;
+	left: 50%;
 }
 
 .mejs-overlay-play {
