@@ -90,10 +90,8 @@
 
 .mejs-overlay {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 50px;
-	height: 50px;
+	top: 0;
+	left: 0;
 }
 
 .mejs-overlay-play {
@@ -101,9 +99,10 @@
 }
 
 .mejs-overlay-button {
+	display: none;
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 50%;
+	left: 50%;
 	width: 100px;
 	height: 100px;
 	margin: -50px 0 0 -50px;
