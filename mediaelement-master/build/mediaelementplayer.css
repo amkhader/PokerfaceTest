@@ -58,14 +58,14 @@
 /* Start: LAYERS */
 .mejs-background {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 50%;
+	left: 50%;
 }
 
 .mejs-mediaelement {
 	position: absolute;
-	top: 50;
-	left: 50;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 }
@@ -106,8 +106,7 @@
 	left: 0;
 	width: 100px;
 	height: 100px;
-	margin: 0;
-	/*margin: -50px 0 0 -50px;*/
+	margin: -50px 0 0 -50px;
 	background: url(bigplay.svg) no-repeat;
 }
 
