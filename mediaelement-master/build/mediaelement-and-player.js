@@ -2027,12 +2027,12 @@ if (typeof jQuery != 'undefined') {
 		// rewind to beginning when media ends
                 autoRewind: true,
 		// resize to media dimensions
-		enableAutosize: true,
+		enableAutosize: false,
 		// forces the hour marker (##:00:00)
 		alwaysShowHours: false,
 
 		// show framecount in timecode (##:00:00:00)
-		showTimecodeFrameCount: false,
+		showTimecodeFrameCount: true,
 		// used when showTimecodeFrameCount is set to true
 		framesPerSecond: 25,
 
