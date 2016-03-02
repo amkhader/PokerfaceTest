@@ -3045,7 +3045,7 @@ if (typeof jQuery != 'undefined') {
 
 						var htmlQ1 = '<h1>Are you confused by something in this frame?</h1>';
 						var htmlButtons = '<style>#button1{ width: 300px; height: 40px;} #button2{ width: 300px; height: 40px;} #container{ text-align: center;}</style>';
-						var htmlButtonsRewind = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button>,<button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("button1").write( "This word means..."); }</script>';
+						var htmlButtonsRewind = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button>,<button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container").innerHTML ="This word means..."; }</script>';
 						
 						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind), 'html', $('a.html_popup'));
 						
