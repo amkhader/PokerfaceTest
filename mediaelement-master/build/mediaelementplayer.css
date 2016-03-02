@@ -132,7 +132,7 @@
 	background-image: url(CONFUSED.png);
 }
 
-.mejs-overlay:hover .mejs-overlay-con-button {
+.mejs-overlay:hover .mejs-overlay-button {
 	background-position: 0 -100px ;
 }
 
