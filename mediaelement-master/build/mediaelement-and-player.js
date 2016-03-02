@@ -3046,7 +3046,7 @@ if (typeof jQuery != 'undefined') {
 						//popup.open('<h1>New Content</h1>', 'html');
 						
 						$('a.html_popup').popup({
-						  content : '<h1>Are you confused by something in this frame?</h1><button onclick="jargonFunction()">YES</button><p id="jargonButton"></p><script>function jargonFunction() {document.getElementById('jargonButton').innerHTML = 'This word means...'; }</script>',
+						  content : '<h1>Are you confused by something in this frame?</h1><button onclick="jargonFunction()">YES</button><p id="jargonButton"></p><script>function jargonFunction() {document.getElementById("jargonButton").innerHTML = "This word means..."; }</script>',
 						  type : 'html'
 						});
 						
