@@ -3046,17 +3046,16 @@ if (typeof jQuery != 'undefined') {
 
 						var htmlQ1 = '<h1>Are you confused by something in this frame?</h1>';
 						var htmlButtons = '<style>#button1{ width: 300px; height: 40px;} #button2{ width: 300px; height: 40px;} #container{ text-align: center;}</style>';
-						var htmlButtonsRewind = '<div id="container"><button id="button1">YES</button>,<button onclick="rewindFunction()" id = "button2">NO</button></div>';
-						var RewindFun = '<script>function rewindFunction() {document.getElementById("player1").currentTime = track.entries.times[4]["start"]; }</script>';
-						console.log(track.entries.times[1]['start']);
-						console.log(document.getElementById("player1").currentTime)
+						var htmlButtonsRewind = '<div id="container"><button id="button1">YES</button><button onclick="rewindFunction()" id = "button2">NO, REWIND</button></div>';
+						var RewindFun = '<script>function rewindFunction() {document.getElementById("player1").currentTime = track.entries.times[currentSubNum-1]["start"]; }</script>';
+						
+						
 						var htmlButtonsJargon = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button>,<button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container").innerHTML ="This word means..."; }</script>';
 
 						
 						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun), 'html', $('a.html_popup'));
 						
 						console.log("please open");
-						console.log(currentSubNum);
 								
 						//var myWindow = window.open('', 'MsgWindow','height=400, width=400');
 						//myWindow.document.write("<!DOCTYPE html><html><body>");
