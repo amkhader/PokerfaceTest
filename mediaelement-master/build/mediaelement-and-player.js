@@ -3056,6 +3056,7 @@ if (typeof jQuery != 'undefined') {
 						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun), 'html', $('a.html_popup'));
 						
 						console.log("please open");
+						console.log(currentSubNum);
 								
 						//var myWindow = window.open('', 'MsgWindow','height=400, width=400');
 						//myWindow.document.write("<!DOCTYPE html><html><body>");
