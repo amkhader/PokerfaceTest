@@ -3042,18 +3042,14 @@ if (typeof jQuery != 'undefined') {
 						media.pause();
 						
 						var popup = new $.Popup();
+
+						var htmlQ1 = '<h1>Are you confused by something in this frame?</h1>';
+						var htmlButtons = '<style>#button1{ width: 300px; height: 40px;} #button2{ width: 300px; height: 40px;} #container{ text-align: center;}</style>';
+						var htmlButtonsRewind = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button>,<button id = "button2">NO</button><script>function jargonFunction() {document.getElementById("button1").innerHTML = "This word means..."; }</script>';
 						
-						//popup.open('<h1>New Content</h1>', 'html');
+						popup.open(html1, 'html', $('a.html_popup'));
 						
-						$('a.html_popup').popup({
-						  content : '<h1>Are you confused by something in this frame?</h1><button onclick="jargonFunction()">YES</button><p id="jargonButton"></p><script>function jargonFunction() {document.getElementById("jargonButton").innerHTML = "This word means..."; }</script>',
-						  type : 'html'
-						});
-						
-						
-						popup.open('<h1>Are you confused by something in this frame?</h1><button onclick="jargonFunction()">YES</button><p id="jargonButton"></p><script>function jargonFunction() {document.getElementById("jargonButton").innerHTML = "This word means..."; }</script>', 'html', $('a.html_popup'));
-						
-						console.log("please open")
+						console.log("please open");
 								
 						//var myWindow = window.open('', 'MsgWindow','height=400, width=400');
 						//myWindow.document.write("<!DOCTYPE html><html><body>");
