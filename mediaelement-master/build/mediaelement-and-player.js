@@ -3048,7 +3048,7 @@ if (typeof jQuery != 'undefined') {
 						var htmlButtons = '<style>#button1{ width: 300px; height: 40px;} #button2{ width: 300px; height: 40px;} #container{ text-align: center;}</style>';
 						var htmlButtonsRewind = '<div id="container"><button id="button1">YES</button>,<button onclick="rewindFunction()" id = "button2">NO</button></div>';
 						var RewindFun = '<script>function rewindFunction() {document.getElementById("player1").currentTime = subStartTime-1; }</script>';
-						console.log(track.entries.times);
+						console.log(track.entries.times[1]);
 						var htmlButtonsJargon = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button>,<button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container").innerHTML ="This word means..."; }</script>';
 
 						
