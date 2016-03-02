@@ -3046,8 +3046,8 @@ if (typeof jQuery != 'undefined') {
 						var htmlQ1 = '<h1>Are you confused by something in this frame?</h1>';
 						var htmlButtons = '<style>#button1{ width: 300px; height: 40px;} #button2{ width: 300px; height: 40px;} #container{ text-align: center;}</style>';
 						var htmlButtonsRewind = '<div id="container"><button id="button1">YES</button>,<button onclick="rewindFunction()" id = "button2">NO</button></div>';
-						var RewindFun = '<script>function rewindFunction() {this.opener.setCurrentTime(startTime-0.01); }</script>';
-						console.lo(startTime);
+						var RewindFun = '<script>function rewindFunction() {this.opener.setCurrentTime(this.opener.startTime-0.01); }</script>';
+						console.log(startTime);
 						var htmlButtonsJargon = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button>,<button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container").innerHTML ="This word means..."; }</script>';
 
 						
