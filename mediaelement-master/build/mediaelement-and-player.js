@@ -3044,7 +3044,7 @@ if (typeof jQuery != 'undefined') {
 						
 						var popup = new $.Popup();
 
-						var htmlQ1 = '<h1 id="question1">Are you confused by something in this frame?</h1>';
+						var htmlQ1 = '<div id="replace1" style="display:none"> <h1 id="question1">Are you confused by something in this frame?</h1>';
 						var htmlQ2 = '<h1>Are you confused by jargon?</h1>';
 						var htmlButtons = '<style>#button1{ width: 300px; height: 40px;} #button2{ width: 300px; height: 40px;} #container{ text-align: center;}</style>';
 						var htmlButtonsRewind = '<div id="container"><button href="#replace2" class="default_popup" onclick="jargonpopup()" id="button1">YES</button> <button onclick="rewindFunction()" id = "button2">NO, REWIND</button></div>';
@@ -3058,7 +3058,7 @@ if (typeof jQuery != 'undefined') {
 						var newWin = '<div id="replace2" style="display:none"> <h1>Replaced!</h1>'
 
 						
-						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun).concat(JargonFun).concat(newWin), 'html', $('a.html_popup'));
+						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun).concat(JargonFun).concat(newWin).conact("</div>"), 'html', $('a.default_popup'));
 						
 						
 						console.log("please open");
