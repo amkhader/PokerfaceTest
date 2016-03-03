@@ -3055,7 +3055,7 @@ if (typeof jQuery != 'undefined') {
 						//document.getElementById("container").innerHTML = "<div id="container1"><button onclick="jargonFunction()" id="button1">YES</button> <button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container1").innerHTML ="This word means...";
 						//(htmlQ2.concat(htmlButtons).concat(htmlButtonsJargon), "html", $("a.html_popup"))
 						
-						var newWin = '<div id="replace2" style="display:none"> <h1>Replaced!</h1>'
+						var newWin = '<div id="replace2" style="display:none"> <h1>Replaced!</h1></div>'
 
 						
 						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun).concat(JargonFun).concat(newWin).concat("</div>"), 'html', $('a.default_popup'));
