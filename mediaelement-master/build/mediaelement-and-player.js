@@ -3056,7 +3056,7 @@ if (typeof jQuery != 'undefined') {
 						
 
 						
-						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun).concat(JargonFun), 'html', $('a.html_popup'));
+						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun), 'html', $('a.html_popup'));
 						
 						
 						console.log("please open");
