@@ -3047,7 +3047,7 @@ if (typeof jQuery != 'undefined') {
 						var htmlQ1 = '<div id="replace1"> <h1 id="question1">Are you confused by something in this frame?</h1>';
 						var htmlQ2 = '<h1>Are you confused by jargon?</h1>';
 						var htmlButtons = '<style>#button1{ width: 300px; height: 40px;} #button2{ width: 300px; height: 40px;} #container{ text-align: center;}</style>';
-						var htmlButtonsRewind = '<div id="container"><button href="javascript:window.close()" id="button1">YES</button> <button onclick="rewindFunction()" id = "button2">NO, REWIND</button></div>';
+						var htmlButtonsRewind = '<div id="container"><button onclick="window.close()" id="button1">YES</button> <button onclick="rewindFunction()" id = "button2">NO, REWIND</button></div>';
 						var RewindFun = '<script>function rewindFunction() {document.getElementById("player1").currentTime = track.entries.times[currentSubNum-1]["start"]; }</script>';
 						var htmlButtonsJargon = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button> <button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container").innerHTML ="This word means..."; }</script>';
 						//var JargonFun = '<script>function jargonpopup(){var j = $.inArray(currentSubNum, JargonSubNum);if (j > -1){}}</script>'
@@ -3055,11 +3055,10 @@ if (typeof jQuery != 'undefined') {
 						//document.getElementById("container").innerHTML = "<div id="container1"><button onclick="jargonFunction()" id="button1">YES</button> <button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container1").innerHTML ="This word means...";
 						//(htmlQ2.concat(htmlButtons).concat(htmlButtonsJargon), "html", $("a.html_popup"))
 						
-						var newWin = '<div id="replace2" style="display:none"> <h1>Replaced!</h1></div>'
-						var replace = '<script>$(".default_popup").popup();</script>'
+						var newWin = '<a href="javascript:window.close()"></a>'
 
 						
-						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun).concat(newWin).concat("</div>").concat(replace), 'html', $('a.default_popup'));
+						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun).concat(newWin).concat("</div>"), 'html', $('a.default_popup'));
 						
 						
 						console.log("please open");
