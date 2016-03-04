@@ -3056,7 +3056,7 @@ if (typeof jQuery != 'undefined') {
 						//(htmlQ2.concat(htmlButtons).concat(htmlButtonsJargon), "html", $("a.html_popup"))
 						
 						var newWin = '<div id="replace2" style="display:none"> <h1>Replaced!</h1></div>'
-						var replace = '<script>$('.default_popup').popup();</script>'
+						var replace = '<script>$(".default_popup").popup();</script>'
 
 						
 						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun).concat(JargonFun).concat(newWin).concat("</div>").concat(replace), 'html', $('a.default_popup'));
