@@ -3047,7 +3047,7 @@ if (typeof jQuery != 'undefined') {
 						var htmlQ1 = '<div id="replace1"> <h1 id="question1">Are you confused by something in this frame?</h1>';
 						var htmlQ2 = '<h1>Are you confused by jargon?</h1>';
 						var htmlButtons = '<style>#button1{ width: 300px; height: 40px;} #button2{ width: 300px; height: 40px;} #container{ text-align: center;}</style>';
-						var htmlButtonsRewind = '<div id="container"><button href="#replace2" class="default_popup" onclick="jargonpopup()" id="button1">YES</button> <button onclick="rewindFunction()" id = "button2">NO, REWIND</button></div>';
+						var htmlButtonsRewind = '<div id="container"><button href="#replace2" class="default_popup" id="button1">YES</button> <button onclick="rewindFunction()" id = "button2">NO, REWIND</button></div>';
 						var RewindFun = '<script>function rewindFunction() {document.getElementById("player1").currentTime = track.entries.times[currentSubNum-1]["start"]; }</script>';
 						var htmlButtonsJargon = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button> <button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container").innerHTML ="This word means..."; }</script>';
 						var JargonFun = '<script>function jargonpopup(){var j = $.inArray(currentSubNum, JargonSubNum);if (j > -1){$(".default_popup").popup();}}</script>'
