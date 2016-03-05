@@ -3050,7 +3050,7 @@ if (typeof jQuery != 'undefined') {
 						var htmlButtonsRewind = '<div id="container"><button onclick="jargonpopup()" id="button1">YES</button> <button onclick="rewindFunction()" id = "button2">NO, REWIND</button></div>';
 						var RewindFun = '<script>function rewindFunction() {document.getElementById("player1").currentTime = track.entries.times[currentSubNum-1]["start"]; }</script>';
 						var htmlButtonsJargon = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button> <button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container").innerHTML ="This word means..."; }</script>';
-						var JargonFun = "<script>function jargonpopup(){ var j = $.inArray(currentSubNum, JargonSubNum); if (j > -1){ htmlQ2 = '<h1 id=\'question1\'>Are you confused by '.concat(JargonWords[j]).concat('?</h1>'); document.getElementById('question1').innerHTML = htmlQ2.concat('<div id=\'container1\'> </div>');}}</script>";
+						var JargonFun = "<script>function jargonpopup(){ var j = $.inArray(currentSubNum, JargonSubNum); if (j > -1){ htmlQ2 = '<h1 id=\'question1\'>Are you confused by '.concat(JargonWords[j]).concat('?</h1><div id=\'container1\'></div>'); document.getElementById('question1').innerHTML = htmlQ2;}}</script>";
 						//<button onclick = \'jargonFunction()\' id= \'button11\'>YES</button> <button id = \'button22\'>NO</button>
 						//'<div id=\'container\'> <button onclick = \'jargonFunction()\' id= \'button1\'>YES</button> <button id = \'button2\'>NO</button></div>'
 						//<script>function jargonFunction() {document.getElementById(\'container\').innerHTML =\'This word means...\';}</script>
