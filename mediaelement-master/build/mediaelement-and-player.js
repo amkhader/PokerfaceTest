@@ -3044,7 +3044,7 @@ if (typeof jQuery != 'undefined') {
 						
 						var popup = new $.Popup();
 						
-						var head = '<head><script src="//code.jquery.com/jquery-1.11.3.min.js"></script></head>';
+						var head = '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>';
 						var htmlQ1 = '<h1 id="question1">Are you confused by something in this frame?</h1>';
 						var htmlQ2 = '<h1>Are you confused by jargon?</h1>';
 						var htmlButtons = '<style>#button1{ width: 300px; height: 40px;} #button2{ width: 300px; height: 40px;} #container{ text-align: center;}</style>';
