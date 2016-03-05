@@ -3051,8 +3051,8 @@ if (typeof jQuery != 'undefined') {
 						var htmlButtonsRewind = '<div id="container"><button onclick="jargonpopup()" id="button1">YES</button> <button onclick="rewindFunction()" id = "button2">NO, REWIND</button></div>';
 						var RewindFun = '<script>function rewindFunction() {document.getElementById("player1").currentTime = track.entries.times[currentSubNum-1]["start"]; }</script>';
 						var htmlButtonsJargon = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button> <button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container").innerHTML ="This word means..."; }</script>';
-						var JargonFun = '<script>function jargonpopup(){ var j = $.inArray(currentSubNum, JargonSubNum); if (j > -1){ htmlQ2 = "<h1 id=\'question1\'>Are you confused by ".concat(JargonWords[j]).concat("?</h1>"); document.getElementById("question1").innerHTML = htmlQ2;$("#container").html("<button onclick = \'jargonFunction()\' id= \'button1\'>YES</button> <button id = \'button2\'>NO</button><script>function jargonFunction() {document.getElementById(\'container\').innerHTML =\'This word means...\';}</script>");}}</script>';
-						
+						var JargonWinFun = '<script>function jargonpopup(){ var j = $.inArray(currentSubNum, JargonSubNum); if (j > -1){ htmlQ2 = "<h1 id=\'question1\'>Are you confused by ".concat(JargonWords[j]).concat("?</h1>"); document.getElementById("question1").innerHTML = htmlQ2;$("#container").html("<button onclick = \'jargonFunction()\' id= \'button1\'>YES</button> <button id = \'button2\'>NO</button>");}}</script>';
+						var JargonFun = '<script>function jargonFunction() {document.getElementById(\'container\').innerHTML =\'This word means...\';}</script>';
 						//<button onclick = \'jargonFunction()\' id= \'button11\'>YES</button> <button id = \'button22\'>NO</button>
 						//
 						//<script>function jargonFunction() {document.getElementById(\'container\').innerHTML =\'This word means...\';}</script>
@@ -3062,7 +3062,7 @@ if (typeof jQuery != 'undefined') {
 						var newWin = '<a href="javascript:popup.close()"></a>'
 
 						
-						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun).concat(JargonFun), 'html', $('a.default_popup'));
+						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun).concat(JargonWinFun), 'html', $('a.default_popup'));
 						
 						
 						console.log("please open");
