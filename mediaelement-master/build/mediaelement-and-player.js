@@ -3044,14 +3044,15 @@ if (typeof jQuery != 'undefined') {
 						
 						var popup = new $.Popup();
 						
-						var head = '<head><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script></head>';
+						var head = '<head><script src="//code.jquery.com/jquery-1.11.3.min.js"></script></head>';
 						var htmlQ1 = '<h1 id="question1">Are you confused by something in this frame?</h1>';
 						var htmlQ2 = '<h1>Are you confused by jargon?</h1>';
 						var htmlButtons = '<style>#button1{ width: 300px; height: 40px;} #button2{ width: 300px; height: 40px;} #container{ text-align: center;}</style>';
 						var htmlButtonsRewind = '<div id="container"><button onclick="jargonpopup()" id="button1">YES</button> <button onclick="rewindFunction()" id = "button2">NO, REWIND</button></div>';
 						var RewindFun = '<script>function rewindFunction() {document.getElementById("player1").currentTime = track.entries.times[currentSubNum-1]["start"]; }</script>';
 						var htmlButtonsJargon = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button> <button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container").innerHTML ="This word means..."; }</script>';
-						var JargonFun = "<script>function jargonpopup(){ var j = $.inArray(currentSubNum, JargonSubNum); if (j > -1){ htmlQ2 = '<h1 id=\'question1\'>Are you confused by '.concat(JargonWords[j]).concat('?</h1>'); document.getElementById('question1').innerHTML = htmlQ2;$('#container').html('Hello World');}}</script>";
+						var JargonFun = "<script>function jargonpopup(){ var j = $.inArray(currentSubNum, JargonSubNum); if (j > -1){ htmlQ2 = '<h1 id=\'question1\'>Are you confused by '.concat(JargonWords[j]).concat('?</h1>'); document.getElementById('question1').innerHTML = htmlQ2;}}</script>";
+						//$('#container').html('Hello World');
 						//<button onclick = \'jargonFunction()\' id= \'button11\'>YES</button> <button id = \'button22\'>NO</button>
 						//'<div id=\'container\'> <button onclick = \'jargonFunction()\' id= \'button1\'>YES</button> <button id = \'button2\'>NO</button></div>'
 						//<script>function jargonFunction() {document.getElementById(\'container\').innerHTML =\'This word means...\';}</script>
