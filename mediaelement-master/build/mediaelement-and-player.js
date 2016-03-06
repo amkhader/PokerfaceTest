@@ -3053,9 +3053,9 @@ if (typeof jQuery != 'undefined') {
 						var htmlButtonsJargon = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button> <button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container").innerHTML ="This word means..."; }</script>';
 						var JargonWinFun = '<script>function jargonpopup(){ console.log(currentSubNum); var j = $.inArray(currentSubNum, JargonSubNum); if (j > -1){ htmlQ2 = "هل تشعر الخلط من ".concat(JargonWords[j]).concat("?"); $("h1").html(htmlQ2);$("#container").html("<button onclick = \'jargonFunction()\' id= \'button1\'>نعم</button> <button onclick = \'MTEpopup()\' id = \'button2\'>لا</button>");}}</script>';
 						var JargonFun = '<script>function jargonFunction() {document.getElementById("question1").innerHTML =\'This word means...\';}</script>';
-						var MTEpopup = '<script>function MTEpopup() {document.getElementById("question1").innerHTML ="<h1 id=\'question1\'>هل تشعر الخلط من جانب الترجمة؟</h1>"; $("#container").html("<button onclick = \'MTEFunction()\' id= \'button1\'>نعم</button> <button onclick = \'Textpopup()\' id = \'button2\'>لا</button>");} </script>';
+						var MTEpopup = '<script>function MTEpopup() {$("h1").html("هل تشعر الخلط من جانب الترجمة؟")  ;("#container").html("<button onclick = \'MTEFunction()\' id= \'button1\'>نعم</button> <button onclick = \'Textpopup()\' id = \'button2\'>لا</button>");} </script>';
 						var MTEFunction = '<script>function jargonFunction() {document.getElementById("question1").innerHTML =\'This could also be translated:...\';}</script>';
-						
+						var Textpopup = '<script>function jargonFunction() {$("h1").html (\'What are you confused by?\');$("#container").html("\'<textarea><textares/>\');}</script>';
 						//<button onclick = \'jargonFunction()\' id= \'button11\'>YES</button> <button id = \'button22\'>NO</button>
 						//
 						//<script>function jargonFunction() {document.getElementById(\'container\').innerHTML =\'This word means...\';}</script>
@@ -3065,7 +3065,7 @@ if (typeof jQuery != 'undefined') {
 						var newWin = '<a href="javascript:popup.close()"></a>'
 
 						
-						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup), 'html', $('a.default_popup'));
+						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup), 'html', $('a.default_popup'));
 						
 						
 						console.log("please open");
