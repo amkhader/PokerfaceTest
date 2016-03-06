@@ -3045,15 +3045,17 @@ if (typeof jQuery != 'undefined') {
 						var popup = new $.Popup();
 						
 						//var head = '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>';
-						var htmlQ1 = '<h1 id="question1">Are you confused by something in this frame?</h1>';
+						var htmlQ1 = '<h1 id="question1">هل تشعر الخلط بشيء في هذا الإطار من الفيديو؟</h1>';
 						var htmlQ2 = '<h1>Are you confused by jargon?</h1>';
 						var htmlButtons = '<style>h1{font-size: 2em;} #button1{ width: 300px; height: 40px;} #button2{ width: 300px; height: 40px;} #container{ text-align: center;}</style>';
-						var htmlButtonsRewind = '<div id="container"><button onclick="jargonpopup()" id="button1">YES</button> <button onclick="rewindFunction()" id = "button2">NO, REWIND</button></div>';
+						var htmlButtonsRewind = '<div id="container"><button onclick="jargonpopup()" id="button1">نعم</button> <button onclick="rewindFunction()" id = "button2">لا، إطار سابق</button></div>';
 						var RewindFun = '<script>function rewindFunction() {document.getElementById("player1").currentTime = track.entries.times[currentSubNum-1]["start"]; }</script>';
 						var htmlButtonsJargon = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button> <button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container").innerHTML ="This word means..."; }</script>';
-						var JargonWinFun = '<script>function jargonpopup(){ var j = $.inArray(currentSubNum, JargonSubNum); if (j > -1){ htmlQ2 = "Are you confused by ".concat(JargonWords[j]).concat("?"); $("h1").html(htmlQ2);$("#container").html("<button onclick = \'jargonFunction()\' id= \'button1\'>YES</button> <button onclick = \'MTEpopup()\' id = \'button2\'>NO</button>");}}</script>';
-						var JargonFun = '<script>function jargonFunction() {document.getElementById(\'container\').innerHTML =\'This word means...\';}</script>';
-						var MTEpopup = '<script>function MTEpopup() {document.getElementById("question1").innerHTML ="<h1 id=\'question1\'>Are you confused by the translation?</h1>"; $("#container").html("<button onclick = \'MTEFunction()\' id= \'button1\'>YES</button> <button onclick = \'Textpopup()\' id = \'button2\'>NO</button>");} </script>';
+						var JargonWinFun = '<script>function jargonpopup(){ console.log(currentSubNum); var j = $.inArray(currentSubNum, JargonSubNum); if (j > -1){ htmlQ2 = "هل تشعر الخلط من ".concat(JargonWords[j]).concat("?"); $("h1").html(htmlQ2);$("#container").html("<button onclick = \'jargonFunction()\' id= \'button1\'>نعم</button> <button onclick = \'MTEpopup()\' id = \'button2\'>لا</button>");}}</script>';
+						var JargonFun = '<script>function jargonFunction() {document.getElementById("question1").innerHTML =\'This word means...\';}</script>';
+						var MTEpopup = '<script>function MTEpopup() {document.getElementById("question1").innerHTML ="<h1 id=\'question1\'>هل تشعر الخلط من جانب الترجمة؟</h1>"; $("#container").html("<button onclick = \'MTEFunction()\' id= \'button1\'>نعم</button> <button onclick = \'Textpopup()\' id = \'button2\'>لا</button>");} </script>';
+						var MTEFunction = '<script>function jargonFunction() {document.getElementById("question1").innerHTML =\'This could also be translated:...\';}</script>';
+						
 						//<button onclick = \'jargonFunction()\' id= \'button11\'>YES</button> <button id = \'button22\'>NO</button>
 						//
 						//<script>function jargonFunction() {document.getElementById(\'container\').innerHTML =\'This word means...\';}</script>
