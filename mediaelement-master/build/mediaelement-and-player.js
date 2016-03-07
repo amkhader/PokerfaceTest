@@ -3067,7 +3067,7 @@ if (typeof jQuery != 'undefined') {
 						var newWin = '<a href="javascript:popup.close()"></a>'
 
 						
-						popup.open(htmlQ1.concat(htmlButtons).concat(htmlEN).concat(htmlButtonsRewind).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput).concat(ResultsFile), 'html', $('a.default_popup'));
+						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput).concat(ResultsFile), 'html', $('a.default_popup'));
 						
 						
 						console.log("please open");
