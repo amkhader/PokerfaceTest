@@ -3044,8 +3044,9 @@ if (typeof jQuery != 'undefined') {
 						var ResultsFile = '<script>var csvResult = new Array();</script>';
 						//var head = '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>';
 						var htmlQ1 = '<h1 id="question1">هل تشعر الخلط بشيء في هذا الإطار من الفيديو؟</h1>';
+						var htmlEN = '<h2 id = "translation">Are you confused by something in this frame?</h2>'
 						var htmlQ2 = '<h1>Are you confused by jargon?</h1>';
-						var htmlButtons = '<style>h1{font-size: 2em;} #button1{ width: 300px; height: 40px;} #button2{ width: 300px; height: 40px;} #container{ text-align: center;}</style>';
+						var htmlButtons = '<style>h1{font-size: 2em;} h1{font-size: 1.5em;} #button1{font-size:1em; width: 300px; height: 40px;} #button2{font-size:1em; width: 300px; height: 40px;} #container{ text-align: center;}</style>';
 						var htmlButtonsRewind = '<div id="container"><button onclick="jargonpopup()" id="button1">نعم</button> <button onclick="rewindFunction()" id = "button2">لا، إطار سابق</button></div>';
 						var RewindFun = '<script>function rewindFunction() {document.getElementById("player1").currentTime = track.entries.times[currentSubNum-1]["start"]; currentSubNum--; }</script>';
 						var htmlButtonsJargon = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button> <button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container").innerHTML ="This word means..."; }</script>';
