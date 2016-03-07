@@ -342,7 +342,6 @@ mejs.PluginDetector.addPlugin('silverlight','Silverlight Plug-In','application/x
 PluginDetector.addPlugin('acrobat','Adobe Acrobat','application/pdf','AcroPDF.PDF', function (ax) {
 	var version = [],
 		d = ax.GetVersions().split(',')[0].split('=')[1].split('.');
-
 	if (d) {
 		version = [parseInt(d[0], 10), parseInt(d[1], 10), parseInt(d[2], 10)];
 	}
@@ -1549,7 +1548,6 @@ mejs.HtmlMediaElementShim = {
 				htmlMediaElement.src = '';
 				htmlMediaElement.load();
 				htmlMediaElement.canceledPreload = true;
-
 				htmlMediaElement.addEventListener('play',function() {
 					if (htmlMediaElement.canceledPreload) {
 						htmlMediaElement.src = playback.url;
@@ -3044,8 +3042,7 @@ if (typeof jQuery != 'undefined') {
 						
 						var popup = new $.Popup();
 						
-						
-						//var ResultsFile = '<script>var csvResult = new Array();</script>';
+						//var head = '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>';
 						var htmlQ1 = '<h1 id="question1">هل تشعر الخلط بشيء في هذا الإطار من الفيديو؟</h1>';
 						var htmlQ2 = '<h1>Are you confused by jargon?</h1>';
 						var htmlButtons = '<style>h1{font-size: 2em;} #button1{ width: 300px; height: 40px;} #button2{ width: 300px; height: 40px;} #container{ text-align: center;}</style>';
@@ -3057,18 +3054,17 @@ if (typeof jQuery != 'undefined') {
 						var MTEpopup = '<script>function MTEpopup() {$("h1").html("هل تشعر الخلط من جانب الترجمة؟")  ;$("#container").html("<button onclick = \'MTEFunction()\' id= \'button1\'>نعم</button> <button onclick = \'Textpopup()\' id = \'button2\'>لا</button>");} </script>';
 						var MTEFunction = '<script>function MTEFunction() {document.getElementById("container").innerHTML =\'This could also be translated:...\';}</script>';
 						var Textpopup = '<script>function Textpopup() {$("h1").html(\'What are you confused by?\');$("#container").html(\'<textarea id = \"textArea\">I am confused by </textarea><button onclick="savetextarea()" type="button">Submit</button>\');}</script>';
-						//var SaveInput = '<script>function savetextarea(){var txt = document.getElementById("textArea").value;csvResult.push("Other: " + txt)}</script>';
-						//var ResultsLink = '<script>var csvContent = "data:text/csv;charset=utf-8,"; csvContent += csvResult.join("\n");var encodedUri = encodeURI(csvContent);console.log("download this results link: " + encodedUri);</script>';
+						var SaveInput = '<script>function savetextarea(){var txt = document.getElementById("textArea").value;console.log(txt);document.getElementById("saveinput").value = txt;document.forms["aForm"].submit();}</script><form action="savecontent" name="aForm"><input id="saveinput" type="hidden" name="filecontent" value=""></form>'
 						//<button onclick = \'jargonFunction()\' id= \'button11\'>YES</button> <button id = \'button22\'>NO</button>
 						//
 						//<script>function jargonFunction() {document.getElementById(\'container\').innerHTML =\'This word means...\';}</script>
 						//  document.getElementById("container").innerHTML = " <div id=\'container\'> <button onclick = \'jargonFunction()\' id= \'button1\'>YES</button> <button id = \'button2\'>NO</button></div><script>function jargonFunction() {document.getElementById(\'container\').innerHTML =\'This word means...\';}</script>";
 						//(htmlQ2.concat(htmlButtons).concat(htmlButtonsJargon), "html", $("a.html_popup"))
 						
-						//var newWin = '<a href="javascript:popup.close()"></a>';
+						var newWin = '<a href="javascript:popup.close()"></a>'
 
 						
-						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup), 'html', $('a.default_popup'));
+						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput), 'html', $('a.default_popup'));
 						
 						
 						console.log("please open");
@@ -5560,17 +5556,13 @@ if (typeof jQuery != 'undefined') {
 	Parses WebVTT format which should be formatted as
 	================================
 	WEBVTT
-
 	1
 	00:00:01,1 --> 00:00:05,000
 	A line of text
-
 	2
 	00:01:15,1 --> 00:02:05,000
 	A second line of text
-
 	===============================
-
 	Adapted from: http://www.delphiki.com/html5/playr
 	*/
 	mejs.TrackFormatParser = {
