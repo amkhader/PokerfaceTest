@@ -3049,7 +3049,7 @@ if (typeof jQuery != 'undefined') {
 						var htmlQ2 = '<h1>Are you confused by jargon?</h1>';
 						var htmlButtons = '<style>h1{font-size: 2em;} #button1{ width: 300px; height: 40px;} #button2{ width: 300px; height: 40px;} #container{ text-align: center;}</style>';
 						var htmlButtonsRewind = '<div id="container"><button onclick="jargonpopup()" id="button1">نعم</button> <button onclick="rewindFunction()" id = "button2">لا، إطار سابق</button></div>';
-						var RewindFun = '<script>function rewindFunction() {document.getElementById("player1").currentTime = track.entries.times[currentSubNum-1]["start"]; }</script>';
+						var RewindFun = '<script>function rewindFunction() {document.getElementById("player1").currentTime = track.entries.times[currentSubNum-1]["start"]; currentSubNum--; }</script>';
 						var htmlButtonsJargon = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button> <button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container").innerHTML ="This word means..."; }</script>';
 						var JargonWinFun = '<script>function jargonpopup(){ console.log(currentSubNum); var j = $.inArray(currentSubNum, JargonSubNum); if (j > -1){ htmlQ2 = "هل تشعر الخلط من ".concat(JargonWords[j]).concat("?"); $("h1").html(htmlQ2);$("#container").html("<button onclick = \'jargonFunction()\' id= \'button1\'>نعم</button> <button onclick = \'MTEpopup()\' id = \'button2\'>لا</button>");}else{MTEpopup();}}</script>';
 						var JargonFun = '<script>function jargonFunction() {document.getElementById("question1").innerHTML =\'This word means...\';} </script>';
