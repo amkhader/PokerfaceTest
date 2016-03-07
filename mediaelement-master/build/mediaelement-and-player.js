@@ -3055,7 +3055,7 @@ if (typeof jQuery != 'undefined') {
 						var MTEFunction = '<script>function MTEFunction() {document.getElementById("container").innerHTML =\'This could also be translated:...\';}</script>';
 						var Textpopup = '<script>function Textpopup() {$("h1").html(\'What are you confused by?\');$("#container").html(\'<textarea id = \"textArea\">I am confused by </textarea><button onclick="savetextarea()" type="button">Submit</button>\');}</script>';
 						var SaveInput = '<script>function savetextarea(){var txt = document.getElementById("textArea").value; csvResult.push("Other: ".concat(txt));}</script>';
-						var ResultsLink = '<script>var csvContent = "data:text/csv;charset=utf-8,"; csvContent += csvResult.join("\n");var encodedUri = encodeURI(csvContent);console.log("download this results link: " + encodedUri);</script>';
+						//var ResultsLink = '<script>var csvContent = "data:text/csv;charset=utf-8,"; csvContent += csvResult.join("\n");var encodedUri = encodeURI(csvContent);console.log("download this results link: " + encodedUri);</script>';
 						//
 						//<button onclick = \'jargonFunction()\' id= \'button11\'>YES</button> <button id = \'button22\'>NO</button>
 						//
