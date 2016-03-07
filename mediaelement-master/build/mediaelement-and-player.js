@@ -3045,11 +3045,6 @@ if (typeof jQuery != 'undefined') {
 						var popup = new $.Popup();
 						
 						
-						
-				  		 
-				  		  
-				  		
-						
 						//var ResultsFile = '<script>var csvResult = new Array();</script>';
 						var htmlQ1 = '<h1 id="question1">هل تشعر الخلط بشيء في هذا الإطار من الفيديو؟</h1>';
 						var htmlQ2 = '<h1>Are you confused by jargon?</h1>';
