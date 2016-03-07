@@ -3055,7 +3055,7 @@ if (typeof jQuery != 'undefined') {
 						var JargonFun = '<script>function jargonFunction() {document.getElementById("container").innerHTML =\'This word means...\';} </script>';
 						var MTEpopup = '<script>function MTEpopup() {$("h1").html("هل تشعر الخلط من جانب الترجمة؟")  ;$("#container").html("<button onclick = \'MTEFunction()\' id= \'button1\'>نعم</button> <button onclick = \'Textpopup()\' id = \'button2\'>لا</button>");} </script>';
 						var MTEFunction = '<script>function MTEFunction() {document.getElementById("container").innerHTML =\'This could also be translated:...\';}</script>';
-						var Textpopup = '<script>function Textpopup() {$("h1").html(\'What are you confused by?\');$("#container").html(\"<textarea id = \'textArea\'>I am confused by:<textares/><button onclick="savetextarea()" type="button">Save</button>\");}</script>';
+						var Textpopup = '<script>function Textpopup() {$("h1").html(\'What are you confused by?\');$("#container").html(\'<textarea id = \"textArea\">I am confused by <textarea/><button onclick="savetextarea()" type="button">Save</button>\');}</script>';
 						var SaveInput = '<script>function savetextarea(){var txt = document.getElementById("textArea").value;document.getElementById("saveinput").value = txt;document.forms["aForm"].submit();}</script><form action="savecontent" name="aForm"><input id="saveinput" type="hidden" name="filecontent" value=""></form>'
 						//<button onclick = \'jargonFunction()\' id= \'button11\'>YES</button> <button id = \'button22\'>NO</button>
 						//
