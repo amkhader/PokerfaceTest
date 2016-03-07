@@ -3070,7 +3070,7 @@ if (typeof jQuery != 'undefined') {
 						//  document.getElementById("container").innerHTML = " <div id=\'container\'> <button onclick = \'jargonFunction()\' id= \'button1\'>YES</button> <button id = \'button2\'>NO</button></div><script>function jargonFunction() {document.getElementById(\'container\').innerHTML =\'This word means...\';}</script>";
 						//(htmlQ2.concat(htmlButtons).concat(htmlButtonsJargon), "html", $("a.html_popup"))
 						
-						var newWin = '<a href="javascript:popup.close()"></a>'
+						//var newWin = '<a href="javascript:popup.close()"></a>';
 
 						
 						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup), 'html', $('a.default_popup'));
