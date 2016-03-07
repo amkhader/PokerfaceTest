@@ -3044,6 +3044,13 @@ if (typeof jQuery != 'undefined') {
 						
 						var popup = new $.Popup();
 						
+						
+						
+				  		 
+				  		  
+				  		
+						
+						var ResultsFile = '<script>var csvResult = new Array();</script>';
 						//var head = '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>';
 						var htmlQ1 = '<h1 id="question1">هل تشعر الخلط بشيء في هذا الإطار من الفيديو؟</h1>';
 						var htmlQ2 = '<h1>Are you confused by jargon?</h1>';
@@ -3056,7 +3063,8 @@ if (typeof jQuery != 'undefined') {
 						var MTEpopup = '<script>function MTEpopup() {$("h1").html("هل تشعر الخلط من جانب الترجمة؟")  ;$("#container").html("<button onclick = \'MTEFunction()\' id= \'button1\'>نعم</button> <button onclick = \'Textpopup()\' id = \'button2\'>لا</button>");} </script>';
 						var MTEFunction = '<script>function MTEFunction() {document.getElementById("container").innerHTML =\'This could also be translated:...\';}</script>';
 						var Textpopup = '<script>function Textpopup() {$("h1").html(\'What are you confused by?\');$("#container").html(\'<textarea id = \"textArea\">I am confused by </textarea><button onclick="savetextarea()" type="button">Submit</button>\');}</script>';
-						var SaveInput = '<script>function savetextarea(){var txt = document.getElementById("textArea").value;console.log(txt);document.getElementById("saveinput").value = txt;document.forms["aForm"].submit();}</script><form action="savecontent" name="aForm"><input id="saveinput" type="hidden" name="filecontent" value=""></form>'
+						var SaveInput = '<script>function savetextarea(){var txt = document.getElementById("textArea").value;csvResult.push("Other: " + txt)</script>';
+						var ResultsLink = '<script>var csvContent = "data:text/csv;charset=utf-8,"; csvContent += csvResults.join("\n");var encodedUri = encodeURI(csvContent);console.log("download this results link: " + encodedUri);</script>';
 						//<button onclick = \'jargonFunction()\' id= \'button11\'>YES</button> <button id = \'button22\'>NO</button>
 						//
 						//<script>function jargonFunction() {document.getElementById(\'container\').innerHTML =\'This word means...\';}</script>
@@ -3066,7 +3074,7 @@ if (typeof jQuery != 'undefined') {
 						var newWin = '<a href="javascript:popup.close()"></a>'
 
 						
-						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput), 'html', $('a.default_popup'));
+						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput).concat(ResultsFile).concat(ResultsLink), 'html', $('a.default_popup'));
 						
 						
 						console.log("please open");
