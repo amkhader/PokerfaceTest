@@ -3044,7 +3044,7 @@ if (typeof jQuery != 'undefined') {
 						var ResultsFile = '<script>var csvResult = new Array();</script>';
 						//var head = '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>';
 						var htmlQ1 = '<h1 id="question1">هل تشعر الخلط بشيء في هذا الإطار من الفيديو؟</h1>';
-						var htmlEN = '<h2 id = "translation">(Are you confused by something in this frame?)</h2>'
+						var htmlEN = '<h2 id = "translation">(Are you confused by something in this frame?)</h2>';
 						var htmlQ2 = '<h1>Are you confused by jargon?</h1>';
 						var htmlButtons = '<style>h1{font-size: 2em;} h2{font-size: 1.5em;} #button1{font-size:1em; width: 300px; height: 40px;} #button2{font-size:1em; width: 300px; height: 40px;} #container{ text-align: center;}</style>';
 						var htmlButtonsRewind = '<div id="container"><button onclick="jargonpopup()" id="button1">نعم (Yes)</button> <button onclick="rewindFunction()" id = "button2">لا، إطار سابق(No, rewind)</button></div>';
@@ -3067,7 +3067,7 @@ if (typeof jQuery != 'undefined') {
 						var newWin = '<a href="javascript:popup.close()"></a>'
 
 						
-						popup.open(htmlQ1.concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput).concat(ResultsFile), 'html', $('a.default_popup'));
+						popup.open(htmlQ1.concat(htmlEN).concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput).concat(ResultsFile), 'html', $('a.default_popup'));
 						
 						
 						console.log("please open");
