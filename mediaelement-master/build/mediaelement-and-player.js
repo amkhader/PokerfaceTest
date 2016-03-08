@@ -3043,18 +3043,18 @@ if (typeof jQuery != 'undefined') {
 						var popup = new $.Popup();
 						var ResultsFile = '<script>var csvResult = new Array();</script>';
 						//var head = '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>';
-						var htmlQ1 = '<h1 id="question1">هل تشعر الخلط بشيء في هذا الإطار من الفيديو؟(Are you confused by something in this frame?)</h1>';
-						//var htmlEN = '<h2 id = "translation">Are you confused by something in this frame?</h2>'
+						var htmlQ1 = '<h1 id="question1">هل تشعر الخلط بشيء في هذا الإطار من الفيديو؟</h1>';
+						var htmlEN = '<h2 id = "translation">(Are you confused by something in this frame?)</h2>'
 						var htmlQ2 = '<h1>Are you confused by jargon?</h1>';
-						var htmlButtons = '<style>h1{font-size: 2em;}  #button1{font-size:1em; width: 300px; height: 40px;} #button2{font-size:1em; width: 300px; height: 40px;} #container{ text-align: center;}</style>';
-						var htmlButtonsRewind = '<div id="container"><button onclick="jargonpopup()" id="button1">نعم</button> <button onclick="rewindFunction()" id = "button2">لا، إطار سابق</button></div>';
+						var htmlButtons = '<style>h1{font-size: 2em;} h2{font-size: 1.5em;} #button1{font-size:1em; width: 300px; height: 40px;} #button2{font-size:1em; width: 300px; height: 40px;} #container{ text-align: center;}</style>';
+						var htmlButtonsRewind = '<div id="container"><button onclick="jargonpopup()" id="button1">نعم (Yes)</button> <button onclick="rewindFunction()" id = "button2">لا، إطار سابق(No, rewind)</button></div>';
 						var RewindFun = '<script>function rewindFunction() {document.getElementById("player1").currentTime = track.entries.times[currentSubNum-1]["start"]; currentSubNum--; }</script>';
-						var htmlButtonsJargon = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button> <button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container").innerHTML ="This word means..."; }</script>';
+						var htmlButtonsJargon = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button> <button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container").innerHTML =" prophase - الطليعي يعني الطَّورُ الأَوَّل في الانْقِسامِ الخَلَوِيّ"; }</script>';
 						var JargonWinFun = '<script>function jargonpopup(){ console.log(currentSubNum); var j = $.inArray(currentSubNum, JargonSubNum); if (j > -1){ htmlQ2 = "هل تشعر الخلط من ".concat(JargonWords[j]).concat("?"); $("h1").html(htmlQ2);$("#container").html("<button onclick = \'jargonFunction()\' id= \'button1\'>نعم</button> <button onclick = \'MTEpopup()\' id = \'button2\'>لا</button>");}else{MTEpopup();}}</script>';
-						var JargonFun = '<script>function jargonFunction() {document.getElementById("container").innerHTML =\'This word means...\';} </script>';
-						var MTEpopup = '<script>function MTEpopup() {$("h1").html("هل تشعر الخلط من جانب الترجمة؟")  ;$("#container").html("<button onclick = \'MTEFunction()\' id= \'button1\'>نعم</button> <button onclick = \'Textpopup()\' id = \'button2\'>لا</button>");} </script>';
-						var MTEFunction = '<script>function MTEFunction() {document.getElementById("container").innerHTML =\'This could also be translated:...\';}</script>';
-						var Textpopup = '<script>function Textpopup() {$("h1").html(\'What are you confused by?\');$("#container").html(\'<textarea id = \"textArea\">I am confused by </textarea><button onclick="savetextarea()" type="button">Submit</button>\');}</script>';
+						var JargonFun = '<script>function jargonFunction() {document.getElementById("container").innerHTML =\' prophase - الطليعي يعني الطَّورُ الأَوَّل في الانْقِسام\';} </script>';
+						var MTEpopup = '<script>function MTEpopup() {$("h1").html("هل تشعر الخلط من جانب الترجمة؟")  ;$("h2").html("(Are you confused by the translation?)");$("#container").html("<button onclick = \'MTEFunction()\' id= \'button1\'>نعم(Yes)</button> <button onclick = \'Textpopup()\' id = \'button2\'>لا(No)</button>");} </script>';
+						var MTEFunction = '<script>function MTEFunction() {document.getElementById("container").innerHTML =\'...:ويمكن أيضا أن تترجم هذه ل';}</script>';
+						var Textpopup = '<script>function Textpopup() {$("h1").html(\'ما الذي كنت تشعر الخلط من جانب؟\');$("h2").html(\'What are you confused by?\');$("#container").html(\'<textarea id = \"textArea\"></textarea><button onclick="savetextarea()" type="button">Submit</button>\');}</script>';
 						var SaveInput = '<script>function savetextarea(){var txt = document.getElementById("textArea").value; csvResult.push("Other: ".concat(txt));}</script>';
 						//var ResultsLink = '<script>var csvContent = "data:text/csv;charset=utf-8,"; csvContent += csvResult.join("\n");var encodedUri = encodeURI(csvContent);console.log("download this results link: " + encodedUri);</script>';
 						//
