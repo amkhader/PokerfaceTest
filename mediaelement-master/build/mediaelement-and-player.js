@@ -5330,7 +5330,8 @@ if (typeof jQuery != 'undefined') {
 			
 			if (counterf == wcounter && doneFor[counterf].done != 1) {
 				 //console.log("times1 "+doneFor[counter].done);
-				  var link = document.createElement("a"); 
+				  var link1 = document.createElement("a"); 
+				  var link2 = document.createElement("a"); 
 				  var done = 0;
 				  theFullArray.forEach(function(item, index, array) {
 					  
@@ -5347,8 +5348,8 @@ if (typeof jQuery != 'undefined') {
 				  csvContent += csvData.join("\n"); 
 				  var encodedUri = encodeURI(csvContent);  
 				  console.log("download this link: " + encodedUri);
-				  link.setAttribute("href", encodedUri); 
-				  link.setAttribute("download", "my_data.csv");  
+				  link1.setAttribute("href", encodedUri); 
+				  link1.setAttribute("download", "my_data.csv");  
 				  
 				  
 				  //same for confusion data
@@ -5356,8 +5357,8 @@ if (typeof jQuery != 'undefined') {
 				  csvConContent += confusedCsvData.join("\n"); 
 				  var encodedUri = encodeURI(csvConContent);  
 				  console.log("download this confuion link: " + encodedUri);
-				  link.setAttribute("href", encodedUri); 
-				  link.setAttribute("download", "my_data.csv");
+				  link2.setAttribute("href", encodedUri); 
+				  link2.setAttribute("download", "my_data.csv");
 				  //link.click();
 				  doneFor = {
 					  	"id": i,
