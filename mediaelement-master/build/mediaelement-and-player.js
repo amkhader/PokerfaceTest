@@ -3056,7 +3056,7 @@ if (typeof jQuery != 'undefined') {
 						var MTEFunction = '<script>function MTEFunction() {document.getElementById("container").innerHTML =\' ويمكن أيضا أن تترجم هذه ل : إنها هي الدور الاستوائي واحد \';}</script>';
 						var Textpopup = '<script>function Textpopup() {$("h1").html(\'ما الذي كنت تشعر الخلط من جانب؟\');$("h2").html(\'What are you confused by?\');$("#container").html(\'<textarea id = \"textArea\"></textarea><button onclick="savetextarea()" type="button">Submit</button>\');}</script>';
 						var SaveInput = '<script>function savetextarea(){var txt = document.getElementById("textArea").value; csvResult.push("Other: ".concat(txt));}</script>';
-						//var ResultsLink = '<script>var csvContent = "data:text/csv;charset=utf-8,"; csvContent += csvResult.join("\n");var encodedUri = encodeURI(csvContent);console.log("download this results link: " + encodedUri);</script>';
+						var ResultsLink = '<script>var csvContent = "data:text/csv;charset=utf-8,"; csvContent += csvResult.join(\" \n \");var encodedUri = encodeURI(csvContent);console.log("download this results link: " + encodedUri);</script>';
 						//
 						//<button onclick = \'jargonFunction()\' id= \'button11\'>YES</button> <button id = \'button22\'>NO</button>
 						//
@@ -3067,7 +3067,7 @@ if (typeof jQuery != 'undefined') {
 						var newWin = '<a href="javascript:popup.close()"></a>'
 
 						
-						popup.open(htmlQ1.concat(htmlEN).concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput).concat(ResultsFile), 'html', $('a.default_popup'));
+						popup.open(htmlQ1.concat(htmlEN).concat(htmlButtons).concat(htmlButtonsRewind).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(ResultsFile).concat(SaveInput).concat(ResultsLink), 'html', $('a.default_popup'));
 						
 						
 						console.log("please open");
