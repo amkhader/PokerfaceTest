@@ -53,6 +53,8 @@ var currentSubNum = 0;
 var subStartTime =0 ;
 var currentSub = "";
 
+window.csvResult = new Array();
+
 //$.getScript("mediaelement-master/build/require.js", function(){
 //define(function (require) {
   // var fs =  require('fs');
@@ -3039,7 +3041,6 @@ if (typeof jQuery != 'undefined') {
 					if (!media.paused){
 						confusedCsvData.push(new Date().getTime());
 						media.pause();
-						window.csvResult = new Array();
 						var popup = new $.Popup();
 						var ResultsFile = '<script> var csvContent = "data:text/csv;charset=utf-8,";</script>';
 						//var head = '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>';
