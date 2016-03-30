@@ -3055,8 +3055,8 @@ if (typeof jQuery != 'undefined') {
 						var MTEpopup = '<script>function MTEpopup() {$("h1").html("هل تشعر الخلط من جانب الترجمة؟")  ;$("h2").html("(Are you confused by the translation?)");$("#container").html("<button onclick = \'MTEFunction()\' id= \'button1\'>نعم(Yes)</button> <button onclick = \'Textpopup()\' id = \'button2\'>لا(No)</button>");} </script>';
 						var MTEFunction = '<script>function MTEFunction() {document.getElementById("container").innerHTML =\' ويمكن أيضا أن تترجم هذه ل : إنها هي الدور الاستوائي واحد \';}</script>';
 						var Textpopup = '<script>function Textpopup() {$("h1").html(\'ما الذي كنت تشعر الخلط من جانب؟\');$("h2").html(\'What are you confused by?\');$("#container").html(\'<textarea id = \"textArea\"></textarea><button onclick="savetextarea()" type="button">Submit</button>\');}</script>';
-						var SaveInput = '<script>function savetextarea(){var txt = document.getElementById("textArea").value; console.log(txt); csvResult.push("Other: ".concat(txt));}</script>';
-						var ResultsLink = '<script>var csvContent = "data:text/csv;charset=utf-8,"; csvContent += csvResult.join("\\n"); var encodedUri = encodeURI(csvContent);console.log("download this results link: " + encodedUri);var link = document.createElement("a");link.setAttribute("href", encodedUri);link.setAttribute("download", "my_data.csv");</script>';
+						var SaveInput = '<script>function savetextarea(){var txt = document.getElementById("textArea").value; console.log(txt); csvResult.push("Other: ".concat(txt));makeLink();}</script>';
+						var ResultsLink = '<script>function makeLink(){var csvContent = "data:text/csv;charset=utf-8,"; csvContent += csvResult.join("\\n"); var encodedUri = encodeURI(csvContent);console.log("download this results link: " + encodedUri);var link = document.createElement("a");link.setAttribute("href", encodedUri);link.setAttribute("download", "my_data.csv");}</script>';
 						//
 						//<button onclick = \'jargonFunction()\' id= \'button11\'>YES</button> <button id = \'button22\'>NO</button>
 						//
