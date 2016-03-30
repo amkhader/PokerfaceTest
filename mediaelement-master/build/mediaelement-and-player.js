@@ -3039,9 +3039,9 @@ if (typeof jQuery != 'undefined') {
 					if (!media.paused){
 						confusedCsvData.push(new Date().getTime());
 						media.pause();
-						
+						window.csvResult = new Array();
 						var popup = new $.Popup();
-						var ResultsFile = '<script>var csvResult = new Array();var csvContent = "data:text/csv;charset=utf-8,";</script>';
+						var ResultsFile = '<script> var csvContent = "data:text/csv;charset=utf-8,";</script>';
 						//var head = '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>';
 						var htmlQ1 = '<h1 id="question1">هل تشعر الخلط بشيء في هذا الإطار من الفيديو؟</h1>';
 						var htmlEN = '<h2 id = "translation">(Are you confused by something in this frame?)</h2>';
@@ -3055,8 +3055,8 @@ if (typeof jQuery != 'undefined') {
 						var MTEpopup = '<script>function MTEpopup() {$("h1").html("هل تشعر الخلط من جانب الترجمة؟")  ;$("h2").html("(Are you confused by the translation?)");$("#container").html("<button onclick = \'MTEFunction()\' id= \'button1\'>نعم(Yes)</button> <button onclick = \'Textpopup()\' id = \'button2\'>لا(No)</button>");} </script>';
 						var MTEFunction = '<script>function MTEFunction() {document.getElementById("container").innerHTML =\' ويمكن أيضا أن تترجم هذه ل : إنها هي الدور الاستوائي واحد \';}</script>';
 						var Textpopup = '<script>function Textpopup() {$("h1").html(\'ما الذي كنت تشعر الخلط من جانب؟\');$("h2").html(\'What are you confused by?\');$("#container").html(\'<textarea id = \"textArea\"></textarea><buttonid="submit" onclick="savetextarea()" type="button">Submit</button>\');}</script>';
-						var SaveInput = '<script>function savetextarea(){var txt = document.getElementById("textArea").value; console.log(txt); csvResult.push("Other: ".concat(txt));makeLink();}</script>';
-						var ResultsLink = '<script>function makeLink(){csvContent += csvResult.join("\\n"); var encodedUri = encodeURI(csvContent);console.log("download this results link: " + encodedUri);var link = document.createElement("a");link.setAttribute("href", encodedUri);link.setAttribute("download", "my_data.csv");}</script>';
+						var SaveInput = '<script>function savetextarea(){var txt = document.getElementById("textArea").value; window.csvResult.push("Other: ".concat(txt));console.log(window.csvResult); makeLink();}</script>';
+						var ResultsLink = '<script>function makeLink(){csvContent += window.csvResult.join("\\n"); var encodedUri = encodeURI(csvContent);console.log("download this results link: " + encodedUri);var link = document.createElement("a");link.setAttribute("href", encodedUri);link.setAttribute("download", "my_data.csv");}</script>';
 						//
 						//<button onclick = \'jargonFunction()\' id= \'button11\'>YES</button> <button id = \'button22\'>NO</button>
 						//
