@@ -5358,7 +5358,7 @@ if (typeof jQuery != 'undefined') {
 				  var encodedUri = encodeURI(csvConContent);  
 				  console.log("download this confuion link: " + encodedUri);
 				  link2.setAttribute("href", encodedUri); 
-				  link2.setAttribute("download", "my_data.csv");
+				  link2.setAttribute("download", "conf_data.csv");
 				  //link.click();
 				  doneFor = {
 					  	"id": i,
