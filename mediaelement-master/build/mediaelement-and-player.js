@@ -3038,7 +3038,7 @@ if (typeof jQuery != 'undefined') {
 				//.appendTo(layers)
 				//use .onclick
 				//.bind('click', function() { 
-				document.getElementById(redCon).onclick = function(){
+				document.getElementById("redCon").onclick = function(){
 					if (!media.paused){
 						confusedCsvData.push(new Date().getTime());
 						media.pause();
