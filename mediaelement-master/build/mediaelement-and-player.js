@@ -3106,7 +3106,7 @@ if (typeof jQuery != 'undefined') {
 					else{
 						media.play();
 					}
-				});
+				};
 				
 		bigPlay =
 				$('<div class="mejs-overlay mejs-layer mejs-overlay-play">'+
