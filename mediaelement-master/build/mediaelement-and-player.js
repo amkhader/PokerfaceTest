@@ -3032,12 +3032,13 @@ if (typeof jQuery != 'undefined') {
 			
 				
 			redConfused =
-				$('<div class="mejs-overlay mejs-layer mejs-overlay-confused">'+
-					'<div class="mejs-overlay-con-button"></div>'+
-				'</div>')
-				.appendTo(layers)
+				//$('<div class="mejs-overlay mejs-layer mejs-overlay-confused">'+
+					//'<div class="mejs-overlay-con-button"></div>'+
+				//'</div>')
+				//.appendTo(layers)
 				//use .onclick
-				.bind('click', function() {  
+				//.bind('click', function() { 
+				document.getElementById().onclick = function(){
 					if (!media.paused){
 						confusedCsvData.push(new Date().getTime());
 						media.pause();
