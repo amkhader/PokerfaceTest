@@ -113,10 +113,10 @@
 	background-image: url(bigplay.png);
 }
 
-.mejs-overlay-confused {
+/*.mejs-overlay-confused {
 
 	cursor: pointer;
-}
+} 
 
 .mejs-overlay-con-button {
 	position: absolute;
@@ -129,8 +129,8 @@
 }
 
 .no-svg .mejs-overlay-con-button {
-	background-image: url(CONFUSED.png);
-}
+	background-image: url(CONFUSED.png); 
+} */
 
 .mejs-overlay:hover .mejs-overlay-button {
 	background-position: 0 -100px ;
