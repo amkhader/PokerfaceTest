@@ -3072,7 +3072,7 @@ if (typeof jQuery != 'undefined') {
 						
 						var html_content = htmlQ1.concat(htmlEN).concat(htmlButtons).concat(htmlButtonsRewind).concat(ResultsFile).concat(ResultsLink).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput);
 						
-						$('a.default_popup').popup({content: html_content, type : 'html'})
+						$('a.html_popup').popup({content: html_content, type : 'html'})
 						
 						
 						console.log("please open");
