@@ -3073,7 +3073,7 @@ if (typeof jQuery != 'undefined') {
 						
 						var html_content = htmlQ1.concat(htmlEN).concat(htmlButtons).concat(htmlButtonsRewind).concat(ResultsFile).concat(ResultsLink).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput);
 						
-						$('a.button').popup({backOpacity : 0.5, keepInlineChanges : false, modal : true, content: html_content, type : 'html'})
+						$('a.button').popup({backOpacity : 0.5, keepInlineChanges : false, modal : true, content: html_content, type : 'html', afterOpen: function(){while(true){ if (getElementById('redCon')!= null){$('button').click(function(){this.close();});}}}})
 						
 						
 						console.log("please open");
@@ -3102,9 +3102,6 @@ if (typeof jQuery != 'undefined') {
 						
 				
 						//myWindow.document.write("</body></html>");
-					}
-					else{
-						media.play();
 					}
 				};
 				
