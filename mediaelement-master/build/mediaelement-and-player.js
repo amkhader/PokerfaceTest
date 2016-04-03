@@ -50,7 +50,10 @@ for (i = 0; i < JargonData.length; i++) {
 }
 
 var currentSubNum = 0;
+var subStartTime =0 ;
 var currentSub = "";
+
+window.csvResult = new Array();
 
 //$.getScript("mediaelement-master/build/require.js", function(){
 //define(function (require) {
@@ -341,7 +344,6 @@ mejs.PluginDetector.addPlugin('silverlight','Silverlight Plug-In','application/x
 PluginDetector.addPlugin('acrobat','Adobe Acrobat','application/pdf','AcroPDF.PDF', function (ax) {
 	var version = [],
 		d = ax.GetVersions().split(',')[0].split('=')[1].split('.');
-
 	if (d) {
 		version = [parseInt(d[0], 10), parseInt(d[1], 10), parseInt(d[2], 10)];
 	}
@@ -1548,7 +1550,6 @@ mejs.HtmlMediaElementShim = {
 				htmlMediaElement.src = '';
 				htmlMediaElement.load();
 				htmlMediaElement.canceledPreload = true;
-
 				htmlMediaElement.addEventListener('play',function() {
 					if (htmlMediaElement.canceledPreload) {
 						htmlMediaElement.src = playback.url;
@@ -2032,7 +2033,7 @@ if (typeof jQuery != 'undefined') {
 		alwaysShowHours: false,
 
 		// show framecount in timecode (##:00:00:00)
-		showTimecodeFrameCount: false,
+		showTimecodeFrameCount: true,
 		// used when showTimecodeFrameCount is set to true
 		framesPerSecond: 25,
 
@@ -2051,7 +2052,7 @@ if (typeof jQuery != 'undefined') {
 		// force Android's native controls
 		AndroidUseNativeControls: false,
 		// features to show
-		features: ['playpause','current','progress','duration','tracks','volume','fullscreen'],
+		features: ['playpause','current','progress','duration','tracks','volume','fullscreen', 'confused'],
 		// only for dynamic
 		isVideo: true,
 
@@ -3025,7 +3026,89 @@ if (typeof jQuery != 'undefined') {
 				.hide() // start out hidden
 				.appendTo(layers),
 			// this needs to come last so it's on top
-			bigPlay =
+			
+				
+
+			
+				
+			redConfused =
+				//$('<div class="mejs-overlay mejs-layer mejs-overlay-confused">'+
+					//'<div class="mejs-overlay-con-button"></div>'+
+				//'</div>')
+				//.appendTo(layers)
+				//use .onclick
+				//.bind('click', function() { 
+				document.getElementById("redCon").onclick = function(){
+					if (!media.paused){
+						confusedCsvData.push(new Date().getTime());
+						media.pause();
+						var popup = new $.Popup();
+						var ResultsFile = '<script> var csvContent = "data:text/csv;charset=utf-8,";</script>';
+						//var head = '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>';
+						var htmlQ1 = '<h1 id="question1">هل تشعر الخلط بشيء في هذا الإطار من الفيديو؟</h1>';
+						var htmlEN = '<h2 id = "translation">(Are you confused by something in this frame?)</h2>';
+						var htmlQ2 = '<h1>Are you confused by jargon?</h1>';
+						var htmlButtons = '<style>h1{font-size: 2em;} h2{font-size: 1.5em;} #button1{width: 300px; height: 40px;} #button2{width: 300px; height: 40px;} #container{ text-align: center;}</style>';
+						var htmlButtonsRewind = '<div id="container"><button onclick="jargonpopup()" id="button1">نعم (Yes)</button> <button onclick="rewindFunction()" id = "button2">لا، إطار سابق(No, rewind)</button></div>';
+						var RewindFun = '<script>function rewindFunction() {document.getElementById("player1").currentTime = track.entries.times[currentSubNum-1]["start"]; currentSubNum--; }</script>';
+						var htmlButtonsJargon = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button> <button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container").innerHTML =" prophase - الطليعي يعني الطَّورُ الأَوَّل في الانْقِسامِ الخَلَوِيّ"; }</script>';
+						var JargonWinFun = '<script>function jargonpopup(){ console.log(currentSubNum); var j = $.inArray(currentSubNum, JargonSubNum); if (j > -1){ htmlQ2 = "هل تشعر الخلط من ".concat(JargonWords[j]).concat("?"); $("h1").html(htmlQ2);$("h2").html("Are you confused by".concat(JargonWords[j]).concat("?"));$("#container").html("<button onclick = \'jargonFunction()\' id= \'button1\'>نعم</button> <button onclick = \'MTEpopup()\' id = \'button2\'>لا</button>");}else{MTEpopup();}}</script>';
+						var JargonFun = '<script>function jargonFunction() {document.getElementById("container").innerHTML =\' prophase - الطليعي يعني الطَّورُ الأَوَّل في الانْقِسام\';} </script>';
+						var MTEpopup = '<script>function MTEpopup() {$("h1").html("هل تشعر الخلط من جانب الترجمة؟")  ;$("h2").html("(Are you confused by the translation?)");$("#container").html("<button onclick = \'MTEFunction()\' id= \'button1\'>نعم(Yes)</button> <button onclick = \'Textpopup()\' id = \'button2\'>لا(No)</button>");} </script>';
+						var MTEFunction = '<script>function MTEFunction() {document.getElementById("container").innerHTML =\' ويمكن أيضا أن تترجم هذه ل : إنها هي الدور الاستوائي واحد \';}</script>';
+						var Textpopup = '<script>function Textpopup() {$("h1").html(\'ما الذي كنت تشعر الخلط من جانب؟\');$("h2").html(\'What are you confused by?\');$("#container").html(\'<textarea id = \"textArea\"></textarea><button onclick="savetextarea()" id="submit" type="button">Submit</button>\');}</script>';
+						var SaveInput = '<script>function savetextarea(){var txt = document.getElementById("textArea").value; window.csvResult.push("Other: ".concat(txt));console.log(window.csvResult); makeLink();}</script>';
+						var ResultsLink = '<script>function makeLink(){csvContent += window.csvResult.join("\\n"); var encodedUri = encodeURI(csvContent);console.log("download this results link: " + encodedUri);var link = document.createElement("a");link.setAttribute("href", encodedUri);link.setAttribute("download", "my_data.csv");}</script>';
+						//
+						//<button onclick = \'jargonFunction()\' id= \'button11\'>YES</button> <button id = \'button22\'>NO</button>
+						//
+						//<script>function jargonFunction() {document.getElementById(\'container\').innerHTML =\'This word means...\';}</script>
+						//  document.getElementById("container").innerHTML = " <div id=\'container\'> <button onclick = \'jargonFunction()\' id= \'button1\'>YES</button> <button id = \'button2\'>NO</button></div><script>function jargonFunction() {document.getElementById(\'container\').innerHTML =\'This word means...\';}</script>";
+						//(htmlQ2.concat(htmlButtons).concat(htmlButtonsJargon), "html", $("a.html_popup"))
+						
+						var newWin = '<a href="javascript:popup.close()"></a>'
+
+						
+						//popup.open(htmlQ1.concat(htmlEN).concat(htmlButtons).concat(htmlButtonsRewind).concat(ResultsFile).concat(ResultsLink).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput), 'html', $('a.default_popup'));
+						
+						var html_content = htmlQ1.concat(htmlEN).concat(htmlButtons).concat(htmlButtonsRewind).concat(ResultsFile).concat(ResultsLink).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput);
+						
+						$('a.button').popup({content: html_content, type : 'html'})
+						
+						
+						console.log("please open");
+								
+						//var myWindow = window.open('', 'MsgWindow','height=400, width=400');
+						//myWindow.document.write("<!DOCTYPE html><html><body>");
+						//myWindow.document.write("<p>Are you confused?</p>");
+						
+						//jargon button
+						//var j = $.inArray(currentSubNum, JargonSubNum);
+						//if (j > -1){
+						//	myWindow.document.write('<p>Are you confused by '.concat(JargonWords[j], '?<p><button onclick="jargonFunction()">YES</button>') );
+						//	myWindow.document.write('<p id="jargonButton"></p>');
+						//}
+						//translation error button 
+						//myWindow.document.write('<p>Are you confused by *MT_error*?<p><button onclick="MTEFunction()">YES</button>');
+						//myWindow.document.write('<p id="MTEButton"></p>');
+						
+									
+						//myWindow.document.write("<script>function jargonFunction() {document.getElementById('jargonButton').innerHTML = 'This word means...'; }</script>");
+						//myWindow.document.write("<script>function MTEFunction() {document.getElementById('MTEButton').innerHTML = 'This may also mean...'; }</script>");
+						//document.getElementById("jargonButton").innerHTML = "Hello World";
+						
+						
+						
+						
+				
+						//myWindow.document.write("</body></html>");
+					}
+					else{
+						media.play();
+					}
+				};
+				
+		bigPlay =
 				$('<div class="mejs-overlay mejs-layer mejs-overlay-play">'+
 					'<div class="mejs-overlay-button"></div>'+
 				'</div>')
@@ -3035,42 +3118,6 @@ if (typeof jQuery != 'undefined') {
 						if (media.paused) {
 							media.play();
 						}
-					}
-				});
-				
-			redConfused =
-				$('<div class="mejs-overlay mejs-layer mejs-overlay-confused">'+
-					'<div class="mejs-overlay-con-button"></div>'+
-				'</div>')
-				.appendTo(layers)
-				.bind('click', function() {  
-					if (!media.paused){
-						confusedCsvData.push(new Date().getTime());
-						media.pause();
-						
-						var myWindow = window.open('', 'MsgWindow','height=400, width=400');
-						myWindow.document.write("<!DOCTYPE html><html><body>");
-						myWindow.document.write("<p>Are you confused?</p>");
-						
-						//jargon button
-						var j = $.inArray(currentSubNum, JargonSubNum);
-						if (j > -1){
-							myWindow.document.write('<p>Are you confused by '.concat(JargonWords[j], '?<p><button onclick="jargonFunction()">YES</button>') );
-							myWindow.document.write('<p id="jargonButton"></p>');
-						}
-						//translation error button 
-						myWindow.document.write('<p>Are you confused by *MT_error*?<p><button onclick="MTEFunction()">YES</button>');
-						myWindow.document.write('<p id="MTEButton"></p>');
-						
-									
-						myWindow.document.write("<script>function jargonFunction() {document.getElementById('jargonButton').innerHTML = 'This word means...'; }</script>");
-						myWindow.document.write("<script>function MTEFunction() {document.getElementById('MTEButton').innerHTML = 'This may also mean...'; }</script>");
-						//document.getElementById("jargonButton").innerHTML = "Hello World";
-				
-						myWindow.document.write("</body></html>");
-					}
-					else{
-						media.play();
 					}
 				});
 
@@ -3423,7 +3470,7 @@ if (typeof jQuery != 'undefined') {
 		$(document).ready(function() {
 			// auto enable using JSON attribute
 			$('.mejs-player').mediaelementplayer({
-				 startLanguage: 'en',
+				 startLanguage: 'ar',
 				 autoplay: true
 			});
 			
@@ -5250,6 +5297,7 @@ if (typeof jQuery != 'undefined') {
 							
 							
 							currentSubNum = i;
+							subStartTime = startTime;
 							currentSub = track.entries.text[i];
 							theFullArray[counterf] = {
 											  "subnum":i,
@@ -5288,7 +5336,8 @@ if (typeof jQuery != 'undefined') {
 			
 			if (counterf == wcounter && doneFor[counterf].done != 1) {
 				 //console.log("times1 "+doneFor[counter].done);
-				  var link = document.createElement("a"); 
+				  var link1 = document.createElement("a"); 
+				  var link2 = document.createElement("a"); 
 				  var done = 0;
 				  theFullArray.forEach(function(item, index, array) {
 					  
@@ -5305,8 +5354,8 @@ if (typeof jQuery != 'undefined') {
 				  csvContent += csvData.join("\n"); 
 				  var encodedUri = encodeURI(csvContent);  
 				  console.log("download this link: " + encodedUri);
-				  link.setAttribute("href", encodedUri); 
-				  link.setAttribute("download", "my_data.csv");  
+				  link1.setAttribute("href", encodedUri); 
+				  link1.setAttribute("download", "my_data.csv");  
 				  
 				  
 				  //same for confusion data
@@ -5314,8 +5363,8 @@ if (typeof jQuery != 'undefined') {
 				  csvConContent += confusedCsvData.join("\n"); 
 				  var encodedUri = encodeURI(csvConContent);  
 				  console.log("download this confuion link: " + encodedUri);
-				  link.setAttribute("href", encodedUri); 
-				  link.setAttribute("download", "my_data.csv");
+				  link2.setAttribute("href", encodedUri); 
+				  link2.setAttribute("download", "conf_data.csv");
 				  //link.click();
 				  doneFor = {
 					  	"id": i,
@@ -5517,17 +5566,13 @@ if (typeof jQuery != 'undefined') {
 	Parses WebVTT format which should be formatted as
 	================================
 	WEBVTT
-
 	1
 	00:00:01,1 --> 00:00:05,000
 	A line of text
-
 	2
 	00:01:15,1 --> 00:02:05,000
 	A second line of text
-
 	===============================
-
 	Adapted from: http://www.delphiki.com/html5/playr
 	*/
 	mejs.TrackFormatParser = {

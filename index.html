@@ -7,7 +7,6 @@
 	
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://www.google.com/jsapi"></script>
-    <script data-main="/mediaelement-master/build/mediaelement-and-player" src="/mediaelement-master/build/require.js"></script>
     
     <script type="text/javascript">
     google.load("language", "1");
@@ -15,6 +14,9 @@
 	
 	<script src="mediaelement-master/build/mediaelement-and-player.js"></script>
 	<link rel="stylesheet" href="mediaelement-master/build/mediaelementplayer.css" />
+	
+	<link rel="stylesheet" href="mediaelement-master/build/popup.css" />
+	
     
 <style> 
 	 .container {
@@ -36,9 +38,9 @@
 	  
 	 #vidHolder { 
 	  	float:left; 
-	  	padding:15px; 
-	  	width:100%; 
-	  	height: auto;
+	  	/*padding:15px; */
+	  	width: 100%; 
+	  	height: 100%;
 	  	position: absolute;
 	  	margin-left:50%;
 	  	margin-right:50%;
@@ -48,15 +50,46 @@
  		padding: 3px 5px;
  		/* background: rgba(20,20,20,.5);*/
 	 }
+	  
+	 
+	 .button {
+	  position: absolute;
+	  top: 10%;
+	  left: 95%;
+	  width: 100px;
+	  height: 100px;
+	  /*display: inline-block; */
+	  /*padding: 15px 25px; */
+	  /*font-size: 24px;*/
+	  cursor: pointer;
+	  text-align: center;	
+	  text-decoration: none;
+	  outline: none;
+	  color: #fff;
+	  background-color: #f44336;
+	  border: none;
+	  /*border-radius: 50%;*/
+	  box-shadow: 0 9px #999;
+	  background: url(mediaelement-master/build/Stop_question.svg) no-repeat;
+	}
+	
+	.button:hover {background-color: #f44336}
+	
+	.button:active {
+	  background-color: #f44336;
+	  box-shadow: 0 5px #666;
+	  transform: translateY(4px);
+	}
 
 </style>
+
 
 </head>
 
 
 <body class="container">
 
-<video id="player1" class="mejs-player" data-mejsoptions='{"alwaysShowControls": true}' controls="controls">
+<video id="player1" style="width:100%;height:100%;" width="100%" height="100%" class="mejs-player" data-mejsoptions='{"alwaysShowControls": true}' controls="controls">
 
 	<!-- Change the video by changing the value of src -->
 	<source src= "Media/PhasesofMeiosisI.mp4" >
@@ -68,11 +101,11 @@
 	
 </video>	 
 
-<!-- Video Controls -->
-  <div id="video-controls">
-    <button type="button" id="confusion"> Confusion</button>
-  </div>
-</div>
+<a href="#replace1" class="default_popup"></a>
+
+<a href="#" class="button" id="redCon"></a>
+
+<script src="mediaelement-master/build/jquery.popup.min.js"></script>
 
 <script>
 $(document).ready(function(){
@@ -82,6 +115,8 @@ $('#player1').ready(function(){;
 $('#player1').data('mediaelementplayer').play();
 });
 </script>
+
+
 
 </body>
 </html>
