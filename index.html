@@ -71,16 +71,24 @@
 	  /*border-radius: 50%;*/
 	  /*box-shadow: 0 9px #999;*/
 	  background: url(mediaelement-master/build/Stop_question.svg) no-repeat;
+	  -webkit-filter: grayscale(0);
+	  filter: grayscale(0);
+	  -webkit-transition: .3s ease-in-out;
+	  transition: .3s ease-in-out;
 	}
 	
-	.button:hover {background-color: #f44336}
+	.button:hover { 
+		-webkit-filter: grayscale(100%);
+	  	filter: grayscale(100%);
+		
+	}
 	
-	.button:active {
+	/*.button:active {
 	  /*background-color: #f44336; */
 	  background: url(mediaelement-master/build/Stop_question_gray.svg) no-repeat;
 	  /*box-shadow: 0 5px #666;*/
 	  /*transform: translateY(4px);*/
-	}
+	}*/
 
 </style>
 
