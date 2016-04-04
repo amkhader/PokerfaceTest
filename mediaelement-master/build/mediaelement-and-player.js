@@ -3081,7 +3081,7 @@ if (typeof jQuery != 'undefined') {
 									});
 								}
 								if (document.getElementById('button1')!= null){
-									$('button').click(function(){
+									$('button1').click(function(){
 										this.close();
 									});
 								}
