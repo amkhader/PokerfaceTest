@@ -3080,8 +3080,8 @@ if (typeof jQuery != 'undefined') {
 										this.close();
 									});
 								}
-								if (document.getElementById('button1')!= null){
-									$('button1').click(function(){
+								if (this.getElementById('button1')!= null){
+									$('button').click(function(){
 										this.close();
 									});
 								}
