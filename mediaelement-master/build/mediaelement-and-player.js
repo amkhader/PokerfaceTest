@@ -3080,9 +3080,7 @@ if (typeof jQuery != 'undefined') {
 										this.close();
 									});
 								}
-								$('button').click(function(){
-									this.close();
-								});
+								
 								
 							}
 							
