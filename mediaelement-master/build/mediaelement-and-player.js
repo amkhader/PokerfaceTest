@@ -3080,11 +3080,10 @@ if (typeof jQuery != 'undefined') {
 										this.close();
 									});
 								}
-								if (this.getElementById('button1')!= null){
-									$('button').click(function(){
-										this.close();
-									});
-								}
+								$('button1').click(function(){
+									this.close();
+								});
+								
 							}
 							
 						})
