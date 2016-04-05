@@ -5309,6 +5309,8 @@ if (typeof jQuery != 'undefined') {
 							
 							
 							currentSubNum = timeIndex;
+							console.log(timeIndex);
+							timeIndex++;
 							subStartTime = startTime;
 							currentSub = track.entries.text[i];
 							theFullArray[counterf] = {
@@ -5341,7 +5343,7 @@ if (typeof jQuery != 'undefined') {
 						return; // exit out if one is visible;
 					}
 					
-					timeIndex++;
+					
 				}
 				t.captions.hide();
 			} else {
