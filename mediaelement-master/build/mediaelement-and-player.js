@@ -32,7 +32,7 @@ var wcounter = 0;
 var vidStart = 0;
 var tday = new Date();
 var csvData = new Array();
-var timeIndex = 0;
+var timeIndex = -1;
 
 //file created when push confused button
 var confusedCsvData = new Array();
@@ -5242,7 +5242,7 @@ if (typeof jQuery != 'undefined') {
 			if (track !== null && track.isLoaded) {
 				
 				for (i=0; i<track.entries.times.length; i++) {
-					
+					timeIndex++;
 					if (t.media.currentTime >= track.entries.times[i].start && t.media.currentTime <= track.entries.times[i].stop) {
 					
 						var duration = track.entries.times[i].stop - track.entries.times[i].start;
@@ -5310,7 +5310,7 @@ if (typeof jQuery != 'undefined') {
 							
 							currentSubNum = timeIndex;
 							console.log(timeIndex);
-							timeIndex++;
+							
 							subStartTime = startTime;
 							currentSub = track.entries.text[i];
 							theFullArray[counterf] = {
