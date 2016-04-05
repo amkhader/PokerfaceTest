@@ -3042,7 +3042,7 @@ if (typeof jQuery != 'undefined') {
 					if (!media.paused){
 						confusedCsvData.push(new Date().getTime());
 						media.pause();
-						//var popup = new $.Popup();
+						var popup = new $.Popup();
 						var ResultsFile = '<script> var csvContent = "data:text/csv;charset=utf-8,";</script>';
 						//var head = '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>';
 						var htmlQ1 = '<h1 id="question1">هل تشعر الخلط بشيء في هذا الإطار من الفيديو؟</h1>';
@@ -3066,25 +3066,26 @@ if (typeof jQuery != 'undefined') {
 						//  document.getElementById("container").innerHTML = " <div id=\'container\'> <button onclick = \'jargonFunction()\' id= \'button1\'>YES</button> <button id = \'button2\'>NO</button></div><script>function jargonFunction() {document.getElementById(\'container\').innerHTML =\'This word means...\';}</script>";
 						//(htmlQ2.concat(htmlButtons).concat(htmlButtonsJargon), "html", $("a.html_popup"))
 						
-						var newWin = '<a href="javascript:popup.close()"></a>'
+						//var newWin = '<a href="javascript:popup.close()"></a>'
 
 						
-						//popup.open(htmlQ1.concat(htmlEN).concat(htmlButtons).concat(htmlButtonsRewind).concat(ResultsFile).concat(ResultsLink).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput), 'html', $('a.default_popup'));
+						popup.open(htmlQ1.concat(htmlEN).concat(htmlButtons).concat(htmlButtonsRewind).concat(ResultsFile).concat(ResultsLink).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput), 'html', $('a.button'));
 						
-						var html_content = htmlQ1.concat(htmlEN).concat(htmlButtons).concat(htmlButtonsRewind).concat(ResultsFile).concat(ResultsLink).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput);
+						//var html_content = htmlQ1.concat(htmlEN).concat(htmlButtons).concat(htmlButtonsRewind).concat(ResultsFile).concat(ResultsLink).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput);
 						
-						$('a.button').popup({backOpacity : 0.5, keepInlineChanges : false, modal : true, content: html_content, type : 'html', 
-							afterOpen: function(){
-								if (document.getElementById('submit')!= null){
-									$('button').click(function(){
-										this.close();
-									});
-								}
-								
-								
-							}
+						//$('a.button').popup({backOpacity : 0.5, keepInlineChanges : false, modal : true, content: html_content, type : 'html', 
+						//	afterOpen: function(){
+						//		if (document.getElementById('submit')!= null){
+						//			$('button').click(function(){
+						//				this.close();
+						//			});
+						//		}	
+						//	}
 							
-						})
+						//})
+						
+	
+						
 						
 						
 						console.log("please open");
