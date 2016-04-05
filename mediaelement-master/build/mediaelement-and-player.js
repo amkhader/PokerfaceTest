@@ -5244,6 +5244,7 @@ if (typeof jQuery != 'undefined') {
 				timeIndex = currentSubNum - 1;
 				for (i=0; i<track.entries.times.length; i++) {
 					timeIndex ++;
+					i = timeIndex;
 					if (t.media.currentTime >= track.entries.times[i].start && t.media.currentTime <= track.entries.times[i].stop) {
 					
 						var duration = track.entries.times[i].stop - track.entries.times[i].start;
