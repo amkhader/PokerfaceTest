@@ -3059,7 +3059,7 @@ if (typeof jQuery != 'undefined') {
 					var MTEpopup = '<script>function MTEpopup() {$("h1").html("هل تشعر الخلط من جانب الترجمة؟")  ;$("h2").html("(Are you confused by the translation?)");$("#container").html("<button onclick = \'MTEFunction()\' id= \'button1\'>نعم(Yes)</button> <button onclick = \'Textpopup()\' id = \'button2\'>لا(No)</button>");} </script>';
 					var MTEFunction = '<script>function MTEFunction() {document.getElementById("container").innerHTML =\' ويمكن أيضا أن تترجم هذه ل : إنها هي الدور الاستوائي واحد \';}</script>';
 					var Textpopup = '<script>function Textpopup() {$("h1").html(\'ما الذي كنت تشعر الخلط من جانب؟\');$("h2").html(\'What are you confused by?\');$("#container").html(\'<textarea id = \"textArea\"></textarea><div onclick="savetextarea()" id="submit" type="button" class="popup_close">Submit</div>\');}</script>';
-					var SaveInput = '<script>function savetextarea(){var txt = document.getElementById("textArea").value; window.csvResult.push("Other: ".concat(txt));console.log(window.csvResult); makeLink();}</script>';
+					var SaveInput = '<script>function savetextarea(){var txt = document.getElementById("textArea").value; window.csvResult.push("Other: ".concat(txt));console.log(window.csvResult); makeLink(); document.close();}</script>';
 					var ResultsLink = '<script>function makeLink(){csvContent += window.csvResult.join("\\n"); var encodedUri = encodeURI(csvContent);console.log("download this results link: " + encodedUri);var link = document.createElement("a");link.setAttribute("href", encodedUri);link.setAttribute("download", "my_data.csv");}</script>';
 					//
 					//<button onclick = \'jargonFunction()\' id= \'button11\'>YES</button> <button id = \'button22\'>NO</button>
