@@ -5242,7 +5242,7 @@ if (typeof jQuery != 'undefined') {
 			if (track !== null && track.isLoaded) {
 				
 				for (i=0; i<track.entries.times.length; i++) {
-					timeIndex++;
+					
 					if (t.media.currentTime >= track.entries.times[i].start && t.media.currentTime <= track.entries.times[i].stop) {
 					
 						var duration = track.entries.times[i].stop - track.entries.times[i].start;
@@ -5307,7 +5307,7 @@ if (typeof jQuery != 'undefined') {
 							newx = widthInt + diffLeft;		
 							newy = topInt + diffTop;
 							
-							
+							timeIndex = i;
 							currentSubNum = timeIndex;
 							console.log(timeIndex);
 							
