@@ -3076,7 +3076,7 @@ if (typeof jQuery != 'undefined') {
 					//var newWin = '<a href="javascript:popup.close()"></a>'
 
 					
-					popup.open(htmlQ1.concat(htmlEN).concat(htmlButtons).concat(htmlButtonsRewind).concat(ResultsFile).concat(ResultsLink).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput), 'html', $('a.button'));
+					popup.open(htmlQ1.concat(htmlEN).concat(htmlButtons).concat(htmlButtonsRewind).concat(ResultsFile).concat(ResultsLink).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput).concat(SaveFeedback), 'html', $('a.button'));
 					
 					//var html_content = htmlQ1.concat(htmlEN).concat(htmlButtons).concat(htmlButtonsRewind).concat(ResultsFile).concat(ResultsLink).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput);
 					
