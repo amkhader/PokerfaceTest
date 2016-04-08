@@ -5242,7 +5242,7 @@ if (typeof jQuery != 'undefined') {
 			
 			if (track !== null && track.isLoaded) {
 				
-				
+				timeIndex = currentSubNum;
 				for (i=timeIndex; i<track.entries.times.length; i++) {
 					if (t.media.currentTime >= track.entries.times[i].start && t.media.currentTime <= track.entries.times[i].stop) {
 					
