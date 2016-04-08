@@ -5309,7 +5309,7 @@ if (typeof jQuery != 'undefined') {
 							newy = topInt + diffTop;
 							
 							//timeIndex = i;
-							currentSubNum = timeIndex;
+							currentSubNum = i;
 							console.log(currentSubNum);
 							console.log(i);
 							
