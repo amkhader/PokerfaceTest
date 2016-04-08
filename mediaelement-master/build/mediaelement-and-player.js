@@ -5309,7 +5309,7 @@ if (typeof jQuery != 'undefined') {
 							
 							//timeIndex = i;
 							currentSubNum = timeIndex;
-							console.log(timeIndex);
+							console.log(i);
 							
 							subStartTime = startTime;
 							currentSub = track.entries.text[i];
