@@ -5310,6 +5310,7 @@ if (typeof jQuery != 'undefined') {
 							
 							//timeIndex = i;
 							currentSubNum = timeIndex;
+							console.log(currentSubNum);
 							console.log(i);
 							
 							subStartTime = startTime;
