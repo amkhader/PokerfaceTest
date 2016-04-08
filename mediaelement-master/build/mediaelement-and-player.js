@@ -3063,6 +3063,7 @@ if (typeof jQuery != 'undefined') {
 					var Textpopup = '<script>function Textpopup() {$("h1").html(\'ما الذي كنت تشعر الخلط من جانب؟\');$("h2").html(\'What are you confused by?\');$("#container").html(\'<textarea id = \"textArea\"></textarea><div onclick="savetextarea()" id="submit" type="button" class="popup_close">Submit</div>\');}</script>';
 					var SaveInput = '<script>function savetextarea(){var txt = document.getElementById("textArea").value; window.csvResult.push("Other: ".concat(txt));console.log(window.csvResult); makeLink(); this.close();}</script>';
 					var ResultsLink = '<script>function makeLink(){csvContent += window.csvResult.join("\\n"); var encodedUri = encodeURI(csvContent);console.log("download this results link: " + encodedUri);var link = document.createElement("a");link.setAttribute("href", encodedUri);link.setAttribute("download", "my_data.csv");}</script>';
+					
 					//
 					//<button onclick = \'jargonFunction()\' id= \'button11\'>YES</button> <button id = \'button22\'>NO</button>
 					//
@@ -5249,6 +5250,10 @@ if (typeof jQuery != 'undefined') {
 						var duration = track.entries.times[i].stop - track.entries.times[i].start;
 						duration = duration*1000;
 						//console.log("Duration " + duration);
+						//timeIndex = i;
+						currentSubNum = i;
+						console.log(currentSubNum);
+						console.log(i);
 						
 						if ((track.entries.text[i]).search("sub") < 0){
 							theOldText = (track.entries.text[i]).split(/,?\s+/);
@@ -5308,10 +5313,7 @@ if (typeof jQuery != 'undefined') {
 							newx = widthInt + diffLeft;		
 							newy = topInt + diffTop;
 							
-							//timeIndex = i;
-							currentSubNum = i;
-							console.log(currentSubNum);
-							console.log(i);
+							
 							
 							subStartTime = startTime;
 							currentSub = track.entries.text[i];
