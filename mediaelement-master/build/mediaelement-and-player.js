@@ -48,6 +48,7 @@ var items = [];
 
 $.ajax({
       url: "mediaelement-master/build/jargonList.txt",
+      async: false,
       success: function (data){items = data.split('\n'); }});
       
 console.log(items);
