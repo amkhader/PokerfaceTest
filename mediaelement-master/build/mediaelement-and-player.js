@@ -43,7 +43,7 @@ var JargonSubNum = new Array();
 
 
 var items;
-$.get("mediaelement-master/build/jargonList.txt", function(data){item = data.split('\n'); });
+$.get("mediaelement-master/build/jargonList.txt", function(data){items = data.split('\n'); });
 
 console.log(items);
 
