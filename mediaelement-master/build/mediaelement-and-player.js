@@ -41,7 +41,9 @@ var JargonData = new Array();
 var JargonWords = new Array();
 var JargonSubNum = new Array();
 
-$.get("jargonList.txt", function(data) { var items = data.split('\n'); });
+
+var items = new Array();
+$.get("jargonList.txt", function(data) { items = data.split('\n'); });
 
 console.log(items);
 
