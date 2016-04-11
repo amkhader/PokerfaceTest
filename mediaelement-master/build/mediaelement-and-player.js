@@ -42,9 +42,14 @@ var JargonWords = new Array();
 var JargonSubNum = new Array();
 
 
-var items;
-$.get("mediaelement-master/build/jargonList.txt", function(data){items = data.split('\n'); });
+var items = [];
 
+//$.get("mediaelement-master/build/jargonList.txt", function(data){items = data.split('\n'); });
+
+$.ajax({
+      url: "mediaelement-master/build/jargonList.txt",
+      success: function (data){items = data.split('\n'); }});
+      
 console.log(items);
 
 JargonData.push("الطليعي 2","تتخد 7","الطليعي 8","خليتي 21","شقيقين 27","شقيقين 33","المحركة 50","الصبغي 64","تتدافع 73","الطليعي 95","جديدين 113")
