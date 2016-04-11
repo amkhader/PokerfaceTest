@@ -33,6 +33,7 @@ var vidStart = 0;
 var tday = new Date();
 var csvData = new Array();
 
+
 //file created when push confused button
 var confusedCsvData = new Array();
 
@@ -50,10 +51,12 @@ for (i = 0; i < JargonData.length; i++) {
 }
 
 var currentSubNum = 0;
+var timeIndex = currentSubNum;
 var subStartTime =0 ;
 var currentSub = "";
 
 window.csvResult = new Array();
+window.csvFeedback = new Array();
 
 //$.getScript("mediaelement-master/build/require.js", function(){
 //define(function (require) {
@@ -3042,70 +3045,83 @@ if (typeof jQuery != 'undefined') {
 					if (!media.paused){
 						confusedCsvData.push(new Date().getTime());
 						media.pause();
-						var popup = new $.Popup();
-						var ResultsFile = '<script> var csvContent = "data:text/csv;charset=utf-8,";</script>';
-						//var head = '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>';
-						var htmlQ1 = '<h1 id="question1">هل تشعر الخلط بشيء في هذا الإطار من الفيديو؟</h1>';
-						var htmlEN = '<h2 id = "translation">(Are you confused by something in this frame?)</h2>';
-						var htmlQ2 = '<h1>Are you confused by jargon?</h1>';
-						var htmlButtons = '<style>h1{font-size: 2em;} h2{font-size: 1.5em;} #button1{width: 300px; height: 40px;} #button2{width: 300px; height: 40px;} #container{ text-align: center;}</style>';
-						var htmlButtonsRewind = '<div id="container"><button onclick="jargonpopup()" id="button1">نعم (Yes)</button> <button onclick="rewindFunction()" id = "button2">لا، إطار سابق(No, rewind)</button></div>';
-						var RewindFun = '<script>function rewindFunction() {document.getElementById("player1").currentTime = track.entries.times[currentSubNum-1]["start"]; currentSubNum--; }</script>';
-						var htmlButtonsJargon = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button> <button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container").innerHTML =" prophase - الطليعي يعني الطَّورُ الأَوَّل في الانْقِسامِ الخَلَوِيّ"; }</script>';
-						var JargonWinFun = '<script>function jargonpopup(){ console.log(currentSubNum); var j = $.inArray(currentSubNum, JargonSubNum); if (j > -1){ htmlQ2 = "هل تشعر الخلط من ".concat(JargonWords[j]).concat("?"); $("h1").html(htmlQ2);$("h2").html("Are you confused by".concat(JargonWords[j]).concat("?"));$("#container").html("<button onclick = \'jargonFunction()\' id= \'button1\'>نعم</button> <button onclick = \'MTEpopup()\' id = \'button2\'>لا</button>");}else{MTEpopup();}}</script>';
-						var JargonFun = '<script>function jargonFunction() {document.getElementById("container").innerHTML =\' prophase - الطليعي يعني الطَّورُ الأَوَّل في الانْقِسام\';} </script>';
-						var MTEpopup = '<script>function MTEpopup() {$("h1").html("هل تشعر الخلط من جانب الترجمة؟")  ;$("h2").html("(Are you confused by the translation?)");$("#container").html("<button onclick = \'MTEFunction()\' id= \'button1\'>نعم(Yes)</button> <button onclick = \'Textpopup()\' id = \'button2\'>لا(No)</button>");} </script>';
-						var MTEFunction = '<script>function MTEFunction() {document.getElementById("container").innerHTML =\' ويمكن أيضا أن تترجم هذه ل : إنها هي الدور الاستوائي واحد \';}</script>';
-						var Textpopup = '<script>function Textpopup() {$("h1").html(\'ما الذي كنت تشعر الخلط من جانب؟\');$("h2").html(\'What are you confused by?\');$("#container").html(\'<textarea id = \"textArea\"></textarea><button onclick="savetextarea()" id="submit" type="button">Submit</button>\');}</script>';
-						var SaveInput = '<script>function savetextarea(){var txt = document.getElementById("textArea").value; window.csvResult.push("Other: ".concat(txt));console.log(window.csvResult); makeLink();}</script>';
-						var ResultsLink = '<script>function makeLink(){csvContent += window.csvResult.join("\\n"); var encodedUri = encodeURI(csvContent);console.log("download this results link: " + encodedUri);var link = document.createElement("a");link.setAttribute("href", encodedUri);link.setAttribute("download", "my_data.csv");}</script>';
-						//
-						//<button onclick = \'jargonFunction()\' id= \'button11\'>YES</button> <button id = \'button22\'>NO</button>
-						//
-						//<script>function jargonFunction() {document.getElementById(\'container\').innerHTML =\'This word means...\';}</script>
-						//  document.getElementById("container").innerHTML = " <div id=\'container\'> <button onclick = \'jargonFunction()\' id= \'button1\'>YES</button> <button id = \'button2\'>NO</button></div><script>function jargonFunction() {document.getElementById(\'container\').innerHTML =\'This word means...\';}</script>";
-						//(htmlQ2.concat(htmlButtons).concat(htmlButtonsJargon), "html", $("a.html_popup"))
-						
-						var newWin = '<a href="javascript:popup.close()"></a>'
+					}
+					
+					var popup = new $.Popup();
+					var ResultsFile = '<script> var csvContent = "data:text/csv;charset=utf-8,";</script>';
+					//var head = '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>';
+					var htmlQ1 = '<h1 id="question1">هل تشعر الخلط بشيء في هذا الإطار من الفيديو؟</h1>';
+					var htmlEN = '<h2 id = "translation">(Are you confused by something in this frame?)</h2>';
+					var htmlQ2 = '<h1>Are you confused by jargon?</h1>';
+					var htmlButtons = '<style>h1{font-size: 2em;} h2{font-size: 1.5em;} #button1{width: 300px; height: 40px;} #button2{width: 300px; height: 40px;} #container{ text-align: center;}</style>';
+					var htmlButtonsRewind = '<div id="container"><button onclick="jargonpopup()" id="button1">نعم (Yes)</button> <button onclick="rewindFunction()" id = "button2">لا، إطار سابق(No, rewind)</button></div>';
+					var RewindFun = '<script>function rewindFunction() {console.log(currentSubNum); document.getElementById("player1").currentTime = track.entries.times[currentSubNum-1]["start"]; currentSubNum--; timeIndex = currentSubNum; }</script>';
+					var htmlButtonsJargon = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button> <button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container").innerHTML =" prophase - الطليعي يعني الطَّورُ الأَوَّل في الانْقِسامِ الخَلَوِيّ"; }</script>';
+					var JargonWinFun = '<script>function jargonpopup(){ console.log(currentSubNum); var j = $.inArray(currentSubNum, JargonSubNum); var jargon = "";if (j > -1){ jargon = JargonWords[j]; htmlQ2 = "هل تشعر الخلط من ".concat(jargon).concat("?"); $("h1").html(htmlQ2);$("h2").html("Are you confused by".concat(JargonWords[j]).concat("?"));$("#container").html("<button onclick = \'jargonFunction()\' id= \'button1\'>نعم</button> <button onclick = \'MTEpopup()\' id = \'button2\'>لا</button>");}else{MTEpopup();}}</script>';
+					var JargonFun = '<script>function jargonFunction() {var word = JargonWords[currentSubNum]; window.csvResult.push("Jargon "+track.entries.times[currentSubNum][\'identifier\']);makeLink(window.csvResult,"input"); document.getElementById("container").innerHTML = word + \': \\n <div class= "definition"></div>  \\n <h3>Did this help? Why/Why not?</h3> <textarea id = \"textArea\"></textarea><div onclick="savetextareaFeedback()" id="submit" type="button" class="popup_close">Submit</div>\'; $.getJSON("http://ar.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=" + "أيون" + "&callback=?" , function(data){console.log(data); var response2 = ""; for (var id in data.query.pages) { response2 = data.query.pages[id].extract;} if(response2 == undefined){response2 = "Definition not found."} $(\'.definition\').html("<div>" + response2 + "</div>");});} </script>';
+					var MTEpopup = '<script>function MTEpopup() {$("h1").html("هل تشعر الخلط من جانب الترجمة؟")  ;$("h2").html("(Are you confused by the translation?)");$("#container").html("<button onclick = \'MTEFunction()\' id= \'button1\'>نعم(Yes)</button> <button onclick = \'Textpopup()\' id = \'button2\'>لا(No)</button>");} </script>';
+					var MTEFunction = '<script>function MTEFunction() {window.csvResult.push("MTE "+track.entries.times[currentSubNum][\'identifier\']); makeLink(window.csvResult,"input"); document.getElementById("container").innerHTML =\' ويمكن أيضا أن تترجم هذه ل : \\n إنها هي الدور الاستوائي واحد \\n <h3>Did this help? Why/Why not?</h3> <textarea id = \"textArea\"></textarea><div onclick="savetextareaFeedback()" id="submit" type="button" class="popup_close">Submit</div>\';} </script>';
+					var Textpopup = '<script>function Textpopup() {$("h1").html(\'ما الذي كنت تشعر الخلط من جانب؟\');$("h2").html(\'What are you confused by?\');$("#container").html(\'<textarea id = \"textArea\"></textarea><div onclick="savetextarea()" id="submit" type="button" class="popup_close">Submit</div>\');}</script>';
+					var SaveFeedback = '<script>function savetextareaFeedback(){var txt = document.getElementById("textArea").value; window.csvFeedback.push("".concat(txt));console.log(window.csvFeedback); makeLink(window.csvFeedback, "feedback");}</script>';
+					var ResultsLink = '<script>function makeLink(list,name){csvContent += list.join("\\n"); var encodedUri = encodeURI(csvContent);console.log("download this ".concat(name).concat(" link: ") + encodedUri);var link = document.createElement("a");link.setAttribute("href", encodedUri);link.setAttribute("download", "my_data.csv");}</script>';
+					var SaveInput = '<script>function savetextarea(){var txt = document.getElementById("textArea").value; window.csvResult.push("Other: ".concat(txt));console.log(window.csvResult); makeLink(window.csvResult,"input");}</script>';
 
+					//
+					//<button onclick = \'jargonFunction()\' id= \'button11\'>YES</button> <button id = \'button22\'>NO</button>
+					//
+					//<script>function jargonFunction() {document.getElementById(\'container\').innerHTML =\'This word means...\';}</script>
+					//  document.getElementById("container").innerHTML = " <div id=\'container\'> <button onclick = \'jargonFunction()\' id= \'button1\'>YES</button> <button id = \'button2\'>NO</button></div><script>function jargonFunction() {document.getElementById(\'container\').innerHTML =\'This word means...\';}</script>";
+					//(htmlQ2.concat(htmlButtons).concat(htmlButtonsJargon), "html", $("a.html_popup"))
+					
+					//var newWin = '<a href="javascript:popup.close()"></a>'
+
+					
+					popup.open(htmlQ1.concat(htmlEN).concat(htmlButtons).concat(htmlButtonsRewind).concat(ResultsFile).concat(ResultsLink).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput).concat(SaveFeedback), 'html', $('a.button'));
+					
+					//var html_content = htmlQ1.concat(htmlEN).concat(htmlButtons).concat(htmlButtonsRewind).concat(ResultsFile).concat(ResultsLink).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput);
+					
+					//$('a.button').popup({backOpacity : 0.5, keepInlineChanges : false, modal : true, content: html_content, type : 'html', 
+					//	afterOpen: function(){
+					//		if (document.getElementById('submit')!= null){
+					//			$('button').click(function(){
+					//				this.close();
+					//			});
+					//		}	
+					//	}
 						
-						//popup.open(htmlQ1.concat(htmlEN).concat(htmlButtons).concat(htmlButtonsRewind).concat(ResultsFile).concat(ResultsLink).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput), 'html', $('a.default_popup'));
-						
-						var html_content = htmlQ1.concat(htmlEN).concat(htmlButtons).concat(htmlButtonsRewind).concat(ResultsFile).concat(ResultsLink).concat(RewindFun).concat(JargonWinFun).concat(JargonFun).concat(MTEpopup).concat(MTEFunction).concat(Textpopup).concat(SaveInput);
-						
-						$('a.button').popup({content: html_content, type : 'html'})
-						
-						
-						console.log("please open");
+					//})
+					
+
+					
+					
+					
+					console.log("please open");
+							
+					//var myWindow = window.open('', 'MsgWindow','height=400, width=400');
+					//myWindow.document.write("<!DOCTYPE html><html><body>");
+					//myWindow.document.write("<p>Are you confused?</p>");
+					
+					//jargon button
+					//var j = $.inArray(currentSubNum, JargonSubNum);
+					//if (j > -1){
+					//	myWindow.document.write('<p>Are you confused by '.concat(JargonWords[j], '?<p><button onclick="jargonFunction()">YES</button>') );
+					//	myWindow.document.write('<p id="jargonButton"></p>');
+					//}
+					//translation error button 
+					//myWindow.document.write('<p>Are you confused by *MT_error*?<p><button onclick="MTEFunction()">YES</button>');
+					//myWindow.document.write('<p id="MTEButton"></p>');
+					
 								
-						//var myWindow = window.open('', 'MsgWindow','height=400, width=400');
-						//myWindow.document.write("<!DOCTYPE html><html><body>");
-						//myWindow.document.write("<p>Are you confused?</p>");
-						
-						//jargon button
-						//var j = $.inArray(currentSubNum, JargonSubNum);
-						//if (j > -1){
-						//	myWindow.document.write('<p>Are you confused by '.concat(JargonWords[j], '?<p><button onclick="jargonFunction()">YES</button>') );
-						//	myWindow.document.write('<p id="jargonButton"></p>');
-						//}
-						//translation error button 
-						//myWindow.document.write('<p>Are you confused by *MT_error*?<p><button onclick="MTEFunction()">YES</button>');
-						//myWindow.document.write('<p id="MTEButton"></p>');
-						
-									
-						//myWindow.document.write("<script>function jargonFunction() {document.getElementById('jargonButton').innerHTML = 'This word means...'; }</script>");
-						//myWindow.document.write("<script>function MTEFunction() {document.getElementById('MTEButton').innerHTML = 'This may also mean...'; }</script>");
-						//document.getElementById("jargonButton").innerHTML = "Hello World";
-						
-						
-						
-						
+					//myWindow.document.write("<script>function jargonFunction() {document.getElementById('jargonButton').innerHTML = 'This word means...'; }</script>");
+					//myWindow.document.write("<script>function MTEFunction() {document.getElementById('MTEButton').innerHTML = 'This may also mean...'; }</script>");
+					//document.getElementById("jargonButton").innerHTML = "Hello World";
+					
+					
+					
+					
+			
+					//myWindow.document.write("</body></html>");
 				
-						//myWindow.document.write("</body></html>");
-					}
-					else{
-						media.play();
-					}
 				};
 				
 		bigPlay =
@@ -5229,13 +5245,17 @@ if (typeof jQuery != 'undefined') {
 			
 			if (track !== null && track.isLoaded) {
 				
-				for (i=0; i<track.entries.times.length; i++) {
-					
+				timeIndex = currentSubNum;
+				for (i=timeIndex; i<track.entries.times.length; i++) {
 					if (t.media.currentTime >= track.entries.times[i].start && t.media.currentTime <= track.entries.times[i].stop) {
 					
 						var duration = track.entries.times[i].stop - track.entries.times[i].start;
 						duration = duration*1000;
 						//console.log("Duration " + duration);
+						//timeIndex = i;
+						currentSubNum = i;
+						console.log(currentSubNum);
+						console.log(i);
 						
 						if ((track.entries.text[i]).search("sub") < 0){
 							theOldText = (track.entries.text[i]).split(/,?\s+/);
@@ -5296,7 +5316,7 @@ if (typeof jQuery != 'undefined') {
 							newy = topInt + diffTop;
 							
 							
-							currentSubNum = i;
+							
 							subStartTime = startTime;
 							currentSub = track.entries.text[i];
 							theFullArray[counterf] = {
@@ -5328,6 +5348,8 @@ if (typeof jQuery != 'undefined') {
 							
 						return; // exit out if one is visible;
 					}
+					
+					
 				}
 				t.captions.hide();
 			} else {
