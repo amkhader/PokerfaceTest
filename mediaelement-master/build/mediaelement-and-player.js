@@ -43,7 +43,7 @@ var JargonSubNum = new Array();
 
 $.get("jargonList.txt", function(data) { var items = data.split('\n'); });
 
-console.log("hello" + data);
+console.log(items);
 
 JargonData.push("الطليعي 2","تتخد 7","الطليعي 8","خليتي 21","شقيقين 27","شقيقين 33","المحركة 50","الصبغي 64","تتدافع 73","الطليعي 95","جديدين 113")
 for (i = 0; i < JargonData.length; i++) { 
