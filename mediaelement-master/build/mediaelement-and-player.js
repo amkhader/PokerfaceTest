@@ -59,7 +59,17 @@ $.ajax({
 		console.log(JargonSubNum[i]);
 	}	
       	
-   }});
+}});
+   
+var altTranslations = [];   
+   
+$.ajax({
+      url: "mediaelement-master/build/Interferometry_Sizing_Up_the_Stars_1_alt_trans.txt",
+      success: function (data){altTranslations = data.split('\n');}
+});
+   
+   
+   
       
 
 //JargonData.push("الطليعي 2","تتخد 7","الطليعي 8","خليتي 21","شقيقين 27","شقيقين 33","المحركة 50","الصبغي 64","تتدافع 73","الطليعي 95","جديدين 113")
@@ -3075,7 +3085,7 @@ if (typeof jQuery != 'undefined') {
 					var JargonWinFun = '<script>function jargonpopup(){ console.log(currentSubNum); var j = $.inArray(currentSubNum, JargonSubNum); var jargon = "";if (j > -1){ jargon = JargonWords[j]; htmlQ2 = "هل تشعر الخلط من ".concat(jargon).concat("?"); $("h1").html(htmlQ2);$("h2").html("Are you confused by".concat(JargonWords[j]).concat("?"));$("#container").html("<button onclick = \'jargonFunction()\' id= \'button1\'>نعم</button> <button onclick = \'MTEpopup()\' id = \'button2\'>لا</button>");}else{MTEpopup();}}</script>';
 					var JargonFun = '<script>function jargonFunction() {var word = JargonWords[currentSubNum]; window.csvResult.push("Jargon "+track.entries.times[currentSubNum][\'identifier\']);makeLink(window.csvResult,"input"); document.getElementById("container").innerHTML = word + \': \\n <div class= "definition"></div>  \\n <h3>Did this help? Why/Why not?</h3> <textarea id = \"textArea\"></textarea><div onclick="savetextareaFeedback()" id="submit" type="button" class="popup_close">Submit</div>\'; $.getJSON("http://ar.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=" + "أيون" + "&callback=?" , function(data){console.log(data); var response2 = ""; for (var id in data.query.pages) { response2 = data.query.pages[id].extract;} if(response2 == undefined){response2 = "Definition not found."} $(\'.definition\').html("<div>" + response2 + "</div>");});} </script>';
 					var MTEpopup = '<script>function MTEpopup() {$("h1").html("هل تشعر الخلط من جانب الترجمة؟")  ;$("h2").html("(Are you confused by the translation?)");$("#container").html("<button onclick = \'MTEFunction()\' id= \'button1\'>نعم(Yes)</button> <button onclick = \'Textpopup()\' id = \'button2\'>لا(No)</button>");} </script>';
-					var MTEFunction = '<script>function MTEFunction() {window.csvResult.push("MTE "+track.entries.times[currentSubNum][\'identifier\']); makeLink(window.csvResult,"input"); document.getElementById("container").innerHTML =\' ويمكن أيضا أن تترجم هذه ل : \\n إنها هي الدور الاستوائي واحد \\n <h3>Did this help? Why/Why not?</h3> <textarea id = \"textArea\"></textarea><div onclick="savetextareaFeedback()" id="submit" type="button" class="popup_close">Submit</div>\';} </script>';
+					var MTEFunction = '<script>function MTEFunction() {window.csvResult.push("MTE "+track.entries.times[currentSubNum][\'identifier\']); makeLink(window.csvResult,"input"); document.getElementById("container").innerHTML =\' ويمكن أيضا أن تترجم هذه ل : \\n \' + altTranslations[currentSubNum] + \'\\n <h3>Did this help? Why/Why not?</h3> <textarea id = \"textArea\"></textarea><div onclick="savetextareaFeedback()" id="submit" type="button" class="popup_close">Submit</div>\';} </script>';
 					var Textpopup = '<script>function Textpopup() {$("h1").html(\'ما الذي كنت تشعر الخلط من جانب؟\');$("h2").html(\'What are you confused by?\');$("#container").html(\'<textarea id = \"textArea\"></textarea><div onclick="savetextarea()" id="submit" type="button" class="popup_close">Submit</div>\');}</script>';
 					var SaveFeedback = '<script>function savetextareaFeedback(){var txt = document.getElementById("textArea").value; window.csvFeedback.push("".concat(txt));console.log(window.csvFeedback); makeLink(window.csvFeedback, "feedback");}</script>';
 					var ResultsLink = '<script>function makeLink(list,name){csvContent += list.join("\\n"); var encodedUri = encodeURI(csvContent);console.log("download this ".concat(name).concat(" link: ") + encodedUri);var link = document.createElement("a");link.setAttribute("href", encodedUri);link.setAttribute("download", "my_data.csv");}</script>';
