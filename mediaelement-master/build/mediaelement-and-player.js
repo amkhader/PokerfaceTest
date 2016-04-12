@@ -5424,7 +5424,7 @@ if (typeof jQuery != 'undefined') {
 				  var encodedUri = encodeURI(csvRewindContent);
 				  console.log("download this rewinds link: " + encodedUri);
 				  document.createElement("a").setAttribute("href", encodedUri);
-				  document.createElement("a")setAttribute("download","rewinds.csv");
+				  document.createElement("a").setAttribute("download","rewinds.csv");
 				  
 				  
 				  
