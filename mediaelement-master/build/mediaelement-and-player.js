@@ -40,15 +40,30 @@ var confusedCsvData = new Array();
 var JargonData = new Array();
 var JargonWords = new Array();
 var JargonSubNum = new Array();
-JargonData.push("الطليعي 2","تتخد 7","الطليعي 8","خليتي 21","شقيقين 27","شقيقين 33","المحركة 50","الصبغي 64","تتدافع 73","الطليعي 95","جديدين 113")
-for (i = 0; i < JargonData.length; i++) { 
+
+
+var items = [];
+
+//$.get("mediaelement-master/build/jargonList.txt", function(data){items = data.split('\n'); });
+
+$.ajax({
+      url: "mediaelement-master/build/jargonList.txt",
+      success: function (data){JargonData = data.split('\n'); 
+      	for (i = 0; i < JargonData.length; i++) { 
+
 	
-	JargonWords[i] = JargonData[i].substr(0, JargonData[i].indexOf(' '));
-	console.log(JargonWords[i]);
-	
-	JargonSubNum[i] = parseInt(JargonData[i].substr(JargonData[i].indexOf(' ')+1), 10);
-	console.log(JargonSubNum[i]);
-}
+		JargonWords[i] = JargonData[i].substr(0, JargonData[i].indexOf(' '));
+		console.log(JargonWords[i]);
+		
+		JargonSubNum[i] = parseInt(JargonData[i].substr(JargonData[i].indexOf(' ')+1), 10);
+		console.log(JargonSubNum[i]);
+	}	
+      	
+   }});
+      
+
+//JargonData.push("الطليعي 2","تتخد 7","الطليعي 8","خليتي 21","شقيقين 27","شقيقين 33","المحركة 50","الصبغي 64","تتدافع 73","الطليعي 95","جديدين 113")
+
 
 var currentSubNum = 0;
 var timeIndex = currentSubNum;
