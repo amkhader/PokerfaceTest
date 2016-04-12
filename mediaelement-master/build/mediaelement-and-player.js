@@ -80,6 +80,7 @@ var timeIndex = currentSubNum;
 var subStartTime =0 ;
 var currentSub = "";
 
+window.csvRewinds = new Array();
 window.csvResult = new Array();
 window.csvFeedback = new Array();
 
@@ -3085,7 +3086,7 @@ if (typeof jQuery != 'undefined') {
 					var htmlButtonsRewind = '<div id="container"><button onclick="jargonpopup()" id="button1">نعم (Yes)</button> <button onclick="rewindFunction()" id = "button2">لا، إطار سابق(No, rewind)</button></div>';
 					var RewindFun = '<script>function rewindFunction() {numRewinds++; console.log(currentSubNum); document.getElementById("player1").currentTime = track.entries.times[currentSubNum-1]["start"]; currentSubNum--; timeIndex = currentSubNum; }</script>';
 					var htmlButtonsJargon = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button> <button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container").innerHTML =" prophase - الطليعي يعني الطَّورُ الأَوَّل في الانْقِسامِ الخَلَوِيّ"; }</script>';
-					var JargonWinFun = '<script>function jargonpopup(){ numRewinds=0;console.log(currentSubNum); var j = $.inArray(currentSubNum, JargonSubNum); var jargon = "";if (j > -1){ jargon = JargonWords[j]; htmlQ2 = "هل تشعر الخلط من ".concat(jargon).concat("?"); $("h1").html(htmlQ2);$("h2").html("Are you confused by".concat(JargonWords[j]).concat("?"));$("#container").html("<button onclick = \'jargonFunction()\' id= \'button1\'>نعم</button> <button onclick = \'MTEpopup()\' id = \'button2\'>لا</button>");}else{MTEpopup();}}</script>';
+					var JargonWinFun = '<script>function jargonpopup(){ window.csvRewinds.push(track.entries.times[currentSubNum-1] + "," + numRewinds);numRewinds=0;console.log(currentSubNum); var j = $.inArray(currentSubNum, JargonSubNum); var jargon = "";if (j > -1){ jargon = JargonWords[j]; htmlQ2 = "هل تشعر الخلط من ".concat(jargon).concat("?"); $("h1").html(htmlQ2);$("h2").html("Are you confused by".concat(JargonWords[j]).concat("?"));$("#container").html("<button onclick = \'jargonFunction()\' id= \'button1\'>نعم</button> <button onclick = \'MTEpopup()\' id = \'button2\'>لا</button>");}else{MTEpopup();}}</script>';
 					var JargonFun = '<script>function jargonFunction() {var word = JargonWords[currentSubNum]; window.csvResult.push("Jargon "+track.entries.times[currentSubNum][\'identifier\']);makeLink(window.csvResult,"input"); document.getElementById("container").innerHTML = word + \': \\n <div class= "definition"></div>  \\n <h3>Did this help? Why/Why not?</h3> <textarea id = \"textArea\"></textarea><div onclick="savetextareaFeedback()" id="submit" type="button" class="popup_close">Submit</div>\'; $.getJSON("http://ar.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=" + "أيون" + "&callback=?" , function(data){console.log(data); var response2 = ""; for (var id in data.query.pages) { response2 = data.query.pages[id].extract;} if(response2 == undefined){response2 = "Definition not found."} $(\'.definition\').html("<div>" + response2 + "</div>");});} </script>';
 					var MTEpopup = '<script>function MTEpopup() {$("h1").html("هل تشعر الخلط من جانب الترجمة؟")  ;$("h2").html("(Are you confused by the translation?)");$("#container").html("<button onclick = \'MTEFunction()\' id= \'button1\'>نعم(Yes)</button> <button onclick = \'Textpopup()\' id = \'button2\'>لا(No)</button>");} </script>';
 					var MTEFunction = '<script>function MTEFunction() {window.csvResult.push("MTE "+track.entries.times[currentSubNum][\'identifier\']); makeLink(window.csvResult,"input"); document.getElementById("container").innerHTML =\' ويمكن أيضا أن تترجم هذه ل : \\n \' + altTranslations[currentSubNum] + \'\\n <h3>Did this help? Why/Why not?</h3> <textarea id = \"textArea\"></textarea><div onclick="savetextareaFeedback()" id="submit" type="button" class="popup_close">Submit</div>\';} </script>';
@@ -5400,22 +5401,34 @@ if (typeof jQuery != 'undefined') {
 					  }
 					  
 				  });
-				  var csvContent = "data:text/csv;charset=utf-8,"
-				  csvContent += csvData.join("\n"); 
-				  var encodedUri = encodeURI(csvContent);  
-				  console.log("download this link: " + encodedUri);
-				  link1.setAttribute("href", encodedUri); 
-				  link1.setAttribute("download", "my_data.csv");  
+				  //var csvContent = "data:text/csv;charset=utf-8,"
+				  //csvContent += csvData.join("\n"); 
+				  //var encodedUri = encodeURI(csvContent);  
+				  //console.log("download this link: " + encodedUri);
+				  //link1.setAttribute("href", encodedUri); 
+				  //link1.setAttribute("download", "my_data.csv");  
 				  
 				  
 				  //same for confusion data
-				  var csvConContent = "data:text/csv;charset=utf-8,"
-				  csvConContent += confusedCsvData.join("\n"); 
-				  var encodedUri = encodeURI(csvConContent);  
-				  console.log("download this confuion link: " + encodedUri);
-				  link2.setAttribute("href", encodedUri); 
-				  link2.setAttribute("download", "conf_data.csv");
+				  //var csvConContent = "data:text/csv;charset=utf-8,"
+				  //csvConContent += confusedCsvData.join("\n"); 
+				  //var encodedUri = encodeURI(csvConContent);  
+				  //console.log("download this confuion link: " + encodedUri);
+				  //link2.setAttribute("href", encodedUri); 
+				  //link2.setAttribute("download", "conf_data.csv");
 				  //link.click();
+				  
+				  
+				  var csvRewindContent = "data:text/csv;charset=utf-8,"
+				  csvRewindContent += window.csvRewinds.join("\n");
+				  var encodedUri = encodeURI(csvRewindContent);
+				  console.log("download this rewinds link: " + encodedUri);
+				  document.createElement("a").setAttribute("href", encodedUri);
+				  document.createElement("a")setAttribute("download","rewinds.csv");
+				  
+				  
+				  
+				  
 				  doneFor = {
 					  	"id": i,
 						"done": 1
