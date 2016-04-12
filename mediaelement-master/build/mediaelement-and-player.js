@@ -5427,6 +5427,20 @@ if (typeof jQuery != 'undefined') {
 				  document.createElement("a").setAttribute("download","rewinds.csv");
 				  
 				  
+				  var csvResultContent = "data:text/csv;charset=utf-8,"
+				  csvResultContent += window.csvResult.join("\n");
+				  var encodedUri = encodeURI(csvResultContent);
+				  console.log("download this input link: " + encodedUri);
+				  document.createElement("a").setAttribute("href", encodedUri);
+				  document.createElement("a").setAttribute("download","results.csv");
+				  
+				  var csvFeedbackContent = "data:text/csv;charset=utf-8,"
+				  csvFeedbackContent += window.csvResult.join("\n");
+				  var encodedUri = encodeURI(csvFeedbackContent);
+				  console.log("download this feedback link: " + encodedUri);
+				  document.createElement("a").setAttribute("href", encodedUri);
+				  document.createElement("a").setAttribute("download","feedback.csv");
+				  
 				  
 				  
 				  doneFor = {
