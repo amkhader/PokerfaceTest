@@ -80,6 +80,8 @@ var timeIndex = currentSubNum;
 var subStartTime =0 ;
 var currentSub = "";
 
+var numRewinds = 0;
+
 window.csvRewinds = new Array();
 window.csvResult = new Array();
 window.csvFeedback = new Array();
@@ -3072,9 +3074,7 @@ if (typeof jQuery != 'undefined') {
 						confusedCsvData.push(new Date().getTime());
 						media.pause();
 					}
-					
-					var numRewinds = 0;
-					
+
 					
 					var popup = new $.Popup();
 					var ResultsFile = '<script> var csvContent = "data:text/csv;charset=utf-8,";</script>';
