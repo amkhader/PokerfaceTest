@@ -1,0 +1,113 @@
+1
+00:00:00,140 --> 00:00:04,48
+for us understand that the genealogy the
+relationships among dinosaurs we use the
+
+2
+00:00:04,49 --> 00:00:05,580
+same techniques and tools
+
+3
+00:00:05,580 --> 00:00:09,650
+as other biologists use to understand
+how different groups of organisms are
+
+4
+00:00:09,650 --> 00:00:10,160
+related
+
+5
+00:00:10,160 --> 00:00:13,170
+the primary one that we use the
+technique of cladistic
+
+6
+00:00:13,170 --> 00:00:17,890
+and park listed is is that we just look
+at number about repeating the animal
+
+7
+00:00:17,890 --> 00:00:21,80
+and then we try to find the shortest
+path
+
+8
+00:00:21,80 --> 00:00:24,750
+through those attributes when I say
+shortest path I mean the least
+
+9
+00:00:24,750 --> 00:00:26,109
+evolutionary steps
+
+10
+00:00:26,109 --> 00:00:29,779
+I mean for instance if we had you know
+three animals in
+
+11
+00:00:29,779 --> 00:00:33,570
+the room with us now we had say we had a
+human
+
+12
+00:00:33,570 --> 00:00:36,950
+say we had a a mouse I
+
+13
+00:00:36,950 --> 00:00:41,59
+and say we had with her right well one
+of the attributes that links the mouse
+
+14
+00:00:41,59 --> 00:00:42,329
+anti-human together
+
+15
+00:00:42,329 --> 00:00:45,789
+his hair so if you would say that the
+mouth
+
+16
+00:00:45,789 --> 00:00:49,399
+in the wizard were most closely related
+you would have to have to evolutionary
+
+17
+00:00:49,399 --> 00:00:51,600
+steps the independent or gin up hair
+
+18
+00:00:51,600 --> 00:00:54,870
+but by saying that hair only originate
+once
+
+19
+00:00:54,870 --> 00:00:57,879
+it evidence for a preferential
+relationship between
+
+20
+00:00:57,879 --> 00:01:01,849
+humans in mouth so that's a very simple
+example but we do that with hundreds of
+
+21
+00:01:01,850 --> 00:01:03,960
+characters in hundreds a battle
+sometimes
+
+22
+00:01:03,960 --> 00:01:07,390
+and then we have computer algorithms
+which actually go through the matrix and
+
+23
+00:01:07,390 --> 00:01:09,60
+find the shortest path through it
+
+24
+00:01:09,60 --> 00:01:12,560
+and results and a family tree up these
+animals
+

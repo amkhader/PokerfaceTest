@@ -1,0 +1,180 @@
+1
+00:00:02,900 --> 00:00:04,880
+It’s very difficult to wonder about
+
+2
+00:00:06,360 --> 00:00:08,860
+life, our lives, life on this planet,
+
+3
+00:00:08,870 --> 00:00:10,299
+and life on other planets, without first
+
+4
+00:00:10,299 --> 00:00:12,738
+wondering about stars. 
+
+5
+00:00:12,740 --> 00:00:16,900
+Stars are the substance, the engines that build
+
+6
+00:00:16,910 --> 00:00:18,599
+everything in our known universe.
+
+7
+00:00:18,599 --> 00:00:21,60
+And without understanding stars, we will
+
+8
+00:00:21,60 --> 00:00:22,790
+never understand where planets come from
+
+9
+00:00:22,790 --> 00:00:24,310
+and where we came from.
+
+10
+00:00:25,680 --> 00:00:27,300
+We have one star that we’ve been able to
+
+11
+00:00:27,300 --> 00:00:29,739
+study in exquisite detail, and that’s the
+Sun
+
+12
+00:00:29,739 --> 00:00:31,840
+and that’s because it’s so close by.
+
+13
+00:00:31,840 --> 00:00:33,280
+You can actually take pictures of it
+
+14
+00:00:33,280 --> 00:00:34,640
+and be able to see sunspots
+
+15
+00:00:34,640 --> 00:00:37,680
+and see solar explosions. And
+
+16
+00:00:37,680 --> 00:00:39,610
+the Sun is the only star that we’ve
+
+17
+00:00:39,610 --> 00:00:42,960
+been able to look at in this sort of detail.
+
+18
+00:00:42,960 --> 00:00:45,530
+And this is where you need special
+
+19
+00:00:45,530 --> 00:00:47,570
+techniques to look at other stars
+
+20
+00:00:47,570 --> 00:00:50,70
+and see them in the sort of detail that has
+
+21
+00:00:50,70 --> 00:00:54,730
+been previously only done for the Sun.
+
+22
+00:01:03,60 --> 00:01:04,540
+CHARA stands for Center for High
+
+23
+00:01:04,549 --> 00:01:05,990
+Angular Resolution Astronomy,
+
+24
+00:01:05,990 --> 00:01:09,679
+which basically is the theme of what we do.
+
+25
+00:01:09,680 --> 00:01:12,130
+Resolution is the ability to see fine detail
+
+26
+00:01:12,130 --> 00:01:15,199
+in distant objects, and unfortunately,
+
+27
+00:01:15,200 --> 00:01:16,630
+distances are so great in astronomy
+
+28
+00:01:16,630 --> 00:01:18,699
+that resolution has always been
+
+29
+00:01:18,700 --> 00:01:21,220
+something that has been unattainable
+
+30
+00:01:21,220 --> 00:01:23,130
+for most of the objects we look at.
+
+31
+00:01:23,130 --> 00:01:25,310
+Stars, for example, are so far away
+
+32
+00:01:25,310 --> 00:01:26,570
+that even with the biggest
+
+33
+00:01:26,570 --> 00:01:27,908
+telescopes that we've ever built
+
+34
+00:01:27,909 --> 00:01:29,190
+most of them appear just as points
+
+35
+00:01:29,190 --> 00:01:31,929
+of light. But the kind of problems
+
+36
+00:01:31,930 --> 00:01:33,930
+that we have to solve involving
+
+37
+00:01:33,930 --> 00:01:35,510
+measuring sizes of stars
+
+38
+00:01:35,510 --> 00:01:38,30
+requires us to build telescopes that
+
+39
+00:01:38,30 --> 00:01:39,810
+are not just tens of meters across,
+
+40
+00:01:39,810 --> 00:01:41,760
+but hundreds of meters across, and
+
+41
+00:01:41,760 --> 00:01:43,530
+those are completely unfeasible
+
+42
+00:01:43,530 --> 00:01:45,840
+for the indefinite future.
+
+43
+00:01:45,840 --> 00:01:48,689
+So we get around this problem by
+
+44
+00:01:48,689 --> 00:01:50,789
+synthesizing a single giant telescope
+
+45
+00:01:50,790 --> 00:01:53,970
+with arrays of smaller telescopes.

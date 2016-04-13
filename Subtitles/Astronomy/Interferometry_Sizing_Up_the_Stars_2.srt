@@ -1,0 +1,224 @@
+1
+00:00:00,000 --> 00:00:01,300
+The CHARA array is a collection of six
+
+2
+00:00:01,499 --> 00:00:04,260
+telescopes that are arranged on the ground
+
+3
+00:00:04,260 --> 00:00:07,600
+in an area that more or less kind of
+
+4
+00:00:07,600 --> 00:00:09,490
+covers the area that a single large
+
+5
+00:00:09,490 --> 00:00:11,489
+telescope mirror would have. And what we
+
+6
+00:00:11,489 --> 00:00:14,370
+then have to do is to have relay optics—
+
+7
+00:00:14,370 --> 00:00:16,409
+many, many mirrors along
+
+8
+00:00:16,409 --> 00:00:17,969
+the way to effectively
+
+9
+00:00:17,969 --> 00:00:19,809
+move the beams as if the
+
+10
+00:00:19,809 --> 00:00:21,990
+telescopes were all placed
+
+11
+00:00:21,990 --> 00:00:23,179
+lying on this optical mirror
+
+12
+00:00:23,180 --> 00:00:24,150
+that we’re trying to synthesize.
+
+13
+00:00:24,150 --> 00:00:26,510
+And that’s been the real problem
+
+14
+00:00:26,510 --> 00:00:28,189
+with interferometry, being able to
+
+15
+00:00:28,189 --> 00:00:31,349
+precisely control the beams of light to
+
+16
+00:00:31,349 --> 00:00:34,548
+attain that synthesis of a single mirror.
+
+17
+00:00:37,180 --> 00:00:39,360
+This is part of the daily
+
+18
+00:00:39,370 --> 00:00:41,400
+alignment check. Essentially we
+
+19
+00:00:41,400 --> 00:00:43,290
+send a laser beam backwards through the
+
+20
+00:00:43,290 --> 00:00:44,980
+system and check that it hits all the points
+
+21
+00:00:44,980 --> 00:00:46,790
+that it needs to hit. One of
+
+22
+00:00:46,790 --> 00:00:49,170
+the targets is right here.
+
+23
+00:00:52,420 --> 00:00:53,780
+Spot on.
+
+24
+00:00:55,920 --> 00:00:58,439
+It's very important that from the star all
+
+25
+00:00:58,439 --> 00:01:00,209
+the way to the point inside the instrument
+
+26
+00:01:00,209 --> 00:01:01,699
+where we bring the light beams together that
+
+27
+00:01:01,699 --> 00:01:04,499
+the light travel time is exactly the same.
+
+28
+00:01:04,499 --> 00:01:06,799
+Now because the telescopes are at different
+
+29
+00:01:06,799 --> 00:01:08,790
+elevations and different parts of the mountain
+
+30
+00:01:08,790 --> 00:01:11,698
+and the Earth is constantly rotating,
+
+31
+00:01:11,699 --> 00:01:12,969
+these paths are forever changing.
+
+32
+00:01:12,969 --> 00:01:15,120
+So we have to continuously adjust
+
+33
+00:01:15,120 --> 00:01:16,409
+these paths within the instrument
+
+34
+00:01:16,409 --> 00:01:19,400
+using a thing called a delay line.
+
+35
+00:01:19,400 --> 00:01:22,529
+In interferometry, timing is everything and
+
+36
+00:01:22,529 --> 00:01:24,690
+that means that we have to get the light from
+
+37
+00:01:24,690 --> 00:01:26,290
+all six telescopes around the mountain
+
+38
+00:01:26,290 --> 00:01:28,989
+into this room at the same time.
+
+39
+00:01:29,960 --> 00:01:32,459
+While we can’t control the speed of light
+
+40
+00:01:32,459 --> 00:01:35,709
+or
+the time it travels, what we can do is change
+
+41
+00:01:35,709 --> 00:01:37,889
+the path length over which it travels.
+
+42
+00:01:37,889 --> 00:01:40,290
+And that’s what this long tunnel is for.
+
+43
+00:01:40,290 --> 00:01:42,608
+These carts are optical trombones. Such
+
+44
+00:01:42,609 --> 00:01:45,569
+that we can add and subtract path-length
+
+45
+00:01:45,569 --> 00:01:47,388
+and make the light from each of the
+
+46
+00:01:47,389 --> 00:01:49,650
+six telescopes arrive at the same time
+
+47
+00:01:49,650 --> 00:01:51,150
+at the back end so that we collect
+
+48
+00:01:51,150 --> 00:01:53,610
+the data to make our pictures.
+
+49
+00:01:57,880 --> 00:01:59,519
+The ability to make images with
+
+50
+00:01:59,519 --> 00:02:01,169
+interferometry is dependant upon
+
+51
+00:02:01,169 --> 00:02:01,989
+how many telescopes
+
+52
+00:02:01,989 --> 00:02:03,940
+you can put into the mix.
+
+53
+00:02:04,740 --> 00:02:07,780
+As you add more and more telescopes, you
+
+54
+00:02:07,779 --> 00:02:09,849
+get to fill in more and more pieces of
+
+55
+00:02:09,850 --> 00:02:11,220
+this image that you're trying to
+
+56
+00:02:11,220 --> 00:02:13,600
+synthesize as if you had a big telescope.
