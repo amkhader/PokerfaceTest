@@ -51,10 +51,10 @@ $.ajax({
       	for (i = 0; i < JargonData.length; i++) { 
 
 	
-		JargonWords[i] = JargonData[i].substr(0, JargonData[i].indexOf(' '));
+		JargonWords[i] = JargonData[i].substr(JargonData[i].indexOf(' ')+1);
 		console.log(JargonWords[i]);
 		
-		JargonSubNum[i] = parseInt(JargonData[i].substr(JargonData[i].indexOf(' ')+1), 10);
+		JargonSubNum[i] = parseInt(JargonData[i].substr(0,JargonData[i].indexOf(' ')), 10);
 		console.log(JargonSubNum[i]);
 	}	
       	
