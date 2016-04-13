@@ -46,7 +46,7 @@ var jargon = "";
 //$.get("mediaelement-master/build/jargonList.txt", function(data){items = data.split('\n'); });
 
 $.ajax({
-      url: "Subtitles/Astronomy/Interferometry_Sizing_Up_the_Stars_1_jargon.txt",
+      url: "Subtitles/Math/Discrete_Logarithm_Problem_jargon.txt",
       success: function (data){JargonData = data.split('\n'); 
       	for (i = 0; i < JargonData.length; i++) { 
 
@@ -63,7 +63,7 @@ $.ajax({
 var altTranslations = [];   
    
 $.ajax({
-      url: "Subtitles/Astronomy/Interferometry_Sizing_Up_the_Stars_1_alt_trans.txt",
+      url: "Subtitles/Math/Discrete_Logarithm_Problem_alt_trans.txt",
       success: function (data){altTranslations = data.split('\n');}
 });
    
