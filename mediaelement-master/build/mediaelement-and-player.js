@@ -3098,7 +3098,7 @@ if (typeof jQuery != 'undefined') {
 					var ResultsLink = '<script>function makeLink(list,name){csvContent += list.join("\\n"); var encodedUri = encodeURI(csvContent);console.log("download this ".concat(name).concat(" link: ") + encodedUri);var link = document.createElement("a");link.setAttribute("href", encodedUri);link.setAttribute("download", "my_data.csv");}</script>';
 					var SaveInput = '<script>function savetextarea(){var txt = document.getElementById("textArea").value; window.csvResult.push(currentSubNum + ",Other, ".concat(txt));console.log(window.csvResult); makeLink(window.csvResult,"input");}</script>';
 
-					var FeedbackButton = '<script>function SetButtonYes(){buttonClicked = "Yes";}SetButtonNo(){buttonClicked = "No";}</script>'
+					var FeedbackButton = '<script>function SetButtonYes(){buttonClicked = "Yes";}function SetButtonNo(){buttonClicked = "No";}</script>'
 
 					//
 					//<button onclick = \'jargonFunction()\' id= \'button11\'>YES</button> <button id = \'button22\'>NO</button>
