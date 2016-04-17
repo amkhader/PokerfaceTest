@@ -49,7 +49,7 @@ var jargon = "";
 //$.get("mediaelement-master/build/jargonList.txt", function(data){items = data.split('\n'); });
 
 $.ajax({
-      url: "Subtitles/Physics/Coulomb's_Law_jargon.txt",
+      url: "Subtitles2/Astronomy/Interferometry_Sizing_Up_the_Stars_1_jargon.txt",
       success: function (data){JargonData = data.split('\n'); 
       	for (i = 0; i < JargonData.length; i++) { 
 
@@ -66,7 +66,7 @@ $.ajax({
 var altTranslations = [];   
    
 $.ajax({
-      url: "Subtitles/Physics/Coulomb's_Law_alt_trans.txt",
+      url: "Subtitles2/Astronomy/Interferometry_Sizing_Up_the_Stars_1_alt_trans.txt",
       success: function (data){altTranslations = data.split('\n');}
 });
    
@@ -3083,7 +3083,7 @@ if (typeof jQuery != 'undefined') {
 					var popup = new $.Popup();
 					var ResultsFile = '<script> var csvContent = "data:text/csv;charset=utf-8,";</script>';
 					//var head = '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>';
-					var htmlQ1 = '<h1 id="question1">هل تشعر الخلط بشيء في هذا الإطار من الفيديو؟</h1>';
+					var htmlQ1 = '<h1 id="question1">هل تشعر بالحيرة من شيء في هذا الإطار من الفيديو ؟ </h1>';
 					var htmlEN = '<h2 id = "translation">(Are you confused by something in this frame?)</h2>';
 					var htmlQ2 = '<h1>Are you confused by jargon?</h1>';
 					var htmlButtons = '<style>h1{font-size: 2em;} h2{font-size: 1.5em;} #button1{width: 300px; height: 40px;} #button2{width: 300px; height: 40px;} #container{ text-align: center;}</style>';
@@ -3092,7 +3092,7 @@ if (typeof jQuery != 'undefined') {
 					var htmlButtonsJargon = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button> <button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container").innerHTML =" prophase - الطليعي يعني الطَّورُ الأَوَّل في الانْقِسامِ الخَلَوِيّ"; }</script>';
 					var JargonWinFun = '<script>function jargonpopup(){ window.csvRewinds.push(currentSubNum + "," + numRewinds);numRewinds=0;console.log(currentSubNum); var j = $.inArray(currentSubNum, JargonSubNum); if (j > -1){ jargon = JargonWords[j]; htmlQ2 = "هل تشعر الخلط من ".concat(jargon).concat("?"); $("h1").html(htmlQ2);$("h2").html("Are you confused by".concat(JargonWords[j]).concat("?"));$("#container").html("<button onclick = \'jargonFunction()\' id= \'button1\'>نعم</button> <button onclick = \'MTEpopup()\' id = \'button2\'>لا</button>");}else{MTEpopup();}}</script>';
 					var JargonFun = '<script>function jargonFunction() {var word = jargon; window.csvResult.push(currentSubNum + ",Jargon");makeLink(window.csvResult,"input"); document.getElementById("container").innerHTML = "Wikipedia - " + word + \': \\n <div class= "definition"></div>  \\n <h3>كان ذلك مفيدا؟ لماذا؟</h3>  \\n <button onclick="SetButtonYes()">نعم</button><button onclick="SetButtonNo()">لا</button> \\n <textarea id = \"textArea\"></textarea><button onclick="savetextareaFeedback()" id="submit" type="button">Submit</button>\'; $.getJSON("http://ar.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=" +word  + "&redirects&callback=?" , function(data){console.log(data); var response2 = ""; for (var id in data.query.pages) { response2 = data.query.pages[id].extract;} if(response2 == undefined || response2 == ""){response2 = "Definition not found."} $(\'.definition\').html("<div>" + response2 + "</div>");});} </script>';
-					var MTEpopup = '<script>function MTEpopup() {$("h1").html("هل تشعر الخلط من جانب الترجمة؟")  ;$("#container").html("<button onclick = \'MTEFunction()\' id= \'button1\'>نعم</button> <button onclick = \'Textpopup()\' id = \'button2\'>لا</button>");} </script>';
+					var MTEpopup = '<script>function MTEpopup() {$("h1").html("هل تشعر بالحيرة من جانب الترجمة؟")  ;$("#container").html("<button onclick = \'MTEFunction()\' id= \'button1\'>نعم</button> <button onclick = \'Textpopup()\' id = \'button2\'>لا</button>");} </script>';
 					//("h2").html("(Are you confused by the translation?)");$(
 					var MTEFunction = '<script>function MTEFunction() {window.csvResult.push(currentSubNum + ",MTE"); makeLink(window.csvResult,"input"); document.getElementById("container").innerHTML = "<b>" + altTranslations[currentSubNum] + "</b>" + \' :ويمكن أيضا أن تترجم هذه ل \\n \' +"(via Google translate \\n)" +\'\\n <h3>كان ذلك مفيدا؟ لماذا؟</h3> \\n <button onclick="SetButtonYes()">نعم</button><button onclick="SetButtonNo()">لا</button> \\n <textarea id = \"textArea\"></textarea><button onclick="savetextareaFeedback()" id="submit" type="button">Submit</button>\';} </script>';
 					var Textpopup = '<script>function Textpopup() {$("h1").html(\'ما الذي كنت تشعر الخلط من جانب؟\');$("h2").html(\'What are you confused by?\');$("#container").html(\'<textarea id = \"textArea\"></textarea><button onclick="savetextarea()" id="submit" type="button">Submit</button>\');}</script>';
