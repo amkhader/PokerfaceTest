@@ -15,6 +15,9 @@
 // Namespace
 var mejs = mejs || {};
 
+
+var numPauses = 0;
+
 // Global Variable
 var everythingArr = [];
 var theFullArray = [];
@@ -3373,6 +3376,8 @@ if (typeof jQuery != 'undefined') {
 		pause: function() {
 			try {
 				this.media.pause();
+				numPauses += 1
+				console.log('numPauses: ' + numPauses)
 			} catch (e) {}
 		},
 		load: function() {
