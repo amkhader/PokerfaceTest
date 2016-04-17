@@ -1,0 +1,257 @@
+1
+00:00:00,000 --> 00:00:00,630
+
+
+2
+00:00:00,630 --> 00:00:03,800
+What we have depicted right over
+here is a combustion reaction.
+
+3
+00:00:03,800 --> 00:00:06,730
+We have the hydrocarbon
+methane right over here.
+
+4
+00:00:06,730 --> 00:00:07,470
+You take that.
+
+5
+00:00:07,470 --> 00:00:09,840
+You take some molecular oxygen.
+
+6
+00:00:09,840 --> 00:00:11,440
+You give them enough heat.
+
+7
+00:00:11,440 --> 00:00:13,559
+And then, they are
+going to combust.
+
+8
+00:00:13,560 --> 00:00:16,880
+And they're going to produce
+carbon dioxide, water, and then
+
+9
+00:00:16,880 --> 00:00:19,110
+more energy than you put in.
+
+10
+00:00:19,110 --> 00:00:20,800
+This is an exothermic reaction.
+
+11
+00:00:20,800 --> 00:00:23,270
+More energy comes
+out than you put in.
+
+12
+00:00:23,270 --> 00:00:25,770
+This is why fires
+keep spreading.
+
+13
+00:00:25,770 --> 00:00:30,304
+This is why combustion
+is used to power things.
+
+14
+00:00:30,304 --> 00:00:32,720
+But that's not what we're going
+to focus on in this video.
+
+15
+00:00:32,720 --> 00:00:34,960
+In this video, we want
+to think about-- which
+
+16
+00:00:34,960 --> 00:00:37,950
+of these components, of
+these molecules, what's
+
+17
+00:00:37,950 --> 00:00:41,250
+being oxidized and
+what is being reduced?
+
+18
+00:00:41,250 --> 00:00:43,930
+And to do that,
+let's first think
+
+19
+00:00:43,930 --> 00:00:47,740
+about the oxidation
+states of the input atoms
+
+20
+00:00:47,740 --> 00:00:49,970
+and the oxidation
+states of the outputs--
+
+21
+00:00:49,970 --> 00:00:52,839
+of the different constituents
+of these molecules.
+
+22
+00:00:52,840 --> 00:00:55,90
+So I encourage you to
+now pause this video
+
+23
+00:00:55,90 --> 00:00:59,280
+and try to figure
+that out on your own.
+
+24
+00:00:59,280 --> 00:01:01,190
+So I'm assuming you've
+given a go at it.
+
+25
+00:01:01,190 --> 00:01:04,50
+Now, let's work
+through this together.
+
+26
+00:01:04,50 --> 00:01:05,910
+Let's first think
+about the methane.
+
+27
+00:01:05,910 --> 00:01:08,250
+And I have a bunch of
+electronegativities here based
+
+28
+00:01:08,250 --> 00:01:10,540
+on the Pauling scale
+listed out here,
+
+29
+00:01:10,540 --> 00:01:12,230
+but let's just
+visualize methane.
+
+30
+00:01:12,230 --> 00:01:14,725
+Methane is a carbon
+bonded to 4 hydrogens.
+
+31
+00:01:14,725 --> 00:01:17,610
+
+
+32
+00:01:17,610 --> 00:01:20,730
+In our oxidation state world--
+even though, this, in reality,
+
+33
+00:01:20,730 --> 00:01:22,980
+is a covalent bond--
+we pretend like they're
+
+34
+00:01:22,980 --> 00:01:24,850
+hypothetically ionic bonds.
+
+35
+00:01:24,850 --> 00:01:30,70
+So we have to give the electron
+pair to one of the parties
+
+36
+00:01:30,70 --> 00:01:31,460
+to the bond.
+
+37
+00:01:31,460 --> 00:01:34,649
+If we look between
+carbon and hydrogen,
+
+38
+00:01:34,650 --> 00:01:38,90
+carbon is more
+electronegative than hydrogen.
+
+39
+00:01:38,90 --> 00:01:41,260
+So we will assume that carbon
+will be hogging the electrons
+
+40
+00:01:41,260 --> 00:01:44,10
+and that hydrogen will be
+giving away the electrons.
+
+41
+00:01:44,10 --> 00:01:46,370
+So carbon's going to take--
+in this hypothetical world--
+
+42
+00:01:46,370 --> 00:01:50,440
+hypothetically take an electron
+from each of these hydrogens.
+
+43
+00:01:50,440 --> 00:01:55,320
+It is going to have an
+oxidation state of negative 4,
+
+44
+00:01:55,320 --> 00:01:57,369
+an electron from
+each of 4 hydrogens.
+
+45
+00:01:57,370 --> 00:01:58,160
+Negative 4.
+
+46
+00:01:58,160 --> 00:02:00,590
+And once again, we write
+the sign after the number
+
+47
+00:02:00,590 --> 00:02:04,289
+probably so that we don't get
+these confused with exponents.
+
+48
+00:02:04,289 --> 00:02:05,830
+Now, let's think
+about the hydrogens.
+
+49
+00:02:05,830 --> 00:02:08,880
+Each of those
+hydrogens is having--
+
+50
+00:02:08,880 --> 00:02:12,260
+in this hypothetical world--
+an electron taken away from it.
+
+51
+00:02:12,260 --> 00:02:15,280
+We could say it has an
+oxidation state of plus 1, which
+
+52
+00:02:15,280 --> 00:02:16,976
+we could write as 1 plus.
+
+53
+00:02:16,976 --> 00:02:18,600
+Or we could just
+write a positive right
+
+54
+00:02:18,600 --> 00:02:21,239
+over here-- a plus sign.

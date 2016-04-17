@@ -1,0 +1,196 @@
+1
+00:00:28,833 --> 00:00:31,299
+adenosine triphosphate, and
+even when we look at its
+
+2
+00:00:31,300 --> 00:00:34,434
+molecular structure it seems
+quite involved, but if we break
+
+3
+00:00:34,434 --> 00:00:36,634
+it down into its constituent
+parts it becomes a little bit
+
+4
+00:00:36,634 --> 00:00:40,566
+more understandable and we'll
+begin to appreciate why,
+
+5
+00:00:40,566 --> 00:00:45,000
+how it is a store of energy
+in biological systems.
+
+6
+00:00:45,33 --> 00:00:47,900
+The first part is to break
+down this molecule between
+
+7
+00:00:47,900 --> 00:00:49,766
+the part that is adenosine
+and the part that
+
+8
+00:00:49,767 --> 00:00:53,366
+is the triphosphates, or
+the three phosphoryl groups.
+
+9
+00:00:54,304 --> 00:00:57,33
+The adenosine is this
+part of the molecule,
+
+10
+00:00:57,33 --> 00:00:59,167
+let me do it in that same color.
+
+11
+00:00:59,167 --> 00:01:02,966
+This part right over here is adenosine,
+
+12
+00:01:02,966 --> 00:01:06,233
+and it's an adenine connected to a ribose
+
+13
+00:01:06,233 --> 00:01:10,500
+right over there, that's
+the adenosine part.
+
+14
+00:01:10,500 --> 00:01:12,833
+And then you have three phosphoryl groups,
+
+15
+00:01:12,833 --> 00:01:16,166
+and when they break off they
+can turn into a phosphate.
+
+16
+00:01:17,704 --> 00:01:22,500
+The triphosphate part
+you have, triphosphate,
+
+17
+00:01:22,500 --> 00:01:27,767
+you have one phosphoryl
+group, two phosphoryl groups,
+
+18
+00:01:27,767 --> 00:01:32,232
+two phosphoryl groups and
+three phosphoryl groups.
+
+19
+00:01:32,233 --> 00:01:35,966
+One way that you can conceptualize
+this molecule which will
+
+20
+00:01:35,966 --> 00:01:39,232
+make it a little bit easier
+to understand how it's a store
+
+21
+00:01:39,233 --> 00:01:44,366
+of energy in biological systems
+is to represent this whole
+
+22
+00:01:44,366 --> 00:01:47,967
+adenosine group, let's just
+represent that as an A.
+
+23
+00:01:47,967 --> 00:01:50,100
+Actually let's make that an Ad.
+
+24
+00:01:50,100 --> 00:01:51,899
+Then let's just show it bonded to
+
+25
+00:01:51,900 --> 00:01:54,300
+the three phosphoryl groups.
+
+26
+00:01:55,883 --> 00:01:59,33
+I'll make those with a P
+and a circle around it.
+
+27
+00:01:59,33 --> 00:02:02,166
+You can do it like that,
+or sometimes you'll see it
+
+28
+00:02:02,166 --> 00:02:04,100
+actually depicted, instead
+of just drawing these
+
+29
+00:02:04,100 --> 00:02:07,100
+straight horizontal lines
+you'll see it depicted
+
+30
+00:02:07,100 --> 00:02:09,765
+with essentially higher energy bonds.
+
+31
+00:02:09,765 --> 00:02:12,899
+You'll see something like that to show
+
+32
+00:02:12,900 --> 00:02:15,367
+that these bonds have a lot of energy.
+
+33
+00:02:15,367 --> 00:02:22,700
+But I'll just do it this way
+for the sake of this video.
+
+34
+00:02:22,700 --> 00:02:25,500
+These are high energy bonds.
+
+35
+00:02:25,500 --> 00:02:26,833
+What does that mean, what does that
+
+36
+00:02:26,833 --> 00:02:29,833
+mean that these are high energy bonds?
+
+37
+00:02:29,833 --> 00:02:33,100
+It means that the electrons
+in this bond are in a
+
+38
+00:02:33,100 --> 00:02:36,700
+high energy state, and if
+somehow this bond could be
+
+39
+00:02:36,700 --> 00:02:39,632
+broken these electrons are
+going to go into a more
+
+40
+00:02:39,633 --> 00:02:42,834
+comfortable state, into
+a lower energy state.
+
+41
+00:02:42,834 --> 00:02:45,500
+As they go from a higher
+energy state into a lower, more
+
+42
+00:02:45,500 --> 00:02:49,166
+comfortable energy state they
+are going to release energy.
