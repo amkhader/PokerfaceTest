@@ -49,7 +49,7 @@ var jargon = "";
 //$.get("mediaelement-master/build/jargonList.txt", function(data){items = data.split('\n'); });
 
 $.ajax({
-      url: "Subtitles2/Chemistry/Introduction_to_redox_reactions_jargon.txt",
+      url: "Subtitles2/Biology/ATP_Adenosine_triphosphate_jargon.txt",
       success: function (data){JargonData = data.split('\n'); 
       	for (i = 0; i < JargonData.length; i++) { 
 
@@ -66,7 +66,7 @@ $.ajax({
 var altTranslations = [];   
    
 $.ajax({
-      url: "Subtitles/Chemistry/Introduction_to_redox_reactions_alt_trans.txt",
+      url: "Subtitles2/Biology/ATP_Adenosine_triphosphate_alt_trans.txt",
       success: function (data){altTranslations = data.split('\n');}
 });
    
