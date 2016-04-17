@@ -66,7 +66,7 @@ $.ajax({
 var altTranslations = [];   
    
 $.ajax({
-      url: "Subtitles2/Chemistry/Introduction_to_redox_reactions_alt_trans.txt",
+      url: "Subtitles/Chemistry/Introduction_to_redox_reactions_alt_trans.txt",
       success: function (data){altTranslations = data.split('\n');}
 });
    
