@@ -15,6 +15,9 @@
 // Namespace
 var mejs = mejs || {};
 
+
+var numPauses = 0;
+
 // Global Variable
 var everythingArr = [];
 var theFullArray = [];
@@ -46,15 +49,15 @@ var jargon = "";
 //$.get("mediaelement-master/build/jargonList.txt", function(data){items = data.split('\n'); });
 
 $.ajax({
-      url: "mediaelement-master/build/jargonList.txt",
+      url: "Subtitles/Physics/Coulomb's_Law_jargon.txt",
       success: function (data){JargonData = data.split('\n'); 
       	for (i = 0; i < JargonData.length; i++) { 
 
 	
-		JargonWords[i] = JargonData[i].substr(0, JargonData[i].indexOf(' '));
+		JargonWords[i] = JargonData[i].substr(JargonData[i].indexOf(' ')+1);
 		console.log(JargonWords[i]);
 		
-		JargonSubNum[i] = parseInt(JargonData[i].substr(JargonData[i].indexOf(' ')+1), 10);
+		JargonSubNum[i] = parseInt(JargonData[i].substr(0,JargonData[i].indexOf(' ')), 10);
 		console.log(JargonSubNum[i]);
 	}	
       	
@@ -63,7 +66,7 @@ $.ajax({
 var altTranslations = [];   
    
 $.ajax({
-      url: "mediaelement-master/build/Interferometry_Sizing_Up_the_Stars_1_alt_trans.txt",
+      url: "Subtitles/Physics/Coulomb's_Law_alt_trans.txt",
       success: function (data){altTranslations = data.split('\n');}
 });
    
@@ -3088,7 +3091,7 @@ if (typeof jQuery != 'undefined') {
 					var RewindFun = '<script>function rewindFunction() {numRewinds++; console.log(currentSubNum); document.getElementById("player1").currentTime = track.entries.times[currentSubNum-1]["start"]; currentSubNum--; timeIndex = currentSubNum; }</script>';
 					var htmlButtonsJargon = '<div id="container"><button onclick="jargonFunction()" id="button1">YES</button> <button id = "button2">NO</button></div><script>function jargonFunction() {document.getElementById("container").innerHTML =" prophase - الطليعي يعني الطَّورُ الأَوَّل في الانْقِسامِ الخَلَوِيّ"; }</script>';
 					var JargonWinFun = '<script>function jargonpopup(){ window.csvRewinds.push(currentSubNum + "," + numRewinds);numRewinds=0;console.log(currentSubNum); var j = $.inArray(currentSubNum, JargonSubNum); if (j > -1){ jargon = JargonWords[j]; htmlQ2 = "هل تشعر الخلط من ".concat(jargon).concat("?"); $("h1").html(htmlQ2);$("h2").html("Are you confused by".concat(JargonWords[j]).concat("?"));$("#container").html("<button onclick = \'jargonFunction()\' id= \'button1\'>نعم</button> <button onclick = \'MTEpopup()\' id = \'button2\'>لا</button>");}else{MTEpopup();}}</script>';
-					var JargonFun = '<script>function jargonFunction() {var word = jargon; window.csvResult.push(currentSubNum + ",Jargon");makeLink(window.csvResult,"input"); document.getElementById("container").innerHTML = "Wikipedia - " + word + \': \\n <div class= "definition"></div>  \\n <h3>كان ذلك مفيدا؟ لماذا؟</h3>  \\n <button onclick="SetButtonYes()">نعم</button><button onclick="SetButtonNo()">لا</button> \\n <textarea id = \"textArea\"></textarea><button onclick="savetextareaFeedback()" id="submit" type="button">Submit</button>\'; $.getJSON("http://ar.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=" +word  + "&callback=?" , function(data){console.log(data); var response2 = ""; for (var id in data.query.pages) { response2 = data.query.pages[id].extract;} if(response2 == undefined){response2 = "Definition not found."} $(\'.definition\').html("<div>" + response2 + "</div>");});} </script>';
+					var JargonFun = '<script>function jargonFunction() {var word = jargon; window.csvResult.push(currentSubNum + ",Jargon");makeLink(window.csvResult,"input"); document.getElementById("container").innerHTML = "Wikipedia - " + word + \': \\n <div class= "definition"></div>  \\n <h3>كان ذلك مفيدا؟ لماذا؟</h3>  \\n <button onclick="SetButtonYes()">نعم</button><button onclick="SetButtonNo()">لا</button> \\n <textarea id = \"textArea\"></textarea><button onclick="savetextareaFeedback()" id="submit" type="button">Submit</button>\'; $.getJSON("http://ar.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=" +word  + "&redirects&callback=?" , function(data){console.log(data); var response2 = ""; for (var id in data.query.pages) { response2 = data.query.pages[id].extract;} if(response2 == undefined || response2 == ""){response2 = "Definition not found."} $(\'.definition\').html("<div>" + response2 + "</div>");});} </script>';
 					var MTEpopup = '<script>function MTEpopup() {$("h1").html("هل تشعر الخلط من جانب الترجمة؟")  ;$("#container").html("<button onclick = \'MTEFunction()\' id= \'button1\'>نعم</button> <button onclick = \'Textpopup()\' id = \'button2\'>لا</button>");} </script>';
 					//("h2").html("(Are you confused by the translation?)");$(
 					var MTEFunction = '<script>function MTEFunction() {window.csvResult.push(currentSubNum + ",MTE"); makeLink(window.csvResult,"input"); document.getElementById("container").innerHTML = "<b>" + altTranslations[currentSubNum] + "</b>" + \' :ويمكن أيضا أن تترجم هذه ل \\n \' +"(via Google translate \\n)" +\'\\n <h3>كان ذلك مفيدا؟ لماذا؟</h3> \\n <button onclick="SetButtonYes()">نعم</button><button onclick="SetButtonNo()">لا</button> \\n <textarea id = \"textArea\"></textarea><button onclick="savetextareaFeedback()" id="submit" type="button">Submit</button>\';} </script>';
@@ -3373,6 +3376,8 @@ if (typeof jQuery != 'undefined') {
 		pause: function() {
 			try {
 				this.media.pause();
+				numPauses += 1
+				console.log('numPauses: ' + numPauses)
 			} catch (e) {}
 		},
 		load: function() {
